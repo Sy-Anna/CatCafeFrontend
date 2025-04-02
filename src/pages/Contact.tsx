@@ -1,11 +1,58 @@
-import React from 'react';
-import '../App.css';
+import Image from '../img/catCafeIndex.png';
+import { Col, Container, Row, Card } from 'react-bootstrap';
 
-const Contact = () => {
+import '../css/Contact.css';
+import '../css/ContactDark.css';
+
+const persons = [
+    {
+        id: 1,
+        name: "Tyitova Irina",
+        role: "Rendszergazda"
+    },
+    {
+        id: 2,
+        name: "Sáray Anna",
+        role: "Szoftverfejlesztő - Frontend"
+    },{
+        id: 3,
+        name: "Berencs Zsolt",
+        role: "Rendszergazda"
+    },{
+        id: 4,
+        name: "Kopányi Gergő",
+        role: "Rendszergazda"
+    },{
+        id: 5,
+        name: "Piovarcs Patrik",
+        role: "Szoftverfejlesztő - Backend"
+    }
+]
+
+
+function Contact() {
+
     return (
-        <div>
-            <p>contact</p>
-        </div>
+        <>
+            <Container fluid="lg" className="mt-4">
+                <Row className="gx-4 gy-4">
+                    {persons.map((persons) => (
+                        <Col key={persons.id} xs={16} sm={16} md={6} lg={4}>
+                            <Card className="contactCard">
+                            <img className="contactCardImage" src={Image} alt="webshopImage" />
+                                <h1 className="contactCardTitle">
+                                    {persons.name}
+                                </h1>
+                                <p className='contactCardText'>
+                                     {persons.role}
+                                </p>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
+        
+        </>
     );
 };
 

@@ -1,6 +1,6 @@
-import React from 'react'
+import './css/App.css';
+import './css/AppDark.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
 import NavbarComponent from './Navbar.tsx';
 import {
   BrowserRouter as Router,

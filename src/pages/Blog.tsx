@@ -1,14 +1,14 @@
-import React from 'react';
-import '../App.css';
-
+import "../css/Blog.css";
 export default function Blog() {
     return (
-        <div>
+        <div className="sticky">
+            
             <h1>
                 Címsor
             </h1>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A laudantium nulla obcaecati sed. Dolores at distinctio sunt tenetur expedita dignissimos ullam et eum odit autem, hic facilis eligendi doloribus odio.
+            Megnyitottunk! Örömmel tájékoztatjuk összes leendő vásárlónkat, hogy üzletünk és kávézónk is megnyitott az alábbi címeken: <br />
+
             </p>
         </div>
     );

@@ -1,0 +1,14 @@
+h1 {
+    color: #2C3930;
+    font-family: "Caveat", cursive !important;
+    font-weight: bold;
+    font-size: 40px !important; 
+    text-align: left;
+  }
+  p {
+    font-family: "Fuzzy Bubbles", sans-serif !important;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    text-align: justify;
+  }

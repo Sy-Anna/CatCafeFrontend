@@ -1,0 +1,54 @@
+/* cards */
+:root [dark=true] {
+    /* cards */
+  .productCard {
+    background-color: #3F4F44;
+    border-color: #2C3930;
+    border-radius: 20px;
+    box-shadow: 5px 10px #2C3930;
+  }
+  .productCardButton {
+  background-color: #DCD7C9;
+  border: #DCD7C9 1px solid;
+  display: inline;
+  float: right;  
+  box-shadow: 3px 3px #A27B5C;
+  }
+  .productCardText {
+  display: inline;
+  float: left;
+  }
+  .productCardImage {
+  align-self: center;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  }
+  /* Card responsiveness */
+  .productCardButton:hover {
+  border-color: #DCD7C9;
+  background-color: #DCD7C9 !important;
+  box-shadow: 2px 2px #A27B5C;
+  }
+  
+  .productCard:hover {
+  background-color: #334037;
+  box-shadow: 4px 9px #2C3930;
+  }
+
+
+  .productCardTitle {
+  color: #A27B5C;
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+  font-size: 25px !important; 
+  text-align: left !important;
+  }
+
+  p {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  }
+    
+}
