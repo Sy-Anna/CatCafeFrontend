@@ -1,9 +1,8 @@
-import Button from 'react-bootstrap/Button'
 import Image from '../img/catCafeIndex.png';
 import CartIcon from '../img/icons/cartIcon.png';
 import '../css/Webshop.css';
 import '../css/WebshopDark.css';
-import { Col, Container, Row, Card } from 'react-bootstrap';
+import { Col, Container, Row, Card, Button } from 'react-bootstrap';
 
 
 const products = [
@@ -39,9 +38,9 @@ function Webshop () {
     return (
         <>
         <Container fluid="lg" className="mt-4 card-grid">
-            <Row className='gx-4 gy-4'> 
+            <Row className='gx-4 gy-4 gap-4'> 
                 {products.map((products) => (
-                    <Col key={products.id} xs={16} sm={16} md={6} lg={4}>
+                    <Col className="cardContainer" key={products.id}>
                             <Card className="productCard">
                                 <img className="productCardImage" src={Image} alt="webshopImage" />
                                 <h1 className="productCardTitle">
@@ -61,7 +60,6 @@ function Webshop () {
             </Row>
             
         </Container>
-        
         </>
     );
 };

@@ -40,7 +40,7 @@
   font-style: normal;
   text-align: justify;
   float: left;
-  width: 40%;
+  width: 45%;
   padding: 10px;
 }
 .aboutCardPhone {
@@ -50,7 +50,7 @@
   font-style: normal;
   text-align: left;
   float: left;
-  width: 40%;
+  width: 37%;
   padding: 10px;
 }
 .aboutIcon {
@@ -71,8 +71,9 @@
   clear: both;
 }
 .card-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)) !important; 
-    gap: 1rem !important;
-    justify-content: center !important;
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr)); 
+  gap: 1rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   }

@@ -3,7 +3,6 @@
     width: clamp(14rem, 16rem, 18rem);
     height: clamp(21rem, 23rem, 25rem);
     padding: 2em;
-    margin: 30px;
     background-color: #DCD7C9;
     border-color: #2C3930;
     border-radius: 20px;
@@ -11,8 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    float: left !important;
-}
+  }
 .productCardButton {
   background-color: #A27B5C;
   border: #2C3930 1px solid;
@@ -61,11 +59,9 @@ p {
 }
 
 .card-grid {
-  
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr)); 
   gap: 1rem;
   justify-content: center;
   display: flex;
   align-items: center;
-
 }

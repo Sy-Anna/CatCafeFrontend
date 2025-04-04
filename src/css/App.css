@@ -1,8 +1,8 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  margin: auto;
 }
 
 
@@ -63,7 +63,7 @@ body {
   border: 2px solid #DCD7C9 !important;
   background-color: #DCD7C9;
 }
-.navSwitch:hover {
+.navSwitch .form-check-input:hover {
   cursor:pointer;
 }
 .navSwitch .form-check-input:checked {
@@ -94,3 +94,11 @@ p {
   font-style: normal;
   text-align: justify;
 }
+
+.cardContainer {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+

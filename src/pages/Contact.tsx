@@ -34,10 +34,10 @@ function Contact() {
 
     return (
         <>
-            <Container fluid="lg" className="mt-4">
-                <Row className="gx-4 gy-4">
+            <Container fluid="lg" className="mt-4 card-grid">
+                <Row className='gx-4 gy-4 gap-4'>
                     {persons.map((persons) => (
-                        <Col key={persons.id} xs={16} sm={16} md={6} lg={4}>
+                        <Col className="cardContainer" key={persons.id}>
                             <Card className="contactCard">
                             <img className="contactCardImage" src={Image} alt="webshopImage" />
                                 <h1 className="contactCardTitle">

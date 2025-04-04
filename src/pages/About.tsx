@@ -30,7 +30,7 @@ const addresses = [
         id: 4,
         title: "Raktár",
         phone: "06606660606",
-        address: "Tiszacsécsény, 1234 Sehol utc 2.", description: "Itt tároljuk termékeinket, míg otthonaitokba vagy kávéházunkba meg nem érkezik."
+        address: "Tiszacsécsény, 1234 Sehol utca 2.", description: "Itt tároljuk termékeinket, míg otthonaitokba vagy kávéházunkba meg nem érkezik."
     }
 ]
 
@@ -41,9 +41,9 @@ function About() {
         <>
             
             <Container fluid="lg" className="mt-4 card-grid">
-                <Row className="gx-4 gy-4">
+                <Row className='gx-4 gy-4 gap-4'>
                     {addresses.map((address) => (
-                        <Col key={address.id} xs={16} sm={16} md={8} lg={6}>
+                        <Col className="cardContainer" key={address.id}>
                             <Card className="aboutCard">
                                 <h1 className="aboutCardTitle">
                                     {address.title}
