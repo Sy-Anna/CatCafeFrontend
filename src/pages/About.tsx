@@ -5,6 +5,7 @@ import {Row, Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import locationIcon from '../img/icons/marker.png'
 import phoneIcon from '../img/icons/phone-call.png'
+import { UsersApi } from '../libs/api/users';
 
 const addresses = [
     {
@@ -36,6 +37,11 @@ const addresses = [
 
 
 function About() {
+
+    // const [userError, userInfo] = await UsersApi.login('worker@cat-cafe.hu', 'worker-pass-123')
+    // if (!userError) {
+    //     console.log('token:', userInfo.token)
+    // }
 
     return (
         <>

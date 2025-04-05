@@ -11,13 +11,20 @@ import profileIcon from './img/icons/profileIcon.png';
 
 export default function NavbarComponent() {
   // darkMode
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    return localStorage.getItem("theme") === "true";
+  });
   const toggleDarkMode = () => {
-    setDark(!dark);
-  }
+    const newVal = !dark;
+    setDark(newVal);
+    localStorage.setItem("theme", newVal.toString());
+    document.body.setAttribute("dark", newVal.toString());
+  };
   useEffect(() => {
-    document.body.setAttribute("dark", dark.toString());
-  }, [dark]);
+    const saved = localStorage.getItem("theme") === "true";
+    document.body.setAttribute("dark", saved.toString());
+    setDark(saved);
+  }, []);
 
   return (
     <Navbar expand="lg" fixed="top"  className="navbar">

@@ -9,23 +9,22 @@ const persons = [
         id: 1,
         name: "Tyitova Irina",
         role: "Rendszergazda"
-    },
-    {
-        id: 2,
-        name: "Sáray Anna",
-        role: "Szoftverfejlesztő - Frontend"
     },{
-        id: 3,
+        id: 2,
         name: "Berencs Zsolt",
         role: "Rendszergazda"
     },{
-        id: 4,
+        id: 3,
         name: "Kopányi Gergő",
         role: "Rendszergazda"
     },{
-        id: 5,
+        id: 4,
         name: "Piovarcs Patrik",
         role: "Szoftverfejlesztő - Backend"
+    }, {
+        id: 5,
+        name: "Sáray Anna",
+        role: "Szoftverfejlesztő - Frontend"
     }
 ]
 

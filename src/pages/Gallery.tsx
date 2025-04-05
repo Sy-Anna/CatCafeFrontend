@@ -1,4 +1,4 @@
-import { Col, Container, Row, Card, Button } from 'react-bootstrap';
+import { Col, Container, Row, Card } from 'react-bootstrap';
 import "../css/Gallery.css";
 
 
@@ -34,14 +34,12 @@ function Gallery() {
             <Row className='gx-4 gy-4 gap-4'> 
                 {images.map((image) => (
                     <Col className="cardContainer" key={image.id}>
-                            <Card className="imageCard">
-                                <img className="imageCardImage" src={image.source} alt="webshopImage" />
-                                
+                        <Card className="imageCard">
+                            <img className="imageCardImage" src={image.source} alt="webshopImage" />
                         </Card>
                     </Col>
                 ))}
             </Row>
-            
         </Container>
 
         </>
