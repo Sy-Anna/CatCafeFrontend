@@ -1,7 +1,7 @@
 /* cards */
-.imageCard {
+.homeCard {
     display: inline-block;
-    background-color: #DCD7C9;
+    background-color: #2C3930;
     border: #2C3930 1px solid;
     border-radius: 20px;
     box-shadow: 5px 10px #A27B5C;
@@ -10,34 +10,37 @@
     width: clamp(14rem, 16rem, 18rem);
     height: auto; 
     transition: transform 0.3s ease;
-}
+  }
+  
+  .homeCard img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card pseudo-classes */
+  .homeCard:hover {
+    background-color: #bdb6aa;
+    box-shadow: 4px 9px #A27B5C;
+  }
+  .homeCard:hover img {
+    transform: scale(1.3);
+  }
 
-.imageCard img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s ease;
-}
-
-/* Card pseudo-classes */
-.imageCard:hover {
-  background-color: #bdb6aa;
-  box-shadow: 4px 9px #A27B5C;
-}
-.imageCard:hover img {
-  transform: scale(1.2);
-}
-
-
-.imageCardTitle {
-  color: #2C3930;
-  font-family: "Caveat", cursive;
-  font-weight: bold;
-  font-size: 25px !important; 
-  text-align: left !important;
-}
+  .homeCardTitle {
+    bottom: 0;
+    width: 100%;
+    background-color: #DCD7C9;
+    color: #A27B5C;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
 
 p {
   font-family: "Delius", cursive;
@@ -46,14 +49,22 @@ p {
   text-align: justify !important;
 }
 .home-card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+.homeCardContainer {
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+  margin: 0;
 }
 
-.homeCardContainer {
-  max-width: 16rem;
-  flex: 1 1 16rem;
+button {
+    padding: 0px;
+    border-radius: 50px;
+    border: none;
 }

@@ -70,7 +70,6 @@ const images = [
 function Gallery() {
     return (
         <>
-        
         <div className="gallery-card-grid">
                 {images.map((image) => (
                     <div className="galleryCardContainer" key={image.id}>
@@ -80,7 +79,6 @@ function Gallery() {
                     </div>
                 ))}
         </div>
-
         </>
     );
 };
