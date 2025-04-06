@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 .contactCardImage {
   width: clamp(12rem, 14rem, 16rem);

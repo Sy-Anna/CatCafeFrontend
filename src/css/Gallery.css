@@ -45,7 +45,7 @@ p {
   font-style: normal;
   text-align: justify !important;
 }
-.card-grid {
+.gallery-card-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -53,7 +53,9 @@ p {
   padding: 2rem;
 }
 
-.cardContainer {
-  max-width: 16rem;
-  flex: 1 1 16rem;
+.galleryCardContainer {
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+  margin: 0;
 }

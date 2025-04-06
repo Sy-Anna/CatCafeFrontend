@@ -71,9 +71,9 @@ function Gallery() {
     return (
         <>
         
-        <div className="card-grid">
+        <div className="gallery-card-grid">
                 {images.map((image) => (
-                    <div className="cardContainer" key={image.id}>
+                    <div className="galleryCardContainer" key={image.id}>
                         <div className="imageCard">
                             <img className="imageCardImage" src={image.source} alt="image" />
                         </div>
