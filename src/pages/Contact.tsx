@@ -8,23 +8,28 @@ const persons = [
     {
         id: 1,
         name: "Tyitova Irina",
-        role: "Rendszergazda"
+        role: "Rendszergazda",
+        img: "/img/workers/Irina.jpg"
     },{
         id: 2,
         name: "Berencs Zsolt",
-        role: "Rendszergazda"
+        role: "Rendszergazda",
+        img: "/img/workers/Zsolt.png"
     },{
         id: 3,
         name: "Kopányi Gergő",
-        role: "Rendszergazda"
+        role: "Rendszergazda",
+        img: "/img/workers/Gergő.jpg"
     },{
         id: 4,
         name: "Piovarcs Patrik",
-        role: "Szoftverfejlesztő - Backend"
+        role: "Szoftverfejlesztő - Backend",
+        img: "/img/workers/Patrik.jpg"
     }, {
         id: 5,
         name: "Sáray Anna",
-        role: "Szoftverfejlesztő - Frontend"
+        role: "Szoftverfejlesztő - Frontend",
+        img: "/img/workers/Anna.png"
     }
 ]
 
@@ -38,7 +43,7 @@ function Contact() {
                     {persons.map((persons) => (
                         <Col className="cardContainer" key={persons.id}>
                             <Card className="contactCard">
-                            <img className="contactCardImage" src={Image} alt="webshopImage" />
+                            <img className="contactCardImage" src={persons.img} alt="webshopImage" />
                                 <h1 className="contactCardTitle">
                                     {persons.name}
                                 </h1>

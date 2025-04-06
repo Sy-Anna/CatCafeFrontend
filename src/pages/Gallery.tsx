@@ -1,5 +1,5 @@
-import { Col, Container, Row, Card } from 'react-bootstrap';
 import "../css/Gallery.css";
+import "../css/GalleryDark.css";
 
 
 const images = [
@@ -17,30 +17,69 @@ const images = [
     },
     {
         id: 4,
-        source: "/img/gallery/img4.jpg"
+        source: "/img/gallery/img8.jpeg"
     },
     {
         id: 5,
         source: "/img/gallery/img5.jpg"
     },
-
+    {
+        id: 6,
+        source: "/img/gallery/img6.jpeg"
+    },
+    {
+        id: 7,
+        source: "/img/gallery/img7.jpeg"
+    },
+    {
+        id: 8,
+        source: "/img/gallery/img4.jpg"
+    },
+    {
+        id: 9,
+        source: "/img/gallery/img9.jpeg"
+    },
+    {
+        id: 10,
+        source: "/img/gallery/img10.jpeg"
+    },
+    {
+        id: 11,
+        source: "/img/gallery/img11.jpeg"
+    },
+    {
+        id: 12,
+        source: "/img/gallery/img12.jpeg"
+    },
+    {
+        id: 13,
+        source: "/img/gallery/img13.jpeg"
+    },
+    {
+        id: 14,
+        source: "/img/gallery/img14.jpeg"
+    },
+    {
+        id: 15,
+        source: "/img/gallery/img15.jpeg"
+    },
 ]
+
+
 
 function Gallery() {
     return (
         <>
         
-        <Container fluid="lg" className="mt-4 card-grid">
-            <Row className='gx-4 gy-4 gap-4'> 
+        <div className="card-grid">
                 {images.map((image) => (
-                    <Col className="cardContainer" key={image.id}>
-                        <Card className="imageCard">
-                            <img className="imageCardImage" src={image.source} alt="webshopImage" />
-                        </Card>
-                    </Col>
+                    <div className="cardContainer" key={image.id}>
+                        <div className="imageCard">
+                            <img className="imageCardImage" src={image.source} alt="image" />
+                        </div>
+                    </div>
                 ))}
-            </Row>
-        </Container>
+        </div>
 
         </>
     );

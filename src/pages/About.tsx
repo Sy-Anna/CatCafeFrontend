@@ -5,7 +5,7 @@ import {Row, Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import locationIcon from '../img/icons/marker.png'
 import phoneIcon from '../img/icons/phone-call.png'
-import { UsersApi } from '../libs/api/users';
+// import { UsersApi } from '../libs/api/users';
 
 const addresses = [
     {
