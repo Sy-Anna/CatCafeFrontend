@@ -22,22 +22,40 @@ p {
 .blogImage {
     float: right;
     margin-top: 3.5rem;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
     width: clamp(300px, 40%, 500px);
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 10px #A27B5C;
     object-fit: cover;
+    transition: transform 0.3s ease;
   }
+.blogParagraph a {
+  color: #A27B5C;
+}
   
-  /* Responsiveness*/
-  @media (max-width: 768px) {
-    .float-img {
-      float: none;
-      display: block;
-      margin: 1rem auto;
-      width: 100%;
-      max-width: 100%;
-    }
+/* Responsiveness*/
+@media (max-width: 768px) {
+  .float-img {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 100%;
   }
+}
+.blogImage:hover {
+  box-shadow: 4px 9px #A27B5C;
+  transform: scale(1.2);
+}
+
+:root [dark=true] {
+  .blogImage {
+    box-shadow: 5px 10px #2C3930;
+  }
+  .blogImage:hover {
+    box-shadow: 4px 9px #2C3930;
+  }
+}
+
   
