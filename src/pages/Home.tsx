@@ -26,7 +26,7 @@ const pages = [
     },{
         id: 1,
         source: "/Contact",
-        imgSource: "/img/gallery/img2.jpg",
+        imgSource: "/img/homePage/teamImage.jpg",
         title: "Kapcsolat"
     },{
         id: 1,

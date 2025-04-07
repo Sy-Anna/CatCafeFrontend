@@ -26,6 +26,24 @@ export default function Blog() {
         </div>
 
         <div className="blogParagraph">
+            <img className='blogImage' src="/img/sysAdmin.jpg" alt="image" />
+            <h1>
+            Macskák, Kávé, Meg WiFi – A Rendszergazdák Megérkeztek
+            </h1>
+            <p>
+            Drága cicarajongók, ne ijedjetek meg, ha a napokban furcsa figurák mászkálnak létrákkal, kábelekkel és nagyon komoly arccal a Cat Caféban. Nem UFO-invázió, és nem is egy új escape room – a rendszergazdáink dolgoznak!
+
+            <br />Ugyanis mi nem csak cukik akarunk lenni, hanem szuperszónikus netkapcsolattal is várunk titeket. A háttérben tehát épp épül a WiFi birodalom. Kábelt húznak, routert bűvölnek, switch-eket varázsolnak. Néha morgolódnak, néha beszélnek a géphez, de ez a dolguk. Ők a digitális dzsungel Tarzanjai.
+
+            <br />És hogy miért jó ez neked? Mert hamarosan villámgyors lesz a net, akár Zoom meetinget is tarthatsz egy doromboló szőrmók mellett. A kávé gőzölög, a macska dorombol, te meg simán letöltöd az élet értelmét 5 másodperc alatt.
+
+            <br />Szóval ha most pár napig párhuzamos valóságban élnél, ahol a macskák mellett kábelek is nyújtózkodnak, ne pánikolj – minden érted történik.
+
+            <br /> <br />Stay tuned, a net jön, és gyorsabb lesz, mint egy frissen felriadt cica!
+            </p>
+        </div>
+
+        <div className="blogParagraph">
             <img className='blogImage' src="/img/teamImage.jpg" alt="image" />
             <h1>
             Együtt a csapat
@@ -35,7 +53,7 @@ export default function Blog() {
             <br />Mi inspirálta a Cat Café megnyitását? Mi, az alapítók, mindannyian nagy macskakedvelők vagyunk, és egy régi álmot szerettünk volna valóra váltani: egy olyan helyet, ahol a macskák és a kávé iránti szeretetünket megoszthatjuk másokkal. Teljes cicabedobással igyekszünk megvalósítani álmunk, és ezzel az összes cicaszeretűnek megteremteni új törzshelyét. Reméljük hamarosan találkozunk, és vendégünk lehetsz egy jó kávéra, teára, vagy csak gyönyörködsz a cicás környezetben.
             </p>
         </div>
-        
+
         </>
     );
 }

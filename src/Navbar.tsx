@@ -46,7 +46,7 @@ export default function NavbarComponent() {
             <NavLink className="navLink" href="/Booking">Asztalfoglalás</NavLink>
             <NavLink className="navLink" href="/Webshop">Webshop</NavLink>
             <NavLink className="navLink" href="/Contact">Kapcsolat</NavLink>
-            <NavLink className="navLink" href="./About">Rólunk</NavLink>
+            <NavLink className="navLink" href="/About">Rólunk</NavLink>
           </Nav>
         </Navbar.Collapse>
         <div className='d-flex gap-3 align-items-center'>
@@ -56,13 +56,13 @@ export default function NavbarComponent() {
               onChange={toggleDarkMode}
             />
             <Button className="navButton">
-                <a href="./Cart">
+                <a href="/Cart">
                   <img className="navIcon" src={cartIcon} alt="cart icon" />
                   </a>
 
             </Button>
             <Button className="navButton">
-                <a href="./Profile">
+                <a href="/Profile">
                   <img className="navIcon" src={profileIcon} alt="profile icon" />
                 </a>
             </Button>
