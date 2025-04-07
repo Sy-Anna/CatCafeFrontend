@@ -1,4 +1,3 @@
-import Image from '../img/catCafeIndex.png';
 import { Col, Container, Row, Card } from 'react-bootstrap';
 
 import '../css/Contact.css';
