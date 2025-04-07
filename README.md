@@ -21,10 +21,7 @@ Ensure you have the following installed on your system:
    ```bash
    npm install
    ```
-
-3. Configure the environment:
-   - By default, the API base URL is set in `src/libs/api.ts`. Update it if necessary.
-
+   
 ## Development
 
 To start the development server:
