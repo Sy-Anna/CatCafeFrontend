@@ -14,7 +14,7 @@ Ensure you have the following installed on your system:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Sy-Anna/CatCafeFrontend
    cd cat-cafe-frontend
    ```
 
@@ -95,7 +95,7 @@ Győződj meg róla, hogy a következők telepítve vannak a rendszereden:
 
 1. Klónozd a repót:
   ```bash
-  git clone <repository-url>
+  git clone https://github.com/Sy-Anna/CatCafeFrontend
   cd cat-cafe-frontend
   ```
 
