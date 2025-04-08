@@ -23,9 +23,19 @@ function getApiUrl() {
 	}
 }
 
+function getAuthorizationHeader() {
+	const token = localStorage.getItem('token');
+	if (token) {
+		return { Authorization: `Bearer ${token}` };
+	}
+
+	return {};
+}
+
 export const api = axios.create({
 	baseURL: getApiUrl(),
 	headers: {
 		'Content-Type': 'application/json',
+		...getAuthorizationHeader(),
 	},
 });
