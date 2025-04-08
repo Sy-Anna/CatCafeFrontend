@@ -104,9 +104,6 @@ Győződj meg róla, hogy a következők telepítve vannak a rendszereden:
   npm install
   ```
 
-3. Konfiguráld a környezetet:
-  - Alapértelmezés szerint az API alap URL-je a `src/libs/api.ts` fájlban van beállítva. Szükség esetén frissítsd.
-
 ## Fejlesztés
 
 A fejlesztői szerver indításához:
