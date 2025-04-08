@@ -3,8 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import { UsersApi } from '../libs/api/users';
+import { User } from '../libs/types';
 
-function RegForm() {
+type RegFormProps = {
+	onRegisterSuccess: (user: User) => void;
+};
+
+function RegForm({ onRegisterSuccess }: RegFormProps) {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');

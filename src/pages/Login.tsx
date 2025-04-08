@@ -1,13 +1,17 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { UsersApi } from '../libs/api/users';
+import { User } from '../libs/types';
 import { useEffect, useState } from 'react'
 import useStorageState from 'use-storage-state';
 import { useNavigate } from 'react-router-dom';
 
-function LoginForm() {
+type LoginFormProps = {
+    onLoginSuccess: (user: User) => void;
+  };
+  
+function LoginForm({ onLoginSuccess }: LoginFormProps) {
     const navigate = useNavigate();
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [token, setToken] = useStorageState('token', { defaultValue: '' });
