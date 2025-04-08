@@ -80,6 +80,7 @@ export class BlogApi {
      * @returns 404 - Post not found
      * @returns 409 - Conflict
      */
+    
     static async update(id: number, data: { title?: string, content?: string }) {
         try {
             const response = await api.patch(BlogApi.apiPath + '/' + id, data)
@@ -100,6 +101,7 @@ export class BlogApi {
      * @returns 403 - Forbidden
      * @returns 404 - Post not found
      */
+
     static async delete(id: number) {
         try {
             const response = await api.delete(BlogApi.apiPath + '/' + id)

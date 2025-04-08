@@ -20,7 +20,7 @@ const pages = [
     },{
         id: 1,
         source: "/Webshop",
-        imgSource: "/img/gallery/img2.jpg",
+        imgSource: "/img/homePage/defaultWebshopImg.jpg",
         title: "Webshop"
     },{
         id: 1,
@@ -40,7 +40,7 @@ const Home = () => {
     return <> 
         <div className="home-card-grid">
                 {pages.map((page) => (
-                    <button className="homeCardContainer" key={page.id}>
+                    <div className="homeCardContainer" key={page.id}>
                         <a href={page.source}>
                         <div className="homeCard">
                             <img className="homeCardImage" src={page.imgSource} alt="image" />
@@ -49,7 +49,7 @@ const Home = () => {
                             </div>
                         </div>
                         </a>
-                    </button>
+                    </div>
                 ))}
         </div>
     </>

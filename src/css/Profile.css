@@ -1,0 +1,31 @@
+.profileCard {
+    padding: 2em;
+    background-color: #DCD7C9;
+    border-color: #2C3930;
+    border-radius: 40px;
+    box-shadow: 5px 10px #A27B5C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.login {
+    text-align: left !important;
+}
+
+.loginBtn {
+    background-color: #A27B5C !important;
+    border: #2C3930 1px solid !important;
+    display: inline-block !important;
+    box-shadow: 3px 3px #2C3930 !important; 
+}
+.loginBtn:hover {
+    background-color: #A27B5C !important;
+    border-color: #2C3930 !important;
+    box-shadow: 2px 2px #3F4F44 !important;
+}
+
+.profileCard a {
+    color: #A27B5C;
+}

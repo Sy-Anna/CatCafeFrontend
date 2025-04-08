@@ -1,8 +1,18 @@
-import LoginForm from "./Login";
+import { Card, Container } from 'react-bootstrap';
+import LoginForm from './Login';
+import "../css/Profile.css"
 
 const Profile = () => {
     return (
-        <LoginForm/>
+        <>
+        <Container>
+            <Card className='profileCard'>
+                <LoginForm/>
+            </Card>
+        </Container>
+        
+        
+        </>
     );
 };
 

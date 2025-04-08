@@ -14,6 +14,8 @@ import Booking from "./pages/Booking";
 import Webshop from "./pages/Webshop";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Cart from "./pages/Cart";
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
         <Route path="/Webshop" element={<Webshop />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Profile" element={<Profile />} />
+        
       </Routes>
     </Router>
       )

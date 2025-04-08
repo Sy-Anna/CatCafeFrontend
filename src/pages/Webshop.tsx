@@ -4,7 +4,6 @@ import '../css/Webshop.css';
 import '../css/WebshopDark.css';
 import { Col, Container, Row, Card, Button } from 'react-bootstrap';
 
-
 const products = [
     {
         id: 1,
