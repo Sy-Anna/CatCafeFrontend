@@ -34,7 +34,7 @@ function RegForm() {
 			}
 		} else {
 			console.log('Regisztráció sikeres:', response);
-			navigate('/login');
+			navigate('/Profile');
 		}
 
 		setLoading(false);

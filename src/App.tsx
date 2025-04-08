@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Cart from "./pages/Cart";
 import Profile from './pages/Profile';
+import Cargo from './pages/Cargo.tsx';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path='/Cargo' element={<Cargo/>}/>
         
       </Routes>
     </Router>

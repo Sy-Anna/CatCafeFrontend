@@ -27,6 +27,22 @@ function LoginForm() {
           console.log('Login Successful:', response);
           navigate('/home')
         }
+
+        const [userError, user] = await UsersApi.me();
+
+        if (userError) {
+            console.error('Nem sikerült lekérni a felhasználót', userError);
+            alert('Sikertelen bejelentkezés');
+        } else {
+            console.log('Sikeres bejelentkezés', user);
+            if (user.role == "WORKER") {
+                navigate('/Cargo')
+            } else {
+                navigate('/Home')
+            }
+        }
+
+        
     
         setLoading(false);
       };

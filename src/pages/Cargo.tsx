@@ -32,7 +32,7 @@ const products = [
     },
 ]
 
-function Webshop () {
+function Cargo () {
 
     return (
         <>
@@ -63,4 +63,4 @@ function Webshop () {
     );
 };
 
-export default Webshop;
+export default Cargo;
