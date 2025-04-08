@@ -1,6 +1,7 @@
 # Cat Cafe Frontend
 
 This is the frontend for the Cat Cafe project, built with React, TypeScript, and Vite.
+> For the full docker application check out the [cat-cafe-compose](https://github.com/energypatrikhu/cat-cafe-compose) repository
 
 ## Prerequisites
 
@@ -81,6 +82,7 @@ npm run preview
 # Cat Cafe Frontend
 
 Ez a Cat Cafe projekt frontendje, amely React, TypeScript és Vite segítségével készült.
+> A teljes Docker alkalmazásért nézd meg a [cat-cafe-compose](https://github.com/energypatrikhu/cat-cafe-compose) repót
 
 ## Előfeltételek
 
