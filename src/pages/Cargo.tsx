@@ -57,7 +57,6 @@ function Cargo () {
       setActive(true);
       setImage(null);
 
-      // Újratöltés
       const [_, newProducts] = await ProductsApi.getAll();
       if (newProducts) setProducts(newProducts);
     }

@@ -35,7 +35,7 @@ function Webshop() {
                 {products.map((product) => (
                     <Col className="cardContainer" key={product.id}>
                         <Card className="productCard">
-                            <img className="productCardImage" src={product.image} alt={product.name} />
+                            <img className="productCardImage" src={product.} alt={product.name} />
                             <h1 className="productCardTitle">{product.name}</h1>
                             <div>
                                 <p className="productCardText">{product.price} Ft</p>
