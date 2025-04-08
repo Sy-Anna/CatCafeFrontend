@@ -32,8 +32,10 @@ function getAuthorizationHeader() {
 	return {};
 }
 
+export const API_URL = getApiUrl();
+
 export const api = axios.create({
-	baseURL: getApiUrl(),
+	baseURL: API_URL,
 	headers: {
 		'Content-Type': 'application/json',
 		...getAuthorizationHeader(),
