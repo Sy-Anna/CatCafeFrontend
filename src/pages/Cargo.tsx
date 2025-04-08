@@ -88,7 +88,7 @@ function Cargo() {
 						<Card className='productCard'>
 							<img
 								className='productCardImage'
-								src={`${API_URL}/products/${product.id}/image`}
+								src={`${API_URL}products/${product.id}/image`}
 								alt='webshopImage'
 							/>
 							<h1 className='productCardTitle'>{product.name}</h1>
