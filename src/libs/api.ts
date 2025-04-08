@@ -1,14 +1,30 @@
 import axios from 'axios';
 
-function constructApiDomain() {
+function constructApiDomainDocker() {
 	const protocol = window.location.protocol;
 	const host = window.location.hostname;
 
 	return `${protocol}//${host}:5543/`;
 }
 
+function getApiUrl() {
+	const apiUrl = import.meta.env.VITE_API_URL;
+	if (apiUrl) {
+		return apiUrl;
+	}
+
+	switch (import.meta.env.MODE) {
+		case 'local':
+			return 'http://localhost:3000/';
+		case 'docker':
+			return constructApiDomainDocker();
+		default:
+			return 'https://api.cat-cafe.hu/';
+	}
+}
+
 export const api = axios.create({
-	baseURL: import.meta.env.DEV ? 'https://api.cat-cafe.hu/' : constructApiDomain(),
+	baseURL: getApiUrl(),
 	headers: {
 		'Content-Type': 'application/json',
 	},
