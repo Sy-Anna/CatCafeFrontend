@@ -59,16 +59,10 @@ function Cargo() {
 			setActive(true);
 			setImage(null);
 
-<<<<<<< HEAD
-      const [_, newProducts] = await ProductsApi.getAll();
-      if (newProducts) setProducts(newProducts);
-    }
-=======
 			// Újratöltés
 			const [_, newProducts] = await ProductsApi.getAll();
 			if (newProducts) setProducts(newProducts);
 		}
->>>>>>> 4a7847bab34cd32c9d07a29435c772df8d70f8c3
 
 		setFormLoading(false);
 	};
