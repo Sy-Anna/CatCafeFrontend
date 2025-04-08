@@ -9,6 +9,7 @@ type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 function Booking () {
+  
     const [value, onChange] = useState<Value>(new Date());
 
     return (
