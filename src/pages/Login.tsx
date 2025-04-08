@@ -1,19 +1,48 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { UsersApi } from '../libs/api/users';
+import { useEffect, useState } from 'react'
+import useStorageState from 'use-storage-state';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [token, setToken] = useStorageState('token', { defaultValue: '' });
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+        setLoading(true);
+    
+        const [error, response] = await UsersApi.login(email, password);
+    
+        if (error) {
+          console.error('Login error', error);
+          alert('Hibás email vagy jelszó!');
+        } else {
+          setToken(response!.token);
+          console.log('Login Successful:', response);
+          navigate('/home')
+        }
+    
+        setLoading(false);
+      };
+    
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}> 
         <h1>Bejelentkezés</h1>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control type="email" placeholder="email" />
+        <Form.Control type="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Control type="password" placeholder="jelszó" />
+        <Form.Control type="password" placeholder="jelszó" value={password} onChange={e => setPassword(e.target.value)}/>
       </Form.Group>
       
-      <Button className="loginBtn" variant="primary" type="submit">
+      <Button className="loginBtn" variant="primary" type="submit" disabled = {loading}>
         Tovább
       </Button>
       <br />

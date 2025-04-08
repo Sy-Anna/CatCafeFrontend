@@ -21,6 +21,7 @@
     "react-router-dom": "^7.4.0",
     "reactstrap": "^9.2.3",
     "styled-components": "^6.1.16",
+    "use-local-storage-state": "^19.5.0",
     "use-storage-state": "^5.0.0"
   },
   "devDependencies": {
