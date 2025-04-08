@@ -40,6 +40,26 @@ function Webshop() {
 			)}
 			{error && <Alert variant='danger'>{error}</Alert>}
 
+<<<<<<< HEAD
+            <Row className="gx-4 gy-4 gap-4">
+                {products.map((product) => (
+                    <Col className="cardContainer" key={product.id}>
+                        <Card className="productCard">
+                            <img className="productCardImage" src={product.} alt={product.name} />
+                            <h1 className="productCardTitle">{product.name}</h1>
+                            <div>
+                                <p className="productCardText">{product.price} Ft</p>
+                                <Button className="productCardButton">
+                                    <img className="icon" src={CartIcon} alt="cart icon" />
+                                </Button>
+                            </div>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
+        </Container>
+    );
+=======
 			<Row className='gx-4 gy-4 gap-4'>
 				{products.map((product) => (
 					<Col
@@ -68,6 +88,7 @@ function Webshop() {
 			</Row>
 		</Container>
 	);
+>>>>>>> 4a7847bab34cd32c9d07a29435c772df8d70f8c3
 }
 
 export default Webshop;
