@@ -26,7 +26,7 @@ function getApiUrl() {
 function getAuthorizationHeader() {
 	const token = localStorage.getItem('token');
 	if (token) {
-		return { Authorization: `Bearer ${token}` };
+		return { Authorization: `Bearer ${token.slice(1, -1)}` };
 	}
 
 	return {};
