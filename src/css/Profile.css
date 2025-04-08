@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 100px;
+    padding-bottom: 30px;
 }
 
 .login {
@@ -18,7 +19,9 @@
     background-color: #A27B5C !important;
     border: #2C3930 1px solid !important;
     display: inline-block !important;
-    box-shadow: 3px 3px #2C3930 !important; 
+    box-shadow: 3px 3px #2C3930 !important;
+    margin: 5px; 
+    margin-bottom: 30px;
 }
 .loginBtn:hover {
     background-color: #A27B5C !important;
