@@ -22,7 +22,7 @@ Ensure you have the following installed on your system:
    ```bash
    npm install
    ```
-   
+
 ## Development
 
 To start the development server:
@@ -34,9 +34,25 @@ This will start the Vite development server. Open [http://localhost:5173](http:/
 ## Build
 
 To build the project for production:
-```bash
-npm run build
-```
+- Build the project in production mode:
+    > This is the default mode<br>
+    > In this mode, the application will use the public API URL, unless specified otherwise
+    ```bash
+    npm run build
+    ```
+
+- Build the project in local mode:
+    > In this mode, the application will use the local API URL (http://localhost:3000), unless specified otherwise
+    ```bash
+    npm run build:local
+    ```
+
+- Build the project in docker mode:
+    > In this mode, the application will use the docker API URL ({protocol}://{hostname}:5543), unless specified otherwise
+    ```bash
+    npm run build:docker
+    ```
+
 The build artifacts will be output to the `dist` directory.
 
 ## Preview
@@ -51,9 +67,15 @@ npm run preview
 ### Without Docker
 
 1. Build the project:
-   ```bash
-   npm run build
-   ```
+    > This is the default mode
+    ```bash
+    npm run build
+    ```
+    or for local mode:
+    > In this mode, the application will use the local API URL (http://localhost:3000), unless specified otherwise
+    ```bash
+    npm run build:local
+    ```
 
 2. Serve the `dist` directory using a static file server. For example, using `serve`:
    ```bash
@@ -65,15 +87,21 @@ npm run preview
 
 ### Using Docker
 
-1. Build the Docker image:
-   ```bash
-   docker build -t cat-cafe-frontend .
-   ```
+1. Build the project in docker mode:
+    > Build the project, refer to the build section above for more information
+    ```bash
+    npm run build
+    ```
 
-2. Run the container:
-   ```bash
-   docker run -p 80:80 cat-cafe-frontend
-   ```
+2. Build the Docker image:
+    ```bash
+    docker build -t cat-cafe-frontend .
+    ```
+
+3. Run the container:
+    ```bash
+    docker run -p 80:80 cat-cafe-frontend
+    ```
 
 3. Open [http://localhost](http://localhost) in your browser.
 
@@ -82,7 +110,7 @@ npm run preview
 # Cat Cafe Frontend
 
 Ez a Cat Cafe projekt frontendje, amely React, TypeScript és Vite segítségével készült.
-> A teljes Docker alkalmazásért nézd meg a [cat-cafe-compose](https://github.com/energypatrikhu/cat-cafe-compose) repót
+> A teljes docker alkalmazásért nézd meg a [cat-cafe-compose](https://github.com/energypatrikhu/cat-cafe-compose) repót.
 
 ## Előfeltételek
 
@@ -114,11 +142,27 @@ Ez elindítja a Vite fejlesztői szervert. Nyisd meg a [http://localhost:5173](h
 
 ## Build
 
-A projekt produkciós buildjének elkészítéséhez:
-```bash
-npm run build
-```
-A build fájlok a `dist` könyvtárba kerülnek.
+A projekt buildelése produkciós környezethez:
+- Buildelés produkciós módban:
+   > Ez az alapértelmezett mód<br>
+   > Ebben a módban az alkalmazás a nyilvános API URL-t használja, hacsak másként nincs megadva.
+   ```bash
+   npm run build
+   ```
+
+- Buildelés helyi módban:
+   > Ebben a módban az alkalmazás a helyi API URL-t használja (http://localhost:3000), hacsak másként nincs megadva.
+   ```bash
+   npm run build:local
+   ```
+
+- Buildelés docker módban:
+   > Ebben a módban az alkalmazás a docker API URL-t használja ({protocol}://{hostname}:5543), hacsak másként nincs megadva.
+   ```bash
+   npm run build:docker
+   ```
+
+A buildelt fájlok a `dist` könyvtárba kerülnek.
 
 ## Előnézet
 
@@ -127,14 +171,20 @@ A produkciós build helyi előnézetéhez:
 npm run preview
 ```
 
-## Használat
+## Telepítés
 
 ### Docker nélkül
 
-1. Készítsd el a buildet:
-  ```bash
-  npm run build
-  ```
+1. Buildeld a projektet:
+   > Ez az alapértelmezett mód
+   ```bash
+   npm run build
+   ```
+   vagy helyi módban:
+   > Ebben a módban az alkalmazás a helyi API URL-t használja (http://localhost:3000), hacsak másként nincs megadva.
+   ```bash
+   npm run build:local
+   ```
 
 2. Szolgáld ki a `dist` könyvtárat egy statikus fájlszerverrel. Például a `serve` használatával:
   ```bash
@@ -146,14 +196,20 @@ npm run preview
 
 ### Docker használatával
 
-1. Készítsd el a Docker képet:
-  ```bash
-  docker build -t cat-cafe-frontend .
-  ```
+1. Buildeld a projektet docker módban:
+   > Buildeld a projektet, további információért lásd a build szekciót fentebb.
+   ```bash
+   npm run build
+   ```
 
-2. Indítsd el a konténert:
-  ```bash
-  docker run -p 80:80 cat-cafe-frontend
-  ```
+2. Építsd meg a Docker képet:
+   ```bash
+   docker build -t cat-cafe-frontend .
+   ```
+
+3. Futtasd a konténert:
+   ```bash
+   docker run -p 80:80 cat-cafe-frontend
+   ```
 
 3. Nyisd meg a [http://localhost](http://localhost) címet a böngésződben.
