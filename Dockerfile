@@ -1,7 +1,11 @@
-FROM nginx:alpine
+FROM node:lts-alpine
 
-# Copy frontend files directly to nginx directory
-COPY dist /usr/share/nginx/html
+WORKDIR /app
 
-# Expose the application port
-EXPOSE 80
+COPY [ "package.json", "package-lock.json", "./" ]
+RUN npm ci --no-audit
+
+COPY dist dist
+COPY vite.config.ts vite.config.ts
+
+ENTRYPOINT [ "npm", "run", "preview", "--", "--host", "--mode", "docker" ]
