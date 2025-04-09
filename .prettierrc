@@ -1,0 +1,11 @@
+{
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "arrowParens": "always",
+    "endOfLine": "auto",
+    "objectWrap": "collapse",
+    "htmlWhitespaceSensitivity": "strict",
+    "printWidth": 80,
+    "semi": true,
+    "singleAttributePerLine": true
+}
