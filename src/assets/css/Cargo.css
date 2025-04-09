@@ -1,33 +1,33 @@
 .checkBox {
-	text-align: left;
-	width: 20%;
+    text-align: left;
+    width: 20%;
 }
 
 .cargoCard {
-	width: clamp(14rem, 16rem, 18rem);
-	height: 100%;
-	padding: 1rem;
-	background-color: #dcd7c9;
-	border-color: #2c3930;
-	border-radius: 20px;
-	box-shadow: 5px 10px #a27b5c;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+    width: clamp(14rem, 16rem, 18rem);
+    height: 100%;
+    padding: 1rem;
+    background-color: #dcd7c9;
+    border-color: #2c3930;
+    border-radius: 20px;
+    box-shadow: 5px 10px #a27b5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cargoButton {
-	background-color: #a27b5c;
-	border: #2c3930 1px solid;
-	display: inline;
-	float: right;
-	box-shadow: 3px 3px #2c3930;
-	width: 40px;
-	margin: 0 !important;
+    background-color: #a27b5c;
+    border: #2c3930 1px solid;
+    display: inline;
+    float: right;
+    box-shadow: 3px 3px #2c3930;
+    width: 40px;
+    margin: 0 !important;
 }
 
 .cargoCardText {
-	display: inline;
-	float: left !important;
-	width: 100%;
+    display: inline;
+    float: left !important;
+    width: 100%;
 }

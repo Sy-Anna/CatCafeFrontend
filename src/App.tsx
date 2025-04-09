@@ -14,28 +14,58 @@ import Profile from "@pages/Profile";
 import Webshop from "@pages/Webshop";
 
 export default function App() {
-	useEffect(() => {
-		if (location.pathname === "/") {
-			location.replace("/Home");
-		}
-	}, []);
+    useEffect(() => {
+        if (location.pathname === "/") {
+            location.replace("/Home");
+        }
+    }, []);
 
-	return (
-		<Router>
-			<NavbarComponent />
+    return (
+        <Router>
+            <NavbarComponent />
 
-			<Routes>
-				<Route path='/Home' element={<Home />} />
-				<Route path='/Blog' element={<Blog />} />
-				<Route path='/Gallery' element={<Gallery />} />
-				<Route path='/Booking' element={<Booking />} />
-				<Route path='/Webshop' element={<Webshop />} />
-				<Route path='/Contact' element={<Contact />} />
-				<Route path='/About' element={<About />} />
-				<Route path='/Cart' element={<Cart />} />
-				<Route path='/Profile' element={<Profile />} />
-				<Route path='/Cargo' element={<Cargo />} />
-			</Routes>
-		</Router>
-	);
+            <Routes>
+                <Route
+                    path="/Home"
+                    element={<Home />}
+                />
+                <Route
+                    path="/Blog"
+                    element={<Blog />}
+                />
+                <Route
+                    path="/Gallery"
+                    element={<Gallery />}
+                />
+                <Route
+                    path="/Booking"
+                    element={<Booking />}
+                />
+                <Route
+                    path="/Webshop"
+                    element={<Webshop />}
+                />
+                <Route
+                    path="/Contact"
+                    element={<Contact />}
+                />
+                <Route
+                    path="/About"
+                    element={<About />}
+                />
+                <Route
+                    path="/Cart"
+                    element={<Cart />}
+                />
+                <Route
+                    path="/Profile"
+                    element={<Profile />}
+                />
+                <Route
+                    path="/Cargo"
+                    element={<Cargo />}
+                />
+            </Routes>
+        </Router>
+    );
 }

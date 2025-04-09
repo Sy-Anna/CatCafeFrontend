@@ -10,40 +10,58 @@ import RegForm from "@pages/Registration";
 import "@assets/css/Profile.css";
 
 export default function Profile() {
-	const [loginOrReg, setLoginOrReg] = useState<"login" | "reg">("login");
-	const [user, setUser] = useState<User | null>(null);
-	const [loading, setLoading] = useState(true);
+    const [loginOrReg, setLoginOrReg] = useState<"login" | "reg">("login");
+    const [user, setUser] = useState<User | null>(null);
+    const [loading, setLoading] = useState(true);
 
-	const toggleForm = () => {
-		setLoginOrReg(loginOrReg === "login" ? "reg" : "login");
-	};
+    const toggleForm = () => {
+        setLoginOrReg(loginOrReg === "login" ? "reg" : "login");
+    };
 
-	useEffect(() => {
-		(async () => {
-			const [err, userData] = await UsersApi.me();
-			if (!err && userData) {
-				setUser(userData);
-			}
-			setLoading(false);
-		})();
-	}, []);
+    useEffect(() => {
+        (async () => {
+            const [err, userData] = await UsersApi.me();
+            if (!err && userData) {
+                setUser(userData);
+            }
+            setLoading(false);
+        })();
+    }, []);
 
-	if (loading) return <Spinner animation='border' role='status' />;
+    if (loading)
+        return (
+            <Spinner
+                animation="border"
+                role="status"
+            />
+        );
 
-	return (
-		<Container>
-			<Card className='profileCard'>
-				{user ? (
-					<MyPage user={user} onLogout={() => setUser(null)} />
-				) : (
-					<>
-						{loginOrReg === "login" ? <LoginForm onLoginSuccess={(u) => setUser(u)} /> : <RegForm />}
-						<button className='loginBtn' onClick={toggleForm}>
-							{loginOrReg === "login" ? "Még nincs profilom" : "Már van profilom"}
-						</button>
-					</>
-				)}
-			</Card>
-		</Container>
-	);
+    return (
+        <Container>
+            <Card className="profileCard">
+                {user ? (
+                    <MyPage
+                        user={user}
+                        onLogout={() => setUser(null)}
+                    />
+                ) : (
+                    <>
+                        {loginOrReg === "login" ? (
+                            <LoginForm onLoginSuccess={(u) => setUser(u)} />
+                        ) : (
+                            <RegForm />
+                        )}
+                        <button
+                            className="loginBtn"
+                            onClick={toggleForm}
+                        >
+                            {loginOrReg === "login"
+                                ? "Még nincs profilom"
+                                : "Már van profilom"}
+                        </button>
+                    </>
+                )}
+            </Card>
+        </Container>
+    );
 }
