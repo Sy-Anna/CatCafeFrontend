@@ -6,6 +6,7 @@ import CartIcon from '../img/icons/cartIcon.png';
 import { API_URL } from '../libs/api';
 import { ProductsApi } from '../libs/api/products';
 import type { Product } from '../libs/types';
+import DeleteIcon from "/img/icons/delete.png";
 import "../css/Cargo.css"
 import '../css/Webshop.css';
 import '../css/WebshopDark.css';
@@ -63,7 +64,6 @@ function Cargo() {
 			setActive(true);
 			setImage(null);
 
-			// Újratöltés
 			const [_, newProducts] = await ProductsApi.getAll();
 			if (newProducts) setProducts(newProducts);
 		}
@@ -98,7 +98,7 @@ function Cargo() {
 							<h1 className='productCardTitle'>{product.name}</h1>
 							<p className='productCardText'>{product.price} Ft</p>
 							<Button
-								className='cargoButton'
+								className='productCardButton'
 								onClick={async () => {
 									if (window.confirm(`Biztosan törölni szeretnéd: ${product.name}?`)) {
 									const [error] = await ProductsApi.delete(product.id);
@@ -112,13 +112,13 @@ function Cargo() {
 										}
 									}
 								}}
-							>x
+							>
+								<img className='icon' src={DeleteIcon} alt="delete" />
 							</Button>
 						</Card>
 					</Col>
 				))}
-			</Row>
-			<Card className='cargoCard pt-0 pb-0' >
+				<Card className='cargoCard pt-0' >
 			<Form
 				onSubmit={handleSubmit}
 				className='mt-5'>
@@ -178,14 +178,17 @@ function Cargo() {
 				</Form.Group>
 
 				<Button
-					className='productCardButton mt-0'
+					className='cargoButton mt-0'
 					type='submit'
 					disabled={formLoading}>
-					{formLoading ? 'Mentés...' : 'Tovább'}
+					{formLoading ? '+' : '+'}
+
 				</Button>
 				
 			</Form>
 			</Card>
+			</Row>
+			
 		</Container>
 	);
 }
