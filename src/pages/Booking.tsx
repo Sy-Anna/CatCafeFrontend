@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
 
+import "@assets/css/Calendar.css";
+import "@assets/css/CalendarDark.css";
 import "react-calendar/dist/Calendar.css";
-import "../css/Calendar.css";
-import "../css/CalendarDark.css";
 
 type ValuePiece = Date | null;
 

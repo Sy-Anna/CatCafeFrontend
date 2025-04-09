@@ -3,8 +3,9 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import useStorageState from "use-storage-state";
-import { UsersApi } from "../libs/api/users";
-import { User } from "../libs/types";
+
+import { UsersApi } from "@/libs/api/users";
+import { User } from "@/libs/types";
 
 type LoginFormProps = {
 	onLoginSuccess: (user: User) => void;

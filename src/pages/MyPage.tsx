@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
-import { UsersApi } from "../libs/api/users";
-import { User } from "../libs/types";
+
+import { UsersApi } from "@/libs/api/users";
+import { User } from "@/libs/types";
 
 type MyPageProps = {
 	user: User;

@@ -1,6 +1,7 @@
 import type { AxiosError } from "axios";
-import { api } from "../api";
-import { ApiError, Reservation } from "../types";
+
+import { api } from "@/libs/api";
+import { ApiError, Reservation } from "@/libs/types";
 
 export class ReservationsApi {
 	/**

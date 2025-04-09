@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Form, Row, Spinner } from "react-bootstrap";
-import { API_URL } from "../libs/api";
-import { ProductsApi } from "../libs/api/products";
-import type { Product } from "../libs/types";
-import DeleteIcon from "/img/icons/delete.png";
 
-import "../css/Cargo.css";
-import "../css/Webshop.css";
-import "../css/WebshopDark.css";
+import { API_URL } from "@/libs/api";
+import { ProductsApi } from "@/libs/api/products";
+import type { Product } from "@/libs/types";
+
+// import DeleteIcon from "@assets/img/icons/delete.png";
+
+import "@assets/css/Cargo.css";
+import "@assets/css/Webshop.css";
+import "@assets/css/WebshopDark.css";
 
 export default function Cargo() {
 	const [products, setProducts] = useState<Product[]>([]);
@@ -99,7 +101,7 @@ export default function Cargo() {
 										}
 									}
 								}}>
-								<img className='icon' src={DeleteIcon} alt='delete' />
+								{/* <img className='icon' src={DeleteIcon} alt='delete' /> */}
 							</Button>
 						</Card>
 					</Col>

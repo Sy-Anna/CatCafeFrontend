@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { Alert, Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
-import CartIcon from "../img/icons/cartIcon.png";
-import { API_URL } from "../libs/api";
-import { ProductsApi } from "../libs/api/products";
-import { Product } from "../libs/types";
 
-import "../css/Webshop.css";
-import "../css/WebshopDark.css";
+import { API_URL } from "@/libs/api";
+import { ProductsApi } from "@/libs/api/products";
+import { Product } from "@/libs/types";
+
+import CartIcon from "@assets/img/icons/cartIcon.png";
+
+import "@assets/css/Webshop.css";
+import "@assets/css/WebshopDark.css";
 
 export default function Webshop() {
 	const [products, setProducts] = useState<Product[]>([]);

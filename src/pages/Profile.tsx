@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Card, Container, Spinner } from "react-bootstrap";
-import { UsersApi } from "../libs/api/users";
-import { User } from "../libs/types";
-import LoginForm from "./Login";
-import MyPage from "./MyPage";
-import RegForm from "./Registration";
 
-import "../css/Profile.css";
+import { UsersApi } from "@/libs/api/users";
+import { User } from "@/libs/types";
+import LoginForm from "@pages/Login";
+import MyPage from "@pages/MyPage";
+import RegForm from "@pages/Registration";
+
+import "@assets/css/Profile.css";
 
 export default function Profile() {
 	const [loginOrReg, setLoginOrReg] = useState<"login" | "reg">("login");

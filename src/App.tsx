@@ -1,20 +1,20 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import NavbarComponent from "./Navbar.tsx";
-import About from "./pages/About";
-import Blog from "./pages/Blog.tsx";
-import Booking from "./pages/Booking";
-import Cargo from "./pages/Cargo.tsx";
-import Cart from "./pages/Cart";
-import Contact from "./pages/Contact";
-import Gallery from "./pages/Gallery";
-import Home from "./pages/Home.tsx";
-import Profile from "./pages/Profile";
-import Webshop from "./pages/Webshop";
+import NavbarComponent from "@/Navbar.tsx";
+import About from "@pages/About";
+import Blog from "@pages/Blog.tsx";
+import Booking from "@pages/Booking";
+import Cargo from "@pages/Cargo.tsx";
+import Cart from "@pages/Cart";
+import Contact from "@pages/Contact";
+import Gallery from "@pages/Gallery";
+import Home from "@pages/Home.tsx";
+import Profile from "@pages/Profile";
+import Webshop from "@pages/Webshop";
 
+import "@assets/css/App.css";
+import "@assets/css/AppDark.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./css/App.css";
-import "./css/AppDark.css";
 
 export default function App() {
 	return (

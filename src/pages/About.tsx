@@ -1,9 +1,10 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
-import locationIcon from "../img/icons/marker.png";
-import phoneIcon from "../img/icons/phone-call.png";
 
-import "../css/About.css";
-import "../css/AboutDark.css";
+import locationIcon from "@assets/img/icons/marker.png";
+import phoneIcon from "@assets/img/icons/phone-call.png";
+
+import "@assets/css/About.css";
+import "@assets/css/AboutDark.css";
 
 const addresses = [
 	{

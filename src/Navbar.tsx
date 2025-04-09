@@ -4,9 +4,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import cartIcon from "./img/icons/cartIcon2.png";
-import profileIcon from "./img/icons/profileIcon.png";
-import logoSmall from "./img/logoSmall.png";
+
+import cartIcon from "@assets/img/icons/cartIcon2.png";
+import profileIcon from "@assets/img/icons/profileIcon.png";
+import logoSmall from "@assets/img/logoSmall.png";
 
 export default function NavbarComponent() {
 	// darkMode

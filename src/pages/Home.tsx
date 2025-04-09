@@ -1,5 +1,5 @@
-import "../css/Home.css";
-import "../css/HomeDark.css";
+import "@assets/css/Home.css";
+import "@assets/css/HomeDark.css";
 
 const pages = [
 	{

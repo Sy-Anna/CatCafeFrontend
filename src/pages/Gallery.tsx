@@ -1,5 +1,5 @@
-import "../css/Gallery.css";
-import "../css/GalleryDark.css";
+import "@assets/css/Gallery.css";
+import "@assets/css/GalleryDark.css";
 
 const images = Object.values(
 	import.meta.glob("/src/img/gallery/*.{jpg,jpeg,png,gif,webp}", {

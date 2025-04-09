@@ -1,7 +1,7 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 
-import "../css/Contact.css";
-import "../css/ContactDark.css";
+import "@assets/css/Contact.css";
+import "@assets/css/ContactDark.css";
 
 const persons = [
 	{
