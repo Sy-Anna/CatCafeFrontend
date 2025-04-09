@@ -1,61 +1,59 @@
 h1 {
-    color: #2C3930;
-    font-family: "Caveat", cursive !important;
-    font-weight: bold;
-    font-size: 40px !important; 
-    text-align: left;
-  }
-p {
-    font-family: "Fuzzy Bubbles", sans-serif !important;
-    font-weight: 500;
-    font-size: 18px;
-    font-style: normal;
-    text-align: justify;
-  }
-.blogParagraph {
-    display: flow-root; 
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    line-height: 1.7;
-  }
-  
-.blogImage {
-    float: right;
-    margin-top: 3.5rem;
-    margin-left: 5rem;
-    margin-bottom: 5rem;
-    width: clamp(300px, 40%, 500px);
-    border-radius: 12px;
-    box-shadow: 5px 10px #A27B5C;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-.blogParagraph a {
-  color: #A27B5C;
+	color: #2c3930;
+	font-family: "Caveat", cursive !important;
+	font-weight: bold;
+	font-size: 40px !important;
+	text-align: left;
 }
-  
+p {
+	font-family: "Fuzzy Bubbles", sans-serif !important;
+	font-weight: 500;
+	font-size: 18px;
+	font-style: normal;
+	text-align: justify;
+}
+.blogParagraph {
+	display: flow-root;
+	margin-bottom: 2rem;
+	font-size: 1.1rem;
+	line-height: 1.7;
+}
+
+.blogImage {
+	float: right;
+	margin-top: 3.5rem;
+	margin-left: 5rem;
+	margin-bottom: 5rem;
+	width: clamp(300px, 40%, 500px);
+	border-radius: 12px;
+	box-shadow: 5px 10px #a27b5c;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+.blogParagraph a {
+	color: #a27b5c;
+}
+
 /* Responsiveness*/
 @media (max-width: 768px) {
-  .float-img {
-    float: none;
-    display: block;
-    margin: 1rem auto;
-    width: 100%;
-    max-width: 100%;
-  }
+	.float-img {
+		float: none;
+		display: block;
+		margin: 1rem auto;
+		width: 100%;
+		max-width: 100%;
+	}
 }
 .blogImage:hover {
-  box-shadow: 4px 9px #A27B5C;
-  transform: scale(1.2);
+	box-shadow: 4px 9px #a27b5c;
+	transform: scale(1.2);
 }
 
-:root [dark=true] {
-  .blogImage {
-    box-shadow: 5px 10px #2C3930;
-  }
-  .blogImage:hover {
-    box-shadow: 4px 9px #2C3930;
-  }
+:root [dark="true"] {
+	.blogImage {
+		box-shadow: 5px 10px #2c3930;
+	}
+	.blogImage:hover {
+		box-shadow: 4px 9px #2c3930;
+	}
 }
-
-  

@@ -1,12 +1,10 @@
-:root [dark=true] {
-    .imageCard {
-        border: #2C3930 1px solid;
-        box-shadow: 5px 10px #2C3930;
-    }
+:root [dark="true"] {
+	.imageCard {
+		border: #2c3930 1px solid;
+		box-shadow: 5px 10px #2c3930;
+	}
 
-    .imageCard:hover {
-        box-shadow: 4px 9px #2C3930;
-    }
-      
-      
+	.imageCard:hover {
+		box-shadow: 4px 9px #2c3930;
+	}
 }

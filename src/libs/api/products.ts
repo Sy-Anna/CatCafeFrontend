@@ -1,11 +1,11 @@
-import { api } from '../api';
-import { ApiError, Product } from '../types';
+import { api } from "../api";
+import { ApiError, Product } from "../types";
 
 export class ProductsApi {
 	/**
 	 * Define path for easier use
 	 */
-	private static apiPath = '/products';
+	private static apiPath = "/products";
 
 	/**
 	 * Endpoint for adding new products
@@ -35,7 +35,7 @@ export class ProductsApi {
 				},
 				{
 					headers: {
-						'Content-Type': 'multipart/form-data',
+						"Content-Type": "multipart/form-data",
 					},
 				},
 			);
@@ -52,14 +52,14 @@ export class ProductsApi {
 	 * @returns 200 - List of products
 	 */
 	static async getAll(
-		query: { search?: string; order: 'name' | 'price'; direction: 'asc' | 'desc' } = {
-			search: '',
-			order: 'name',
-			direction: 'asc',
+		query: { search?: string; order: "name" | "price"; direction: "asc" | "desc" } = {
+			search: "",
+			order: "name",
+			direction: "asc",
 		},
 	) {
 		try {
-			const response = await api.get(ProductsApi.apiPath + '?' + new URLSearchParams(query).toString());
+			const response = await api.get(ProductsApi.apiPath + "?" + new URLSearchParams(query).toString());
 
 			return [null, response.data] as [null, Array<Product>];
 		} catch (error: any) {
@@ -77,7 +77,7 @@ export class ProductsApi {
 	 */
 	static async get(id: number) {
 		try {
-			const response = await api.get(ProductsApi.apiPath + '/' + id);
+			const response = await api.get(ProductsApi.apiPath + "/" + id);
 
 			return [null, response.data] as [null, Product];
 		} catch (error: any) {
@@ -107,9 +107,9 @@ export class ProductsApi {
 		data: { name?: string; description?: string; price?: number; quantity?: string; image?: File },
 	) {
 		try {
-			const response = await api.patch(ProductsApi.apiPath + '/' + id, data, {
+			const response = await api.patch(ProductsApi.apiPath + "/" + id, data, {
 				headers: {
-					'Content-Type': 'multipart/form-data',
+					"Content-Type": "multipart/form-data",
 				},
 			});
 
@@ -132,7 +132,7 @@ export class ProductsApi {
 	 */
 	static async delete(id: number) {
 		try {
-			const response = await api.delete(ProductsApi.apiPath + '/' + id);
+			const response = await api.delete(ProductsApi.apiPath + "/" + id);
 
 			return [null, response.data] as [null, string];
 		} catch (error: any) {

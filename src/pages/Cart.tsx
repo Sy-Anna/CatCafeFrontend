@@ -1,10 +1,7 @@
-
-const Cart = () => {
-    return (
-        <div>
-            <p>cart</p>
-        </div>
-    );
-};
-
-export default Cart;
+export default function Cart() {
+	return (
+		<div>
+			<p>cart</p>
+		</div>
+	);
+}

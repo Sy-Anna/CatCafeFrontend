@@ -1,56 +1,56 @@
-body[dark=true] {
-  background-color: #3F4F44 !important;
+body[dark="true"] {
+	background-color: #3f4f44 !important;
 
-    /* Navbar */
-    .navbar {
-      background-color: #2C3930;
-      color: #DCD7C9 !important;
-    }
-    .navLink {
-      margin-right: 8px;
-      color: #A27B5C !important;
-    }
-    .navButton {
-      background-color: #DCD7C9 !important;
-      border: #A27B5C 1px solid !important;
-      box-shadow: 3px 3px #A27B5C !important;  
-    }
-    .navSwitch .form-check-input{
-      display: inline-block;
-      transform: rotate(90deg);
-      background-color: #DCD7C9;
-      border: #A27B5C 1px solid !important;
-      width: 40px !important;
-      height: 20px;
-      float: right;
-    }
-    .navbar-toggler {
-      border: #3F4F44 1px solid !important;
-    }
-    /* navbar responsiveness */
-    .navButton:hover {
-      background-color: #bdb6aa !important;
-      border-color: #A27B5C !important;
-      box-shadow: 2px 2px #A27B5C !important;
-    }
-    .navbar-toggler:hover {
-      border: 2px solid #3F4F44 !important;
-      background-color: #3F4F44;
-    }
+	/* Navbar */
+	.navbar {
+		background-color: #2c3930;
+		color: #dcd7c9 !important;
+	}
+	.navLink {
+		margin-right: 8px;
+		color: #a27b5c !important;
+	}
+	.navButton {
+		background-color: #dcd7c9 !important;
+		border: #a27b5c 1px solid !important;
+		box-shadow: 3px 3px #a27b5c !important;
+	}
+	.navSwitch .form-check-input {
+		display: inline-block;
+		transform: rotate(90deg);
+		background-color: #dcd7c9;
+		border: #a27b5c 1px solid !important;
+		width: 40px !important;
+		height: 20px;
+		float: right;
+	}
+	.navbar-toggler {
+		border: #3f4f44 1px solid !important;
+	}
+	/* navbar responsiveness */
+	.navButton:hover {
+		background-color: #bdb6aa !important;
+		border-color: #a27b5c !important;
+		box-shadow: 2px 2px #a27b5c !important;
+	}
+	.navbar-toggler:hover {
+		border: 2px solid #3f4f44 !important;
+		background-color: #3f4f44;
+	}
 
-    h1 {
-      color: #A27B5C;
-      font-family: "Caveat", cursive;
-      font-weight: bold;
-      font-size: 25px; 
-      text-align: left;
-    }
+	h1 {
+		color: #a27b5c;
+		font-family: "Caveat", cursive;
+		font-weight: bold;
+		font-size: 25px;
+		text-align: left;
+	}
 
-    p {
-      color: #DCD7C9;
-      font-family: "Delius", cursive;
-      font-weight: 400;
-      font-style: normal;
-      text-align: justify;
-    }
+	p {
+		color: #dcd7c9;
+		font-family: "Delius", cursive;
+		font-weight: 400;
+		font-style: normal;
+		text-align: justify;
+	}
 }

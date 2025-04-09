@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 function constructApiDomainDocker() {
 	const protocol = window.location.protocol;
@@ -14,17 +14,17 @@ function getApiUrl() {
 	}
 
 	switch (import.meta.env.MODE) {
-		case 'local':
-			return 'http://localhost:3000/';
-		case 'docker':
+		case "local":
+			return "http://localhost:3000/";
+		case "docker":
 			return constructApiDomainDocker();
 		default:
-			return 'https://api.cat-cafe.hu/';
+			return "https://api.cat-cafe.hu/";
 	}
 }
 
 function getAuthorizationHeader() {
-	const token = localStorage.getItem('token');
+	const token = localStorage.getItem("token");
 	if (token) {
 		return { Authorization: `Bearer ${token.slice(1, -1)}` };
 	}
@@ -37,7 +37,7 @@ export const API_URL = getApiUrl();
 export const api = axios.create({
 	baseURL: API_URL,
 	headers: {
-		'Content-Type': 'application/json',
+		"Content-Type": "application/json",
 		...getAuthorizationHeader(),
 	},
 });

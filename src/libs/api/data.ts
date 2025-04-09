@@ -1,2 +1,1 @@
-import { ProductsApi } from './products';
 
