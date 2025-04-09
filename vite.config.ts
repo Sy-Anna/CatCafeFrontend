@@ -26,6 +26,7 @@ export default defineConfig({
 			"@libs": n_path.resolve(__dirname, "src/libs"),
 			"@assets": n_path.resolve(__dirname, "src/assets"),
 			"@pages": n_path.resolve(__dirname, "src/pages"),
+			"@ui": n_path.resolve(__dirname, "src/ui"),
 		},
 	},
 });

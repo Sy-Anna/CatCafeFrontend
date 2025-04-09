@@ -25,7 +25,8 @@
 			"@/*": ["src/*"],
 			"@libs/*": ["src/libs/*"],
 			"@assets/*": ["src/assets/*"],
-			"@pages/*": ["src/pages/*"]
+			"@pages/*": ["src/pages/*"],
+			"@ui/*": ["src/ui/*"]
 		}
 	},
 	"include": ["vite.config.ts"]
