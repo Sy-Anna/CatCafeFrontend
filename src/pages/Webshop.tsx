@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Alert, Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
 
-import { API_URL } from "@/libs/api";
-import { ProductsApi } from "@/libs/api/products";
-import { Product } from "@/libs/types";
+import { API_URL } from "@libs/api";
+import { ProductsApi } from "@libs/api/products";
+import { Product } from "@libs/types";
 
 import CartIcon from "@assets/img/icons/cartIcon.png";
 

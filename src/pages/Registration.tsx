@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
-import { UsersApi } from "@/libs/api/users";
+import { UsersApi } from "@libs/api/users";
 
 export default function RegForm() {
 	const [name, setName] = useState("");

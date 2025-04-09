@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 
-import { API_URL } from "@/libs/api";
-import { ProductsApi } from "@/libs/api/products";
-import type { Product } from "@/libs/types";
+import { API_URL } from "@libs/api";
+import { ProductsApi } from "@libs/api/products";
+import type { Product } from "@libs/types";
 
 // import DeleteIcon from "@assets/img/icons/delete.png";
 

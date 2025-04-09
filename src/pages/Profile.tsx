@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Card, Container, Spinner } from "react-bootstrap";
 
-import { UsersApi } from "@/libs/api/users";
-import { User } from "@/libs/types";
+import { UsersApi } from "@libs/api/users";
+import { User } from "@libs/types";
 import LoginForm from "@pages/Login";
 import MyPage from "@pages/MyPage";
 import RegForm from "@pages/Registration";
