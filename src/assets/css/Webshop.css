@@ -66,3 +66,36 @@ p {
 	display: flex;
 	align-items: center;
 }
+
+.webshop-wrapper {
+	display: flex;
+	position: relative;
+}
+
+.product-panel {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 0;
+	overflow: hidden;
+	background: white;
+	transition: width 0.3s ease;
+	box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+}
+
+.product-panel.open {
+	width: 30vw;
+	padding: 20px;
+	margin-top: 100px;
+	border-radius: 50px;
+	background-color: #DCD7C9;
+	border: #2c3930 2px solid;
+}
+
+.productDetails {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}

@@ -4,8 +4,7 @@ import { Alert, Button, Card, Col, Container, Row, Spinner } from "react-bootstr
 import { API_URL } from "@libs/api";
 import { ProductsApi } from "@libs/api/products";
 import { Product } from "@libs/types";
-
-import CartIcon from "@assets/img/icons/cartIcon.png";
+import ProductDetails from './ProductDetails';
 
 import "@assets/css/Webshop.css";
 import "@assets/css/WebshopDark.css";
@@ -14,6 +13,7 @@ export default function Webshop() {
 	const [products, setProducts] = useState<Product[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
+	const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
 	useEffect(() => {
 		(async () => {
@@ -29,7 +29,8 @@ export default function Webshop() {
 	}, []);
 
 	return (
-		<Container fluid='lg' className='mt-4 card-grid'>
+		<div>
+			<Container fluid='lg' className='mt-4 card-grid'>
 			{loading && (
 				<Spinner animation='border' role='status'>
 					<span className='visually-hidden'>Loading...</span>
@@ -45,8 +46,8 @@ export default function Webshop() {
 							<h1 className='productCardTitle'>{product.name}</h1>
 							<div>
 								<p className='productCardText'>{product.price} Ft</p>
-								<Button className='productCardButton'>
-									<img className='icon' src={CartIcon} alt='cart icon' />
+								<Button className='productCardButton'onClick={() => setSelectedProduct(product)}>
+									<img className='icon' src="/img/icons/cartIcon.png" alt='cart icon' />
 								</Button>
 							</div>
 						</Card>
@@ -54,5 +55,14 @@ export default function Webshop() {
 				))}
 			</Row>
 		</Container>
+
+		<div className={`product-panel ${selectedProduct ? "open" : ""}`}>
+				{selectedProduct && (
+					<ProductDetails product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+				)}
+		</div>
+
+		</div>
+		
 	);
 }
