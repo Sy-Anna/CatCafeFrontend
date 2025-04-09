@@ -29,11 +29,7 @@ export default function ProductDetails({ product, onClose }: Props) {
     return (
         <div className="productDetails">
             <div className="detailsHeader">
-                <Button
-                    variant="outline-dark"
-                    size="sm"
-                    onClick={onClose}
-                >
+                <Button variant="outline-dark" size="sm" onClick={onClose}>
                     x
                 </Button>
             </div>
@@ -51,11 +47,7 @@ export default function ProductDetails({ product, onClose }: Props) {
             <p>{product.price} Ft</p>
             <p>{product.description}</p>
 
-            <Button
-                className="buyButton"
-                size="sm"
-                onClick={handleBuy}
-            >
+            <Button className="buyButton" size="sm" onClick={handleBuy}>
                 Vásárlás
             </Button>
         </div>

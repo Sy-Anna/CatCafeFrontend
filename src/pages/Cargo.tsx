@@ -82,25 +82,14 @@ export default function Cargo() {
     };
 
     if (loading) {
-        return (
-            <Spinner
-                animation="border"
-                variant="primary"
-            />
-        );
+        return <Spinner animation="border" variant="primary" />;
     }
 
     return (
-        <Container
-            fluid="lg"
-            className="mt-4 card-grid"
-        >
+        <Container fluid="lg" className="mt-4 card-grid">
             <Row className="gx-4 gy-4 gap-4">
                 {products.map((product) => (
-                    <Col
-                        className="cardContainer"
-                        key={product.id}
-                    >
+                    <Col className="cardContainer" key={product.id}>
                         <Card className="productCard">
                             <img
                                 className="productCardImage"
@@ -154,10 +143,7 @@ export default function Cargo() {
                     </Col>
                 ))}
                 <Card className="cargoCard pt-0">
-                    <Form
-                        onSubmit={handleSubmit}
-                        className="mt-5"
-                    >
+                    <Form onSubmit={handleSubmit} className="mt-5">
                         <Form.Group className="mb-3">
                             <Form.Control
                                 type="text"

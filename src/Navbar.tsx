@@ -27,15 +27,8 @@ export default function NavbarComponent() {
     }, []);
 
     return (
-        <Navbar
-            expand="lg"
-            fixed="top"
-            className="navbar"
-        >
-            <Navbar.Brand
-                className="navBrand align-self-center"
-                href="/Home"
-            >
+        <Navbar expand="lg" fixed="top" className="navbar">
+            <Navbar.Brand className="navBrand align-self-center" href="/Home">
                 <img
                     src={logoSmall}
                     width="40"
@@ -50,46 +43,25 @@ export default function NavbarComponent() {
             />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <NavLink
-                        className="navLink"
-                        href="/Home"
-                    >
+                    <NavLink className="navLink" href="/Home">
                         Főoldal
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Blog"
-                    >
+                    <NavLink className="navLink" href="/Blog">
                         Blog
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Gallery"
-                    >
+                    <NavLink className="navLink" href="/Gallery">
                         Galéria
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Booking"
-                    >
+                    <NavLink className="navLink" href="/Booking">
                         Asztalfoglalás
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Webshop"
-                    >
+                    <NavLink className="navLink" href="/Webshop">
                         Webshop
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Contact"
-                    >
+                    <NavLink className="navLink" href="/Contact">
                         Kapcsolat
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/About"
-                    >
+                    <NavLink className="navLink" href="/About">
                         Rólunk
                     </NavLink>
                 </Nav>

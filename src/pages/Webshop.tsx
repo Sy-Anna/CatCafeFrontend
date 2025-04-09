@@ -41,15 +41,9 @@ export default function Webshop() {
 
     return (
         <div>
-            <Container
-                fluid="lg"
-                className="mt-4 card-grid"
-            >
+            <Container fluid="lg" className="mt-4 card-grid">
                 {loading && (
-                    <Spinner
-                        animation="border"
-                        role="status"
-                    >
+                    <Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>
                 )}
@@ -57,10 +51,7 @@ export default function Webshop() {
 
                 <Row className="gx-4 gy-4 gap-4">
                     {products.map((product) => (
-                        <Col
-                            className="cardContainer"
-                            key={product.id}
-                        >
+                        <Col className="cardContainer" key={product.id}>
                             <Card className="productCard">
                                 <img
                                     className="productCardImage"

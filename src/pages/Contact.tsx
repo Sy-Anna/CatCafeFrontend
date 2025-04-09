@@ -38,16 +38,10 @@ const persons = [
 
 export default function Contact() {
     return (
-        <Container
-            fluid="lg"
-            className="mt-4 card-grid"
-        >
+        <Container fluid="lg" className="mt-4 card-grid">
             <Row className="gx-4 gy-4 gap-4">
                 {persons.map((persons) => (
-                    <Col
-                        className="cardContainer"
-                        key={persons.id}
-                    >
+                    <Col className="cardContainer" key={persons.id}>
                         <Card className="contactCard">
                             <img
                                 className="contactCardImage"

@@ -14,10 +14,7 @@ export default function Booking() {
 
     return (
         <div className="container">
-            <Calendar
-                onChange={onChange}
-                value={value}
-            />
+            <Calendar onChange={onChange} value={value} />
         </div>
     );
 }

@@ -43,16 +43,10 @@ const addresses = [
 
 export default function About() {
     return (
-        <Container
-            fluid="lg"
-            className="mt-4 card-grid"
-        >
+        <Container fluid="lg" className="mt-4 card-grid">
             <Row className="gx-4 gy-4 gap-4">
                 {addresses.map((address) => (
-                    <Col
-                        className="cardContainer"
-                        key={address.id}
-                    >
+                    <Col className="cardContainer" key={address.id}>
                         <Card className="aboutCard">
                             <h1 className="aboutCardTitle">{address.title}</h1>
                             <div className="content">

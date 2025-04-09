@@ -28,22 +28,13 @@ export default function Profile() {
         })();
     }, []);
 
-    if (loading)
-        return (
-            <Spinner
-                animation="border"
-                role="status"
-            />
-        );
+    if (loading) return <Spinner animation="border" role="status" />;
 
     return (
         <Container>
             <Card className="profileCard">
                 {user ? (
-                    <MyPage
-                        user={user}
-                        onLogout={() => setUser(null)}
-                    />
+                    <MyPage user={user} onLogout={() => setUser(null)} />
                 ) : (
                     <>
                         {loginOrReg === "login" ? (
@@ -51,10 +42,7 @@ export default function Profile() {
                         ) : (
                             <RegForm />
                         )}
-                        <button
-                            className="loginBtn"
-                            onClick={toggleForm}
-                        >
+                        <button className="loginBtn" onClick={toggleForm}>
                             {loginOrReg === "login"
                                 ? "Még nincs profilom"
                                 : "Már van profilom"}

@@ -55,10 +55,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
     return (
         <Form onSubmit={handleSubmit}>
             <h1>Bejelentkezés</h1>
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicEmail"
-            >
+            <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control
                     type="email"
                     placeholder="email"
@@ -67,10 +64,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
                 />
             </Form.Group>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicPassword"
-            >
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
                     type="password"
                     placeholder="jelszó"

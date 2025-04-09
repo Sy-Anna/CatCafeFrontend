@@ -25,46 +25,16 @@ export default function App() {
             <NavbarComponent />
 
             <Routes>
-                <Route
-                    path="/Home"
-                    element={<Home />}
-                />
-                <Route
-                    path="/Blog"
-                    element={<Blog />}
-                />
-                <Route
-                    path="/Gallery"
-                    element={<Gallery />}
-                />
-                <Route
-                    path="/Booking"
-                    element={<Booking />}
-                />
-                <Route
-                    path="/Webshop"
-                    element={<Webshop />}
-                />
-                <Route
-                    path="/Contact"
-                    element={<Contact />}
-                />
-                <Route
-                    path="/About"
-                    element={<About />}
-                />
-                <Route
-                    path="/Cart"
-                    element={<Cart />}
-                />
-                <Route
-                    path="/Profile"
-                    element={<Profile />}
-                />
-                <Route
-                    path="/Cargo"
-                    element={<Cargo />}
-                />
+                <Route path="/Home" element={<Home />} />
+                <Route path="/Blog" element={<Blog />} />
+                <Route path="/Gallery" element={<Gallery />} />
+                <Route path="/Booking" element={<Booking />} />
+                <Route path="/Webshop" element={<Webshop />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/Cart" element={<Cart />} />
+                <Route path="/Profile" element={<Profile />} />
+                <Route path="/Cargo" element={<Cargo />} />
             </Routes>
         </Router>
     );

@@ -52,10 +52,7 @@ export default function RegForm() {
         <Form onSubmit={handleSubmit}>
             <h1>Regisztráció</h1>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicPassword"
-            >
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
                     type="text"
                     placeholder="felhasználónév"
@@ -64,10 +61,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicEmail"
-            >
+            <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control
                     type="email"
                     placeholder="email"
@@ -76,10 +70,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicPassword"
-            >
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
                     type="password"
                     placeholder="jelszó"
@@ -88,10 +79,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicPassword"
-            >
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
                     type="password"
                     placeholder="jelszó újra"
@@ -100,11 +88,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Button
-                className="loginBtn"
-                type="submit"
-                disabled={loading}
-            >
+            <Button className="loginBtn" type="submit" disabled={loading}>
                 Tovább
             </Button>
             <a href="/Registry"></a>
