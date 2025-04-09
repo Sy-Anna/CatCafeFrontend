@@ -20,6 +20,7 @@ export default function App() {
 	return (
 		<Router>
 			<NavbarComponent />
+
 			<Routes>
 				<Route path='/Home' element={<Home />} />
 				<Route path='/Blog' element={<Blog />} />
