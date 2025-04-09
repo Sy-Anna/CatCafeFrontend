@@ -22,7 +22,10 @@
 
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"]
+			"@/*": ["src/*"],
+			"@libs/*": ["src/libs/*"],
+			"@assets/*": ["src/assets/*"],
+			"@pages/*": ["src/pages/*"]
 		}
 	},
 	"include": ["vite.config.ts"]
