@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import NavbarComponent from "@/Navbar.tsx";
@@ -17,6 +18,12 @@ import "@assets/css/AppDark.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
+	useEffect(() => {
+		if (location.pathname === "/") {
+			location.replace("/Home");
+		}
+	}, []);
+
 	return (
 		<Router>
 			<NavbarComponent />
