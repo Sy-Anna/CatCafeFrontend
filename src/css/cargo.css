@@ -1,0 +1,28 @@
+.checkBox {
+    text-align: left;
+    width: 20%;
+}
+
+.cargoCard {
+        width: clamp(14rem, 16rem, 18rem);
+        height: 100%;
+        padding: 1em;
+        background-color: #DCD7C9;
+        border-color: #2C3930;
+        border-radius: 20px;
+        box-shadow: 5px 10px #A27B5C;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+
+.cargoButton {
+    background-color: #A27B5C;
+    border: #2C3930 1px solid;
+    display: inline;
+    float: right;  
+    box-shadow: 3px 3px #2C3930;
+    width: 40px;
+    margin: 0 !important;
+}
+

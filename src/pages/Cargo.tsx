@@ -6,6 +6,10 @@ import CartIcon from '../img/icons/cartIcon.png';
 import { API_URL } from '../libs/api';
 import { ProductsApi } from '../libs/api/products';
 import type { Product } from '../libs/types';
+import "../css/Cargo.css"
+import '../css/Webshop.css';
+import '../css/WebshopDark.css';
+
 
 function Cargo() {
 	const [products, setProducts] = useState<Product[]>([]);
@@ -89,27 +93,35 @@ function Cargo() {
 							<img
 								className='productCardImage'
 								src={`${API_URL}products/${product.id}/image`}
-								alt='webshopImage'
+								alt={product.name}
 							/>
 							<h1 className='productCardTitle'>{product.name}</h1>
 							<p className='productCardText'>{product.price} Ft</p>
-							<Button className='productCardButton'>
-								<img
-									className='icon'
-									src={CartIcon}
-									alt='cart icon'
-								/>
+							<Button
+								className='cargoButton'
+								onClick={async () => {
+									if (window.confirm(`Biztosan törölni szeretnéd: ${product.name}?`)) {
+									const [error] = await ProductsApi.delete(product.id);
+									if (error) {
+										alert('Hiba történt a törlés során.');
+										console.error(error);
+									} else {
+										alert('Termék törölve.');
+										const [_, updatedProducts] = await ProductsApi.getAll();
+										if (updatedProducts) setProducts(updatedProducts);
+										}
+									}
+								}}
+							>x
 							</Button>
 						</Card>
 					</Col>
 				))}
 			</Row>
-
+			<Card className='cargoCard pt-0 pb-0' >
 			<Form
 				onSubmit={handleSubmit}
 				className='mt-5'>
-				<h1>Új termék hozzáadása</h1>
-
 				<Form.Group className='mb-3'>
 					<Form.Control
 						type='text'
@@ -147,7 +159,17 @@ function Cargo() {
 				</Form.Group>
 
 				<Form.Group className='mb-3'>
-					<Form.Check
+					<Form.Control
+						type='file'
+						onChange={(e) => {
+							const file = (e.target as HTMLInputElement).files?.[0] ?? null;
+							setImage(file);
+						}}
+					/>
+				</Form.Group>
+
+				<Form.Group className='mb-3'>
+					<Form.Check className='checkBox'
 						type='checkbox'
 						label='Aktív'
 						checked={active}
@@ -155,20 +177,15 @@ function Cargo() {
 					/>
 				</Form.Group>
 
-				<Form.Group className='mb-3'>
-					<Form.Control
-						type='file'
-						onChange={(e) => setImage(e.target.files ? e.target.files[0] : null)}
-					/>
-				</Form.Group>
-
 				<Button
-					className='loginBtn'
+					className='productCardButton mt-0'
 					type='submit'
 					disabled={formLoading}>
 					{formLoading ? 'Mentés...' : 'Tovább'}
 				</Button>
+				
 			</Form>
+			</Card>
 		</Container>
 	);
 }

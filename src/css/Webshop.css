@@ -21,6 +21,7 @@
 .productCardText {
   display: inline;
   float: left !important;
+  width: 50%;
 }
 .productCardImage {
   width: clamp(12rem, 14rem, 16rem);
