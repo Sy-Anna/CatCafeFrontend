@@ -5,7 +5,7 @@
     "prettier.quoteProps": "consistent",
     "prettier.trailingComma": "all",
     "prettier.experimentalTernaries": true,
-    "prettier.singleAttributePerLine": true,
+    "prettier.singleAttributePerLine": false,
     "prettier.endOfLine": "auto",
 
     "editor.defaultFormatter": "esbenp.prettier-vscode",
