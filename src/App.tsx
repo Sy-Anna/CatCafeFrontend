@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.css";
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
@@ -15,7 +16,6 @@ import Webshop from "@pages/Webshop";
 
 import "@assets/css/App.css";
 import "@assets/css/AppDark.css";
-import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
 	useEffect(() => {
