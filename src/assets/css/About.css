@@ -1,79 +1,79 @@
 /* cards */
 .aboutCard {
-	width: clamp(26rem, 28rem, 30rem);
-	height: clamp(14rem, 16rem, 18rem);
-	padding: 2em;
-	background-color: #dcd7c9;
-	border-color: #2c3930;
-	border-radius: 40px;
-	box-shadow: 5px 10px #a27b5c;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding-bottom: 20px;
+    width: clamp(26rem, 28rem, 30rem);
+    height: clamp(14rem, 16rem, 18rem);
+    padding: 2em;
+    background-color: #dcd7c9;
+    border-color: #2c3930;
+    border-radius: 40px;
+    box-shadow: 5px 10px #a27b5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 /* Card responsiveness */
 .aboutCardButton:hover {
-	border-color: #2c3930;
-	background-color: #916e51;
-	box-shadow: 2px 2px #2c3930;
+    border-color: #2c3930;
+    background-color: #916e51;
+    box-shadow: 2px 2px #2c3930;
 }
 .aboutCard:hover {
-	background-color: #bdb6aa;
-	box-shadow: 4px 9px #a27b5c;
+    background-color: #bdb6aa;
+    box-shadow: 4px 9px #a27b5c;
 }
 
 .aboutCardTitle {
-	color: #2c3930;
-	font-family: "Caveat", cursive;
-	font-weight: bold;
-	font-size: 25px !important;
-	text-align: left;
-	border-bottom: #3f4f44 solid 1px;
-	padding-left: 25px;
+    color: #2c3930;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    font-size: 25px !important;
+    text-align: left;
+    border-bottom: #3f4f44 solid 1px;
+    padding-left: 25px;
 }
 
 .aboutCardAddress {
-	font-family: "Delius", cursive;
-	font-weight: 400;
-	font-size: 16px;
-	font-style: normal;
-	text-align: left !important;
-	float: left;
-	width: 45%;
-	padding: 10px;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    text-align: left !important;
+    float: left;
+    width: 45%;
+    padding: 10px;
 }
 .aboutCardPhone {
-	font-family: "Delius", cursive;
-	font-weight: 400;
-	font-size: 16px;
-	font-style: normal;
-	text-align: left;
-	float: left;
-	width: 37%;
-	padding: 10px;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    text-align: left;
+    float: left;
+    width: 37%;
+    padding: 10px;
 }
 .aboutIcon {
-	width: 8%;
-	float: left;
-	margin-top: 10px;
+    width: 8%;
+    float: left;
+    margin-top: 10px;
 }
 .aboutCardDescription {
-	font-family: "Delius", cursive;
-	font-weight: 400;
-	font-size: 16px;
-	font-style: normal;
-	text-align: justify;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    text-align: justify;
 }
 .contentTop:after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 .card-grid {
-	grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
-	gap: 1rem;
-	justify-content: center;
-	display: flex;
-	align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }

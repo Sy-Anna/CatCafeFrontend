@@ -1,101 +1,101 @@
 #root {
-	max-width: 1280px;
-	padding: 2rem;
-	text-align: center;
-	margin: auto;
+    max-width: 1280px;
+    padding: 2rem;
+    text-align: center;
+    margin: auto;
 }
 
 body {
-	background-color: #dcd7c9 !important;
-	padding: 100px;
+    background-color: #dcd7c9 !important;
+    padding: 100px;
 }
 
 /* Navbar */
 .navbar {
-	background-color: #a27b5c;
-	color: #2c3930;
-	font-family: "Caveat", cursive;
-	font-weight: bold;
-	font-size: 25px;
-	padding-right: 40px !important;
-	padding-left: 40px !important;
+    background-color: #a27b5c;
+    color: #2c3930;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    font-size: 25px;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
 }
 .navBrand {
-	margin-right: 4px !important;
+    margin-right: 4px !important;
 }
 .navLink {
-	margin-right: 8px;
+    margin-right: 8px;
 }
 .navIcon {
-	width: 30px;
+    width: 30px;
 }
 .navButton {
-	background-color: #dcd7c9 !important;
-	border: #2c3930 1px solid !important;
-	display: inline-block !important;
-	box-shadow: 3px 3px #2c3930 !important;
+    background-color: #dcd7c9 !important;
+    border: #2c3930 1px solid !important;
+    display: inline-block !important;
+    box-shadow: 3px 3px #2c3930 !important;
 }
 .navSwitch .form-check-input {
-	display: inline-block;
-	transform: rotate(90deg);
-	background-color: #dcd7c9;
-	border: #2c3930 1px solid;
-	width: 40px !important;
-	height: 20px;
-	float: right;
+    display: inline-block;
+    transform: rotate(90deg);
+    background-color: #dcd7c9;
+    border: #2c3930 1px solid;
+    width: 40px !important;
+    height: 20px;
+    float: right;
 }
 .navbar-toggler {
-	display: inline-block;
-	float: left;
-	align-self: flex-start;
-	text-align: left;
-	border: #dcd7c9 1px solid !important;
+    display: inline-block;
+    float: left;
+    align-self: flex-start;
+    text-align: left;
+    border: #dcd7c9 1px solid !important;
 }
 /* navbar responsiveness */
 .navButton:hover {
-	background-color: #bdb6aa !important;
-	border-color: #2c3930 !important;
-	box-shadow: 2px 2px #3f4f44 !important;
+    background-color: #bdb6aa !important;
+    border-color: #2c3930 !important;
+    box-shadow: 2px 2px #3f4f44 !important;
 }
 .navbar-toggler:hover {
-	border: 2px solid #dcd7c9 !important;
-	background-color: #dcd7c9;
+    border: 2px solid #dcd7c9 !important;
+    background-color: #dcd7c9;
 }
 .navSwitch .form-check-input:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 .navSwitch .form-check-input:checked {
-	background-color: #3f4f44 !important;
-	border-color: #3f4f44;
+    background-color: #3f4f44 !important;
+    border-color: #3f4f44;
 }
 .navSwitch .form-check-input:focus {
-	border-color: #3f4f44;
-	box-shadow: none;
+    border-color: #3f4f44;
+    box-shadow: none;
 }
 
 /* logos and icons */
 .icon {
-	width: 20px;
+    width: 20px;
 }
 
 h1 {
-	color: #2c3930;
-	font-family: "Caveat", cursive !important;
-	font-weight: bold;
-	font-size: 25px !important;
-	text-align: left;
+    color: #2c3930;
+    font-family: "Caveat", cursive !important;
+    font-weight: bold;
+    font-size: 25px !important;
+    text-align: left;
 }
 
 p {
-	font-family: "Fuzzy Bubbles", sans-serif !important;
-	font-weight: 500;
-	font-style: normal;
-	text-align: justify;
+    font-family: "Fuzzy Bubbles", sans-serif !important;
+    font-weight: 500;
+    font-style: normal;
+    text-align: justify;
 }
 
 .cardContainer {
-	justify-content: center;
-	justify-items: center;
-	align-items: center;
-	align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }

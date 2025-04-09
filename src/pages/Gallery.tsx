@@ -11,18 +11,26 @@ const images = Object.values(
 const shuffledImages = [...images].sort(() => Math.random() - 0.5) as string[];
 
 export default function Gallery() {
-	return (
-		<>
-			<h1>A Cat Café négylábú csapattagjai:</h1>
-			<div className='gallery-card-grid'>
-				{shuffledImages.map((image, index) => (
-					<div className='galleryCardContainer' key={index}>
-						<div className='imageCard'>
-							<img className='imageCardImage' src={image} alt='image' loading='lazy' />
-						</div>
-					</div>
-				))}
-			</div>
-		</>
-	);
+    return (
+        <>
+            <h1>A Cat Café négylábú csapattagjai:</h1>
+            <div className="gallery-card-grid">
+                {shuffledImages.map((image, index) => (
+                    <div
+                        className="galleryCardContainer"
+                        key={index}
+                    >
+                        <div className="imageCard">
+                            <img
+                                className="imageCardImage"
+                                src={image}
+                                alt="image"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 }

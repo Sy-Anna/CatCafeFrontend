@@ -1,12 +1,12 @@
 :root [dark="true"] {
-	.homeCard {
-		box-shadow: 5px 10px #2c3930;
-	}
-	.homeCardTitle {
-		background-color: #3f4f44;
-	}
+    .homeCard {
+        box-shadow: 5px 10px #2c3930;
+    }
+    .homeCardTitle {
+        background-color: #3f4f44;
+    }
 
-	.homeCard:hover {
-		box-shadow: 4px 9px #2c3930;
-	}
+    .homeCard:hover {
+        box-shadow: 4px 9px #2c3930;
+    }
 }

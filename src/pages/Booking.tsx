@@ -10,11 +10,14 @@ type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 export default function Booking() {
-	const [value, onChange] = useState<Value>(new Date());
+    const [value, onChange] = useState<Value>(new Date());
 
-	return (
-		<div className='container'>
-			<Calendar onChange={onChange} value={value} />
-		</div>
-	);
+    return (
+        <div className="container">
+            <Calendar
+                onChange={onChange}
+                value={value}
+            />
+        </div>
+    );
 }
