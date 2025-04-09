@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import useStorageState from "use-storage-state";
 
+import { setAuthorizationHeader } from "@libs/api";
 import { UsersApi } from "@libs/api/users";
 import { User } from "@libs/types";
 
@@ -30,6 +31,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
             alert("Hibás email vagy jelszó!");
         } else {
             setToken(response!.token);
+            setAuthorizationHeader();
             console.log("Login Successful:", response);
             navigate("/home");
         }

@@ -20,6 +20,7 @@ export default function MyPage({ user, onLogout }: MyPageProps) {
         const [err] = await UsersApi.logout(token);
         if (!err) {
             onLogout();
+            localStorage.removeItem("token");
         } else {
             alert("Sikertelen kijelentkezés");
         }
