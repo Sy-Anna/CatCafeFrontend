@@ -4,6 +4,9 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+	preview: {
+		allowedHosts: ["localhost", "cat-cafe.hu"],
+	},
 	plugins: [react()],
 	build: {
 		cssCodeSplit: false,
@@ -26,6 +29,7 @@ export default defineConfig({
 			"@libs": n_path.resolve(__dirname, "src/libs"),
 			"@assets": n_path.resolve(__dirname, "src/assets"),
 			"@pages": n_path.resolve(__dirname, "src/pages"),
+			"@ui": n_path.resolve(__dirname, "src/ui"),
 		},
 	},
 });
