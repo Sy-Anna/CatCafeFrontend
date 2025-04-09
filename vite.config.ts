@@ -4,6 +4,9 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+	preview: {
+		allowedHosts: ["localhost", "cat-cafe.hu"],
+	},
 	plugins: [react()],
 	build: {
 		cssCodeSplit: false,
