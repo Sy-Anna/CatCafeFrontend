@@ -1,0 +1,32 @@
+:root [dark="true"] {
+    .product-panel {
+        background: #3F4F44;
+        border: #2c3930 2px solid;
+    }
+    .productTitle {
+        color: #A27B5C;
+        font-family: "Caveat", cursive !important;
+        font-weight: bold;
+        font-size: 50px !important;
+        text-align: left;
+        text-align: center;
+    }
+    
+    .buyButton {
+        align-self: center;
+        width: 40%;
+        background-color: #a27b5c;
+        border: #2c3930 1px solid;
+        display: inline;
+        float: right;
+        box-shadow: 3px 3px #2c3930;
+        max-width: 50%;
+    }
+    
+    .buyButton:hover {
+        border-color: #2c3930;
+        background-color: #916e51 !important;
+        box-shadow: 2px 2px #2c3930;
+    }    
+}
+
