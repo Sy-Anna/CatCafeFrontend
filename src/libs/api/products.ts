@@ -1,3 +1,4 @@
+import type { AxiosError } from "axios";
 import { api } from "../api";
 import { ApiError, Product } from "../types";
 
@@ -41,8 +42,8 @@ export class ProductsApi {
 			);
 
 			return [null, response.data] as [null, Product];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -62,8 +63,8 @@ export class ProductsApi {
 			const response = await api.get(ProductsApi.apiPath + "?" + new URLSearchParams(query).toString());
 
 			return [null, response.data] as [null, Array<Product>];
-		} catch (error: any) {
-			return [error.response.data, null] as [unknown, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [unknown, null];
 		}
 	}
 
@@ -80,8 +81,8 @@ export class ProductsApi {
 			const response = await api.get(ProductsApi.apiPath + "/" + id);
 
 			return [null, response.data] as [null, Product];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -114,8 +115,8 @@ export class ProductsApi {
 			});
 
 			return [null, response.data] as [null, Product];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -135,8 +136,8 @@ export class ProductsApi {
 			const response = await api.delete(ProductsApi.apiPath + "/" + id);
 
 			return [null, response.data] as [null, string];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -158,8 +159,8 @@ export class ProductsApi {
 			const response = await api.patch(ProductsApi.apiPath, products);
 
 			return [null, response.data] as [null, string];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 }

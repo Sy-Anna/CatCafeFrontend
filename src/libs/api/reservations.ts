@@ -1,3 +1,4 @@
+import type { AxiosError } from "axios";
 import { api } from "../api";
 import { ApiError, Reservation } from "../types";
 
@@ -25,8 +26,8 @@ export class ReservationsApi {
 			});
 
 			return [null, response.data] as [null, Reservation];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -42,8 +43,8 @@ export class ReservationsApi {
 			const response = await api.get(ReservationsApi.apiPath);
 
 			return [null, response.data] as [null, Array<Reservation>];
-		} catch (error: any) {
-			return [error.response.data, null] as [unknown, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [unknown, null];
 		}
 	}
 
@@ -62,8 +63,8 @@ export class ReservationsApi {
 			const response = await api.get(ReservationsApi.apiPath + "/" + id);
 
 			return [null, response.data] as [null, Reservation];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -85,8 +86,8 @@ export class ReservationsApi {
 			const response = await api.patch(ReservationsApi.apiPath + "/" + id, data);
 
 			return [null, response.data] as [null, Reservation];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -106,8 +107,8 @@ export class ReservationsApi {
 			const response = await api.delete(ReservationsApi.apiPath + "/" + id);
 
 			return [null, response.data] as [null, string];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 }

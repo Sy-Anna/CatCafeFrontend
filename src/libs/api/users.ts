@@ -1,3 +1,4 @@
+import type { AxiosError } from "axios";
 import { api } from "../api";
 import { ApiError, User } from "../types";
 
@@ -26,8 +27,8 @@ export class UsersApi {
 			});
 
 			return [null, response.data] as [null, string];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -48,8 +49,8 @@ export class UsersApi {
 			});
 
 			return [null, response.data] as [null, { token: string }];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -71,8 +72,8 @@ export class UsersApi {
 			});
 
 			return [null, response.data] as [null, string];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 
@@ -88,8 +89,8 @@ export class UsersApi {
 			const response = await api.get(UsersApi.apiPath + "/me");
 
 			return [null, response.data] as [null, User];
-		} catch (error: any) {
-			return [error.response.data, null] as [ApiError, null];
+		} catch (error: unknown) {
+			return [(error as AxiosError).response!.data, null] as [ApiError, null];
 		}
 	}
 }
