@@ -5,22 +5,22 @@ const pages = [
     {
         id: 1,
         source: "/Blog",
-        imgSource: "/img/gallery/img2.jpg",
+        imgSource: "/img/homePage/sysAdmin.jpg",
         title: "Blog"
     },{
         id: 1,
         source: "/Gallery",
-        imgSource: "/img/gallery/img2.jpg",
+        imgSource: "/img/homePage/img22.jpg",
         title: "Galéria"
     },{
         id: 1,
         source: "/Booking",
-        imgSource: "/img/gallery/img2.jpg",
+        imgSource: "/img/homePage/img42.jpg",
         title: "Asztalfoglalás"
     },{
         id: 1,
         source: "/Webshop",
-        imgSource: "/img/homePage/defaultWebshopImg.jpg",
+        imgSource: "/img/homePage/Catpucino.png",
         title: "Webshop"
     },{
         id: 1,
@@ -30,7 +30,7 @@ const pages = [
     },{
         id: 1,
         source: "/About",
-        imgSource: "/img/gallery/img2.jpg",
+        imgSource: "/img/homePage/20240316_004312.png",
         title: "Rólunk"
     },
 ]
