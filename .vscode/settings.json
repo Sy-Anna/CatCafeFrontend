@@ -1,0 +1,46 @@
+{
+    "prettier.bracketSameLine": true,
+    "prettier.htmlWhitespaceSensitivity": "strict",
+    "prettier.proseWrap": "always",
+    "prettier.quoteProps": "consistent",
+    "prettier.trailingComma": "all",
+    "prettier.experimentalTernaries": true,
+    "prettier.singleAttributePerLine": true,
+    "prettier.endOfLine": "auto",
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+
+    "html.format.preserveNewLines": false,
+    "html.format.wrapAttributes": "force-expand-multiline",
+    "html.format.wrapLineLength": 0,
+
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "javascript.format.semicolons": "insert",
+    "javascript.preferences.importModuleSpecifier": "project-relative",
+    "javascript.preferences.importModuleSpecifierEnding": "auto",
+    "javascript.suggest.autoImports": true,
+    "javascript.suggest.completeJSDocs": true,
+    "javascript.suggestionActions.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    "typescript.format.insertSpaceAfterConstructor": true,
+    "typescript.format.semicolons": "insert",
+    "typescript.preferences.importModuleSpecifier": "project-relative",
+    "typescript.preferences.importModuleSpecifierEnding": "auto",
+    "typescript.suggest.autoImports": true,
+    "typescript.suggest.completeJSDocs": true,
+    "typescript.suggestionActions.enabled": false,
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "typescript.tsserver.maxTsServerMemory": 8192,
+    "typescript.tsserver.watchOptions": {
+        "watchDirectory": "useFsEvents",
+        "fallbackPolling": "dynamicPriorityPolling",
+        "watchFile": "useFsEventsOnParentDirectory",
+        "synchronousWatchDirectory": true
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.implementationsCodeLens.showOnInterfaceMethods": true,
+    "typescript.preferences.includePackageJsonAutoImports": "on"
+}
