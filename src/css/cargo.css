@@ -26,5 +26,9 @@
     margin: 0 !important;
 }
 
-
+.cargoCardText {
+    display: inline;
+    float: left !important;
+    width: 100%;
+  }
 

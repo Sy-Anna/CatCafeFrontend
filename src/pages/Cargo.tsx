@@ -97,6 +97,8 @@ function Cargo() {
 							/>
 							<h1 className='productCardTitle'>{product.name}</h1>
 							<p className='productCardText'>{product.price} Ft</p>
+							<p className='productCardText'>{product.quantity} db</p>
+							
 							<Button
 								className='productCardButton'
 								onClick={async () => {
