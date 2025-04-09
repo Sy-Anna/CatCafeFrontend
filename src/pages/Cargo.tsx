@@ -68,22 +68,22 @@ export default function Cargo() {
 	};
 
 	if (loading) {
-		return <Spinner animation='border' variant='primary' />;
+		return <Spinner animation="border" variant="primary" />;
 	}
 
 	return (
-		<Container fluid='lg' className='mt-4 card-grid'>
-			<Row className='gx-4 gy-4 gap-4'>
+		<Container fluid="lg" className="mt-4 card-grid">
+			<Row className="gx-4 gy-4 gap-4">
 				{products.map((product) => (
-					<Col className='cardContainer' key={product.id}>
-						<Card className='productCard'>
-							<img className='productCardImage' src={`${API_URL}products/${product.id}/image`} alt={product.name} />
-							<h1 className='productCardTitle'>{product.name}</h1>
-							<p className='productCardText'>{product.price} Ft</p>
-							<p className='productCardText'>{product.quantity} db</p>
+					<Col className="cardContainer" key={product.id}>
+						<Card className="productCard">
+							<img className="productCardImage" src={`${API_URL}products/${product.id}/image`} alt={product.name} />
+							<h1 className="productCardTitle">{product.name}</h1>
+							<p className="productCardText">{product.price} Ft</p>
+							<p className="productCardText">{product.quantity} db</p>
 
 							<Button
-								className='productCardButton'
+								className="productCardButton"
 								onClick={async () => {
 									if (window.confirm(`Biztosan törölni szeretnéd: ${product.name}?`)) {
 										const [error] = await ProductsApi.delete(product.id);
@@ -99,42 +99,42 @@ export default function Cargo() {
 										}
 									}
 								}}>
-								<img className='icon' src="/img/icons/delete.png" alt='delete' />
+								<img className="icon" src="/img/icons/delete.png" alt="delete" />
 							</Button>
 						</Card>
 					</Col>
 				))}
-				<Card className='cargoCard pt-0'>
-					<Form onSubmit={handleSubmit} className='mt-5'>
-						<Form.Group className='mb-3'>
-							<Form.Control type='text' placeholder='Termék név' value={name} onChange={(e) => setName(e.target.value)} />
+				<Card className="cargoCard pt-0">
+					<Form onSubmit={handleSubmit} className="mt-5">
+						<Form.Group className="mb-3">
+							<Form.Control type="text" placeholder="Termék név" value={name} onChange={(e) => setName(e.target.value)} />
 						</Form.Group>
 
-						<Form.Group className='mb-3'>
+						<Form.Group className="mb-3">
 							<Form.Control
-								type='text'
-								placeholder='Leírás'
+								type="text"
+								placeholder="Leírás"
 								value={description}
 								onChange={(e) => setDescription(e.target.value)}
 							/>
 						</Form.Group>
 
-						<Form.Group className='mb-3'>
-							<Form.Control type='number' placeholder='Ár' value={price} onChange={(e) => setPrice(e.target.value)} />
+						<Form.Group className="mb-3">
+							<Form.Control type="number" placeholder="Ár" value={price} onChange={(e) => setPrice(e.target.value)} />
 						</Form.Group>
 
-						<Form.Group className='mb-3'>
+						<Form.Group className="mb-3">
 							<Form.Control
-								type='text'
-								placeholder='Mennyiség'
+								type="text"
+								placeholder="Mennyiség"
 								value={quantity}
 								onChange={(e) => setQuantity(e.target.value)}
 							/>
 						</Form.Group>
 
-						<Form.Group className='mb-3'>
+						<Form.Group className="mb-3">
 							<Form.Control
-								type='file'
+								type="file"
 								onChange={(e) => {
 									const file = (e.target as HTMLInputElement).files?.[0] ?? null;
 									setImage(file);
@@ -142,17 +142,17 @@ export default function Cargo() {
 							/>
 						</Form.Group>
 
-						<Form.Group className='mb-3'>
+						<Form.Group className="mb-3">
 							<Form.Check
-								className='checkBox'
-								type='checkbox'
-								label='Aktív'
+								className="checkBox"
+								type="checkbox"
+								label="Aktív"
 								checked={active}
 								onChange={(e) => setActive(e.target.checked)}
 							/>
 						</Form.Group>
 
-						<Button className='cargoButton mt-0' type='submit' disabled={formLoading}>
+						<Button className="cargoButton mt-0" type="submit" disabled={formLoading}>
 							{formLoading ? "+" : "+"}
 						</Button>
 					</Form>
