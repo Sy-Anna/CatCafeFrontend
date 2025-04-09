@@ -2,7 +2,7 @@ import "@assets/css/Gallery.css";
 import "@assets/css/GalleryDark.css";
 
 const images = Object.values(
-	import.meta.glob("/src/img/gallery/*.{jpg,jpeg,png,gif,webp}", {
+	import.meta.glob("/src/assets/img/gallery/*.{jpg,jpeg,png,gif,webp}", {
 		eager: true,
 		import: "default",
 	}),
@@ -18,7 +18,7 @@ export default function Gallery() {
 				{shuffledImages.map((image, index) => (
 					<div className='galleryCardContainer' key={index}>
 						<div className='imageCard'>
-							<img className='imageCardImage' src={image} alt='image' />
+							<img className='imageCardImage' src={image} alt='image' loading='lazy' />
 						</div>
 					</div>
 				))}
