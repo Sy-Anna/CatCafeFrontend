@@ -5,8 +5,6 @@ import { API_URL } from "@libs/api";
 import { ProductsApi } from "@libs/api/products";
 import type { Product } from "@libs/types";
 
-// import DeleteIcon from "@assets/img/icons/delete.png";
-
 import "@assets/css/Cargo.css";
 import "@assets/css/Webshop.css";
 import "@assets/css/WebshopDark.css";
@@ -101,7 +99,7 @@ export default function Cargo() {
 										}
 									}
 								}}>
-								{/* <img className='icon' src={DeleteIcon} alt='delete' /> */}
+								<img className='icon' src="/img/icons/delete.png" alt='delete' />
 							</Button>
 						</Card>
 					</Col>
