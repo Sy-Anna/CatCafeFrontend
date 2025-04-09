@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css";
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
@@ -13,9 +12,6 @@ import Gallery from "@pages/Gallery";
 import Home from "@pages/Home.tsx";
 import Profile from "@pages/Profile";
 import Webshop from "@pages/Webshop";
-
-import "@assets/css/App.css";
-import "@assets/css/AppDark.css";
 
 export default function App() {
 	useEffect(() => {

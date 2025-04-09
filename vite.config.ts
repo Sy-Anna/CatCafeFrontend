@@ -6,6 +6,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
 	plugins: [react()],
 	build: {
+		cssCodeSplit: false,
 		rollupOptions: {
 			output: {
 				manualChunks(id) {
