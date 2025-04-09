@@ -196,7 +196,10 @@ export class ProductsApi {
      */
     static async buy(products: Array<{ id: number; quantity: number }>) {
         try {
-            const response = await api.patch(ProductsApi.apiPath, products);
+            const response = await api.patch(
+                ProductsApi.apiPath + "/buy",
+                products,
+            );
 
             return [null, response.data] as [null, string];
         } catch (error: unknown) {
