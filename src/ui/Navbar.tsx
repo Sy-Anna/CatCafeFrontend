@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -73,24 +72,16 @@ export default function NavbarComponent() {
                     checked={dark}
                     onChange={toggleDarkMode}
                 />
-                <Button className="navButton">
-                    <a href="/Cart">
-                        <img
-                            className="navIcon"
-                            src={cartIcon}
-                            alt="cart icon"
-                        />
-                    </a>
-                </Button>
-                <Button className="navButton">
-                    <a href="/Profile">
-                        <img
-                            className="navIcon"
-                            src={profileIcon}
-                            alt="profile icon"
-                        />
-                    </a>
-                </Button>
+                <a className="navButton btn btn-primary" href="/Cart">
+                    <img className="navIcon" src={cartIcon} alt="cart icon" />
+                </a>
+                <a className="navButton btn btn-primary" href="/Profile">
+                    <img
+                        className="navIcon"
+                        src={profileIcon}
+                        alt="profile icon"
+                    />
+                </a>
             </div>
         </Navbar>
     );
