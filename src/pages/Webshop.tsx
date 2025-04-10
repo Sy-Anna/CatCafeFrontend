@@ -13,7 +13,7 @@ import { API_URL } from "@libs/api";
 import { ProductsApi } from "@libs/api/products";
 import { Product } from "@libs/types";
 
-import ProductDetails from "@pages/ProductDetails";
+import ProductDetails from "@ui/ProductDetails";
 
 import "@assets/css/Webshop.css";
 import "@assets/css/WebshopDark.css";

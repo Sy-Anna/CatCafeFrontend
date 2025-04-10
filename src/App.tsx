@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import NavbarComponent from "@/Navbar.tsx";
 import About from "@pages/About";
 import Blog from "@pages/Blog.tsx";
 import Booking from "@pages/Booking";
@@ -12,6 +11,7 @@ import Gallery from "@pages/Gallery";
 import Home from "@pages/Home.tsx";
 import Profile from "@pages/Profile";
 import Webshop from "@pages/Webshop";
+import NavbarComponent from "@ui/Navbar";
 
 export default function App() {
     useEffect(() => {

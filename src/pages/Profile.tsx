@@ -3,9 +3,9 @@ import { Card, Container, Spinner } from "react-bootstrap";
 
 import { UsersApi } from "@libs/api/users";
 import { User } from "@libs/types";
-import LoginForm from "@pages/Login";
-import MyPage from "@pages/MyPage";
-import RegForm from "@pages/Registration";
+import LoginForm from "@ui/Login";
+import MyPage from "@ui/MyPage";
+import RegForm from "@ui/Registration";
 
 import "@assets/css/Profile.css";
 
