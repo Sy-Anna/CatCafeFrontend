@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import About from "@pages/About";
@@ -12,9 +12,12 @@ import Home from "@pages/Home.tsx";
 import Profile from "@pages/Profile";
 import Webshop from "@pages/Webshop";
 import NavbarComponent from "@ui/Navbar";
+import { Spinner } from "react-bootstrap";
 import { UsersApi } from "./libs/api/users";
 
 export default function App() {
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         if (location.pathname === "/") {
             location.replace("/Home");
@@ -26,8 +29,11 @@ export default function App() {
             if (!err && userData) {
                 localStorage.setItem("user", JSON.stringify(userData));
             }
+            setLoading(false);
         })();
     }, []);
+
+    if (loading) return <Spinner animation="border" role="status" />;
 
     return (
         <Router>
