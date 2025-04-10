@@ -77,12 +77,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
                 />
             </Form.Group>
 
-            <Button
-                className="loginBtn"
-                variant="primary"
-                type="submit"
-                disabled={loading}
-            >
+            <Button variant="primary" type="submit" disabled={loading}>
                 Tovább
             </Button>
             <br />

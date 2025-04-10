@@ -30,7 +30,10 @@ export default function Profile() {
                         ) : (
                             <RegForm />
                         )}
-                        <button className="loginBtn" onClick={toggleForm}>
+                        <button
+                            className="btn btn-primary"
+                            onClick={toggleForm}
+                        >
                             {loginOrReg === "login"
                                 ? "Még nincs profilom"
                                 : "Már van profilom"}

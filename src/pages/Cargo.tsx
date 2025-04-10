@@ -114,7 +114,6 @@ export default function Cargo() {
                             </p>
 
                             <Button
-                                className="productCardButton"
                                 onClick={async () => {
                                     if (
                                         window.confirm(
@@ -216,7 +215,7 @@ export default function Cargo() {
                         </Form.Group>
 
                         <Button
-                            className="cargoButton mt-0"
+                            className="mt-0"
                             type="submit"
                             disabled={formLoading}
                         >

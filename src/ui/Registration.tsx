@@ -91,7 +91,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Button className="loginBtn" type="submit" disabled={loading}>
+            <Button type="submit" disabled={loading}>
                 Tovább
             </Button>
             <a href="/Registry"></a>

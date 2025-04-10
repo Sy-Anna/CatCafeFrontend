@@ -16,16 +16,6 @@
     justify-content: space-between;
 }
 
-.cargoButton {
-    background-color: #a27b5c;
-    border: #2c3930 1px solid;
-    display: inline;
-    float: right;
-    box-shadow: 3px 3px #2c3930;
-    width: 40px;
-    margin: 0 !important;
-}
-
 .cargoCardText {
     display: inline;
     float: left !important;

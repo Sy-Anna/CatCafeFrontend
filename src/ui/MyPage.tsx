@@ -38,9 +38,7 @@ export default function MyPage({ user, onLogout }: MyPageProps) {
             <p>
                 <strong>Email:</strong> {user.email}
             </p>
-            <Button className="loginBtn" onClick={handleLogout}>
-                Kijelentkezés
-            </Button>
+            <Button onClick={handleLogout}>Kijelentkezés</Button>
         </div>
     );
 }
