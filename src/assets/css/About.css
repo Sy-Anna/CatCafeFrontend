@@ -13,11 +13,11 @@
     padding-bottom: 20px;
 }
 /* Card responsiveness */
-.aboutCardButton:hover {
+/* .aboutCardButton:hover {
     border-color: #2c3930;
     background-color: #916e51;
     box-shadow: 2px 2px #2c3930;
-}
+} */
 .aboutCard:hover {
     background-color: #bdb6aa;
     box-shadow: 4px 9px #a27b5c;

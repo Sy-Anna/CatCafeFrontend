@@ -42,17 +42,21 @@ body[dark="true"] {
 
     h1 {
         color: #a27b5c;
-        font-family: "Caveat", cursive;
-        font-weight: bold;
-        font-size: 25px;
-        text-align: left;
     }
 
     p {
         color: #dcd7c9;
-        font-family: "Delius", cursive;
-        font-weight: 400;
-        font-style: normal;
-        text-align: justify;
+    }
+
+    .btn {
+        background-color: #dcd7c9;
+        border: #dcd7c9 1px solid;
+        box-shadow: 3px 3px #a27b5c;
+        color: #3f4f44;
+    }
+    .btn:hover {
+        border-color: #dcd7c9 !important;
+        background-color: #dcd7c9 !important;
+        box-shadow: 2px 2px #a27b5c !important;
     }
 }

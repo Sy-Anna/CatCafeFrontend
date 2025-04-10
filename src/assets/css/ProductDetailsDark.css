@@ -12,7 +12,7 @@
         text-align: center;
     }
 
-    .buyButton {
+    /* .buyButton {
         align-self: center;
         width: 40%;
         background-color: #a27b5c;
@@ -27,5 +27,5 @@
         border-color: #2c3930;
         background-color: #916e51 !important;
         box-shadow: 2px 2px #2c3930;
-    }
+    } */
 }
