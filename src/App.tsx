@@ -12,12 +12,26 @@ import Home from "@pages/Home.tsx";
 import Profile from "@pages/Profile";
 import Webshop from "@pages/Webshop";
 import NavbarComponent from "@ui/Navbar";
+import useStorageState from "use-storage-state";
+import { UsersApi } from "./libs/api/users";
+import type { User } from "./libs/types";
 
 export default function App() {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [_user, setUser] = useStorageState<User | null>("user");
+
     useEffect(() => {
         if (location.pathname === "/") {
             location.replace("/Home");
+            return;
         }
+
+        (async () => {
+            const [err, userData] = await UsersApi.me();
+            if (!err && userData) {
+                setUser(userData);
+            }
+        })();
     }, []);
 
     return (
