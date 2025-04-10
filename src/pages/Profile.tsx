@@ -8,6 +8,7 @@ import MyPage from "@ui/MyPage";
 import RegForm from "@ui/Registration";
 
 import "@assets/css/Profile.css";
+import "@assets/css/ProfileDark.css";
 
 export default function Profile() {
     const [loginOrReg, setLoginOrReg] = useState<"login" | "reg">("login");

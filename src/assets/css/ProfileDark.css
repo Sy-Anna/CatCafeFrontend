@@ -1,0 +1,5 @@
+:root [dark="true"] {
+    .profileCard p {
+        color: black !important;
+    }
+}
