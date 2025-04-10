@@ -32,12 +32,8 @@ export default function Cargo() {
     const [user] = useStorageState<User | null>("user");
 
     useEffect(() => {
-        if (!user) {
+        if (!user || user.role !== "WORKER") {
             location.replace("/Profile");
-            return;
-        }
-        if (user.role !== "WORKER") {
-            location.replace("/Webshop");
             return;
         }
 
