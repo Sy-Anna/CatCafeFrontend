@@ -3,16 +3,16 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
+import { useNotification } from "@hooks/useNotification";
 import { UsersApi } from "@libs/api/users";
 
 export default function RegForm() {
+    const notification = useNotification();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [_error, setError] = useState<string | null>(null);
 
     const navigate = useNavigate();
 
@@ -20,12 +20,11 @@ export default function RegForm() {
         e.preventDefault();
 
         if (password !== confirmPassword) {
-            setError("A jelszavak nem egyeznek!");
+            notification.add("A jelszavak nem egyeznek!", "error");
             return;
         }
 
         setLoading(true);
-        setError(null);
 
         const [error, response] = await UsersApi.register(
             name,
@@ -34,11 +33,15 @@ export default function RegForm() {
         );
         if (error) {
             if (Array.isArray(error!.message)) {
-                setError(
+                notification.add(
                     error!.message.join("\n") || "Ismeretlen hiba történt.",
+                    "error",
                 );
             } else {
-                setError(error!.message || "Ismeretlen hiba történt.");
+                notification.add(
+                    error!.message || "Ismeretlen hiba történt.",
+                    "error",
+                );
             }
         } else {
             console.log("Regisztráció sikeres:", response);

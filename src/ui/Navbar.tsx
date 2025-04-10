@@ -7,8 +7,15 @@ import Navbar from "react-bootstrap/Navbar";
 import cartIcon from "@assets/img/icons/cartIcon2.png";
 import profileIcon from "@assets/img/icons/profileIcon.png";
 import logoSmall from "@assets/img/logoSmall.png";
+import useStorageState from "use-storage-state";
 
 export default function NavbarComponent() {
+    const [cartContent] = useStorageState<
+        Array<{ id: number; quantity: number }>
+    >("cart", {
+        defaultValue: [],
+    });
+
     // darkMode
     const [dark, setDark] = useState(() => {
         return localStorage.getItem("theme") === "true";
@@ -74,6 +81,9 @@ export default function NavbarComponent() {
                 />
                 <a className="navButton btn btn-primary" href="/Cart">
                     <img className="navIcon" src={cartIcon} alt="cart icon" />
+                    {cartContent.length > 0 && (
+                        <span className="cartCount">{cartContent.length}</span>
+                    )}
                 </a>
                 <a className="navButton btn btn-primary" href="/Profile">
                     <img

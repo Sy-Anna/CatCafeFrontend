@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import useStorageState from "use-storage-state";
 
+import { useNotification } from "@hooks/useNotification";
 import { setAuthorizationHeader } from "@libs/api";
 import { UsersApi } from "@libs/api/users";
 import { User } from "@libs/types";
@@ -13,6 +14,7 @@ type LoginFormProps = {
 };
 
 export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
+    const notification = useNotification();
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -28,7 +30,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
 
         if (error) {
             console.error("Login error", error);
-            alert("Hibás email vagy jelszó!");
+            notification.add("Hibás email vagy jelszó!", "error");
         } else {
             setToken(response!.token);
             setAuthorizationHeader();
@@ -40,7 +42,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
 
         if (userError) {
             console.error("Nem sikerült lekérni a felhasználót", userError);
-            alert("Sikertelen bejelentkezés");
+            notification.add("Sikertelen bejelentkezés", "error");
         } else {
             console.log("Sikeres bejelentkezés", user);
             if (user.role == "WORKER") {
