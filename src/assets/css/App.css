@@ -36,7 +36,6 @@ body {
     box-shadow: 3px 3px #2c3930 !important;
 }
 .navSwitch .form-check-input {
-    display: inline-block;
     transform: rotate(90deg);
     background-color: #dcd7c9;
     border: #2c3930 1px solid;
@@ -45,7 +44,6 @@ body {
     float: right;
 }
 .navbar-toggler {
-    display: inline-block;
     float: left;
     align-self: flex-start;
     text-align: left;
