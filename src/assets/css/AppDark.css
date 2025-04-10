@@ -16,7 +16,6 @@ body[dark="true"] {
         box-shadow: 3px 3px #a27b5c !important;
     }
     .navSwitch .form-check-input {
-        display: inline-block;
         transform: rotate(90deg);
         background-color: #dcd7c9;
         border: #a27b5c 1px solid !important;
@@ -26,6 +25,9 @@ body[dark="true"] {
     }
     .navbar-toggler {
         border: #3f4f44 1px solid !important;
+    }
+    .navbar-toggler-icon {
+        filter: invert(1);
     }
     /* navbar responsiveness */
     .navButton:hover {
