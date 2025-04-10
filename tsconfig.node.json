@@ -1,33 +1,35 @@
 {
-	"compilerOptions": {
-		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-		"target": "ES2022",
-		"lib": ["ES2023"],
-		"module": "ESNext",
-		"skipLibCheck": true,
+    "compilerOptions": {
+        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+        "target": "ES2022",
+        "lib": ["ES2023"],
+        "module": "ESNext",
+        "skipLibCheck": true,
 
-		/* Bundler mode */
-		"moduleResolution": "Bundler",
-		"allowImportingTsExtensions": true,
-		"isolatedModules": true,
-		"moduleDetection": "force",
-		"noEmit": true,
+        /* Bundler mode */
+        "moduleResolution": "Bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
 
-		/* Linting */
-		"strict": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true,
-		"noUncheckedSideEffectImports": true,
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
 
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/*"],
-			"@libs/*": ["src/libs/*"],
-			"@assets/*": ["src/assets/*"],
-			"@pages/*": ["src/pages/*"],
-			"@ui/*": ["src/ui/*"]
-		}
-	},
-	"include": ["vite.config.ts"]
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "@libs/*": ["src/libs/*"],
+            "@assets/*": ["src/assets/*"],
+            "@pages/*": ["src/pages/*"],
+            "@ui/*": ["src/ui/*"],
+            "@contexts/*": ["src/contexts/*"],
+            "@hooks/*": ["src/hooks/*"]
+        }
+    },
+    "include": ["vite.config.ts"]
 }

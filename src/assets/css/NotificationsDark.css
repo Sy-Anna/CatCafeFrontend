@@ -1,0 +1,19 @@
+:root [dark="true"] {
+    .notification {
+        border: #dcd7c9 1px solid;
+        box-shadow: 3px 3px #a27b5c;
+        color: #3f4f44;
+    }
+
+    .notification.info {
+        background-color: #dcd7c9;
+    }
+
+    .notification.success {
+        background-color: #dcc9c9;
+    }
+
+    .notification.error {
+        background-color: #c9dcc9;
+    }
+}
