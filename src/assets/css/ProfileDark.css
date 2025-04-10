@@ -1,5 +1,12 @@
 :root [dark="true"] {
-    .profileCard p {
-        color: black !important;
+    .profileCard {
+        background-color: #3f4f44;
+        border-color: #2c3930;
+        border-radius: 20px;
+        box-shadow: 5px 10px #2c3930;
+    }
+
+    .profileCard h2 {
+        color: #fff;
     }
 }
