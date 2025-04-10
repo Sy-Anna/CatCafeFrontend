@@ -11,11 +11,12 @@ import {
 
 import { API_URL } from "@libs/api";
 import { ProductsApi } from "@libs/api/products";
-import type { Product } from "@libs/types";
+import type { Product, User } from "@libs/types";
 
 import "@assets/css/Cargo.css";
 import "@assets/css/Webshop.css";
 import "@assets/css/WebshopDark.css";
+import useStorageState from "use-storage-state";
 
 export default function Cargo() {
     const [products, setProducts] = useState<Product[]>([]);
@@ -28,8 +29,18 @@ export default function Cargo() {
     const [quantity, setQuantity] = useState("");
     const [active, setActive] = useState(true);
     const [image, setImage] = useState<File | null>(null);
+    const [user] = useStorageState<User | null>("user");
 
     useEffect(() => {
+        if (!user) {
+            location.replace("/Profile");
+            return;
+        }
+        if (user.role !== "WORKER") {
+            location.replace("/Webshop");
+            return;
+        }
+
         (async () => {
             const [error, response] = await ProductsApi.getAll();
             if (error) {
