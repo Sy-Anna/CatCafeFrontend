@@ -31,3 +31,7 @@ export interface Product {
     price: number;
     quantity: number;
 }
+
+export interface NotificationContextProps {
+    add: (message: string, type: "success" | "error" | "info") => void;
+}

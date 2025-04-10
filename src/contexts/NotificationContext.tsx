@@ -19,10 +19,7 @@ export default function NotificationProvider({
 }: NotificationProviderProps) {
     const [notifications, setNotifications] = useState<Notification[]>([]);
 
-    const addNotification = (
-        message: string,
-        type: "success" | "error" | "info",
-    ) => {
+    const add = (message: string, type: "success" | "error" | "info") => {
         const id = new Date().getTime();
         setNotifications([...notifications, { id, message, type }]);
         setTimeout(() => {
@@ -33,7 +30,7 @@ export default function NotificationProvider({
     };
 
     return (
-        <NotificationContext.Provider value={{ addNotification }}>
+        <NotificationContext.Provider value={{ add }}>
             {children}
             <div className="notification-container">
                 {notifications.map(({ id, message, type }) => (
