@@ -33,7 +33,7 @@ export default function Cargo() {
 
     useEffect(() => {
         if (!user || user.role !== "WORKER") {
-            location.replace("/Profile");
+            location.replace("/Home");
             return;
         }
 
