@@ -51,22 +51,26 @@ export default function About() {
                             <h1 className="aboutCardTitle">{address.title}</h1>
                             <div className="content">
                                 <div className="contentTop">
-                                    <img
-                                        className="aboutIcon"
-                                        src={locationIcon}
-                                        alt="icon"
-                                    />
-                                    <p className="aboutCardAddress">
-                                        {address.address}
-                                    </p>
-                                    <img
-                                        className="aboutIcon"
-                                        src={phoneIcon}
-                                        alt="icon"
-                                    />
-                                    <p className="aboutCardPhone">
-                                        {address.phone}
-                                    </p>
+                                    <div>
+                                        <img
+                                            className="aboutIcon"
+                                            src={locationIcon}
+                                            alt="icon"
+                                        />
+                                        <p className="aboutCardAddress">
+                                            {address.address}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="aboutIcon"
+                                            src={phoneIcon}
+                                            alt="icon"
+                                        />
+                                        <p className="aboutCardPhone">
+                                            {address.phone}
+                                        </p>
+                                    </div>
                                 </div>
                                 <p className="aboutCardDescription">
                                     {address.description}

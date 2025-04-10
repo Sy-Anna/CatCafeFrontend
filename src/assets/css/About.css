@@ -1,6 +1,6 @@
 /* cards */
 .aboutCard {
-    width: clamp(26rem, 28rem, 30rem);
+    width: clamp(100px, 28rem, 30rem);
     height: clamp(14rem, 16rem, 18rem);
     padding: 2em;
     background-color: #dcd7c9;
@@ -34,27 +34,20 @@
     font-size: 16px;
     font-style: normal;
     text-align: left !important;
-    float: left;
-    width: 45%;
     padding: 10px;
 }
 .aboutCardPhone {
-    font-family: "Delius", cursive;
     font-weight: 400;
     font-size: 16px;
     font-style: normal;
-    text-align: left;
-    float: left;
-    width: 37%;
     padding: 10px;
 }
 .aboutIcon {
-    width: 8%;
-    float: left;
+    width: 32px;
+    height: 32px;
     margin-top: 10px;
 }
 .aboutCardDescription {
-    font-family: "Delius", cursive;
     font-weight: 400;
     font-size: 16px;
     font-style: normal;
@@ -71,4 +64,26 @@
     justify-content: center;
     display: flex;
     align-items: center;
+}
+.contentTop {
+    display: flex;
+    position: relative;
+}
+.contentTop div {
+    display: flex;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .aboutCard {
+        width: 100% !important;
+        min-width: 300px;
+        height: 100% !important;
+        padding: 1em;
+        margin: 0 auto;
+    }
+
+    .contentTop {
+        flex-direction: column;
+    }
 }
