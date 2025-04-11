@@ -48,6 +48,11 @@ body {
     display: inline-block !important;
     box-shadow: 3px 3px #2c3930 !important;
 }
+.navButton:hover {
+    background-color: #bdb6aa !important;
+    border-color: #2c3930 !important;
+    box-shadow: 2px 2px #3f4f44 !important;
+}
 .navSwitch .form-check-input {
     transform: rotate(90deg);
     background-color: #dcd7c9;
@@ -70,7 +75,7 @@ body {
 }
 .navbar-toggler:hover {
     border: 2px solid #dcd7c9 !important;
-    background-color: #dcd7c9;
+    background-color: #dcd7c9 !important;
 }
 .navSwitch .form-check-input:hover {
     cursor: pointer;
@@ -120,7 +125,10 @@ h6 {
     font-size: 0.875rem;
 }
 
-p {
+p,
+li,
+ul,
+ol {
     font-family: "Fuzzy Bubbles", sans-serif !important;
     font-weight: 500;
     font-style: normal;
@@ -141,14 +149,15 @@ p {
     border: #2c3930 1px solid;
     box-shadow: 3px 3px #2c3930;
     color: #2d3931;
+    transition: all 0.3s ease;
 }
 .btn:hover {
-    border-color: #2c3930 !important;
-    background-color: #916e51 !important;
-    box-shadow: 2px 2px #2c3930 !important;
+    border-color: #2c3930;
+    background-color: #916e51;
+    box-shadow: 2px 2px #2c3930;
 }
 .btn:active {
-    border-color: #2c3930 !important;
+    border-color: #2c3930;
 }
 
 .cartCount {

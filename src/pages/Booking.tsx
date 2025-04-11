@@ -45,7 +45,9 @@ export default function Booking() {
                 <Col>
                     <h3 className="mt-3">
                         Kiválasztott időpont:{" "}
-                        {value ? value.toLocaleString() : "Nincs kiválasztva"}
+                        {value
+                            ? (value as Date).toLocaleDateString("hu-HU")
+                            : "Nincs kiválasztva"}
                     </h3>
                     <button
                         className="btn btn-primary mt-3"

@@ -14,3 +14,6 @@
 .reservation-info {
     margin-top: 20px;
 }
+.reservation-info p {
+    margin-bottom: 0;
+}

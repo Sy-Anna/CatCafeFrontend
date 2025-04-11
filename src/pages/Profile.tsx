@@ -50,26 +50,26 @@ export default function Profile() {
                         <MyPage user={user} onLogout={() => setUser(null)} />
                         {reservation && (
                             <div className="reservation-info">
-                                <h5>Aktív asztalfoglalás:</h5>
+                                <h3>Aktív asztalfoglalás:</h3>
                                 <p>Foglalás ID: {reservation.id}</p>
                                 <p>
                                     Időpont:{" "}
                                     {new Date(
                                         reservation.date,
-                                    ).toLocaleString()}
+                                    ).toLocaleDateString("hu-HU")}
                                 </p>
                             </div>
                         )}
                         {previousReservations.length > 0 && (
                             <div className="reservation-info">
-                                <h5>Előző asztalfoglalások:</h5>
+                                <h3>Előző asztalfoglalások:</h3>
                                 <ul>
                                     {previousReservations.map((res, index) => (
                                         <li key={index}>
                                             Foglalás ID: {res.id}, Időpont:{" "}
                                             {new Date(
                                                 res.date,
-                                            ).toLocaleString()}
+                                            ).toLocaleDateString("hu-HU")}
                                         </li>
                                     ))}
                                 </ul>
