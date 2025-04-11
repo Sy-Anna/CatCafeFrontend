@@ -30,7 +30,13 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
 
         if (error) {
             console.error("Login error", error);
-            notification.add("Hibás email vagy jelszó!", "error");
+            if (Array.isArray(error.message)) {
+                for (const message of error.message) {
+                    notification.add(message, "error");
+                }
+            } else {
+                notification.add(error.message, "error");
+            }
         } else {
             setToken(response!.token);
             setAuthorizationHeader();

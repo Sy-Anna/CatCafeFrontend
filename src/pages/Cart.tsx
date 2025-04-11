@@ -79,7 +79,13 @@ export default function Cart() {
     const handleBuy = async () => {
         const [error] = await ProductsApi.buy(cartContent);
         if (error) {
-            notification.add("Hiba történt a vásárlás során.", "error");
+            if (Array.isArray(error.message)) {
+                for (const message of error.message) {
+                    notification.add(message, "error");
+                }
+            } else {
+                notification.add(error.message, "error");
+            }
             console.error(error);
         } else {
             notification.add("Sikeres vásárlás!", "success");

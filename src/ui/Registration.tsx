@@ -32,16 +32,12 @@ export default function RegForm() {
             password,
         );
         if (error) {
-            if (Array.isArray(error!.message)) {
-                notification.add(
-                    error!.message.join("\n") || "Ismeretlen hiba történt.",
-                    "error",
-                );
+            if (Array.isArray(error.message)) {
+                for (const message of error.message) {
+                    notification.add(message, "error");
+                }
             } else {
-                notification.add(
-                    error!.message || "Ismeretlen hiba történt.",
-                    "error",
-                );
+                notification.add(error.message, "error");
             }
         } else {
             console.log("Regisztráció sikeres:", response);

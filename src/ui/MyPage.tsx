@@ -25,7 +25,13 @@ export default function MyPage({ user, onLogout }: MyPageProps) {
             onLogout();
             localStorage.removeItem("token");
         } else {
-            notification.add("Sikertelen kijelentkezés", "error");
+            if (Array.isArray(err.message)) {
+                for (const message of err.message) {
+                    notification.add(message, "error");
+                }
+            } else {
+                notification.add(err.message, "error");
+            }
         }
     };
 

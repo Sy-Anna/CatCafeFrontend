@@ -71,8 +71,14 @@ export default function Cargo() {
         );
 
         if (error) {
+            if (Array.isArray(error.message)) {
+                for (const message of error.message) {
+                    notification.add(message, "error");
+                }
+            } else {
+                notification.add(error.message, "error");
+            }
             console.error("Hiba termék létrehozásakor:", error);
-            notification.add("Valami elromlott", "error");
         } else {
             notification.add("Termék sikeresen létrehozva", "success");
             setName("");
