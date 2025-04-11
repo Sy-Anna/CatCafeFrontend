@@ -201,7 +201,7 @@ export default function Cart() {
 
             {isModalOpen && (
                 <div className="modal">
-                    <div className="modalContent">
+                    <Card className="modalContent">
                         <h2>Vásárlás megerősítése</h2>
                         <ul>
                             {cartContent.map((item) => {
@@ -229,7 +229,7 @@ export default function Cart() {
                                 Mégse
                             </button>
                         </div>
-                    </div>
+                    </Card>
                 </div>
             )}
         </Container>
