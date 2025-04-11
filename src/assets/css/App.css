@@ -85,8 +85,25 @@ h6 {
     color: #2c3930;
     font-family: "Caveat", cursive !important;
     font-weight: bold;
-    font-size: 25px !important;
     text-align: left;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.25rem;
+}
+h5 {
+    font-size: 1rem;
+}
+h6 {
+    font-size: 0.875rem;
 }
 
 p {

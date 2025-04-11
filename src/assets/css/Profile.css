@@ -11,14 +11,6 @@
     padding-bottom: 30px;
 }
 
-:root [dark="true"] {
-	.profileCard {
-		background-color: #3f4f44 !important;
-		box-shadow: #2c3930 5px 10px;
-	}
-
-}
-
 .login {
     text-align: left !important;
 }
