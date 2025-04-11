@@ -49,7 +49,10 @@ body[dark="true"] {
         color: #a27b5c;
     }
 
-    p {
+    p,
+    li,
+    ul,
+    ol {
         color: #dcd7c9;
     }
 

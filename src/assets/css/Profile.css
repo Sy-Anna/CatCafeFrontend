@@ -13,6 +13,7 @@
 /* Add margin-top to reservation-info class */
 .reservation-info {
     margin-top: 20px;
+    width: max-content;
 }
 .reservation-info p {
     margin-bottom: 0;

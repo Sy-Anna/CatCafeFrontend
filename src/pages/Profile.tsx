@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import useStorageState from "use-storage-state";
 
 import { ReservationsApi } from "@libs/api/reservations";
@@ -44,56 +44,75 @@ export default function Profile() {
 
     return (
         <Container fluid="lg" className="mt-4">
-            <Card className="profileCard">
+            <Row>
                 {user ? (
                     <>
-                        <MyPage user={user} onLogout={() => setUser(null)} />
-                        {reservation && (
-                            <div className="reservation-info">
-                                <h3>Aktív asztalfoglalás:</h3>
-                                <p>Foglalás ID: {reservation.id}</p>
-                                <p>
-                                    Időpont:{" "}
-                                    {new Date(
-                                        reservation.date,
-                                    ).toLocaleDateString("hu-HU")}
-                                </p>
-                            </div>
-                        )}
-                        {previousReservations.length > 0 && (
-                            <div className="reservation-info">
-                                <h3>Előző asztalfoglalások:</h3>
-                                <ul>
-                                    {previousReservations.map((res, index) => (
-                                        <li key={index}>
-                                            Foglalás ID: {res.id}, Időpont:{" "}
+                        <Col>
+                            <Card className="profileCard">
+                                <MyPage
+                                    user={user}
+                                    onLogout={() => setUser(null)}
+                                />
+                            </Card>
+                        </Col>
+                        <Col>
+                            <Card className="profileCard">
+                                {reservation && (
+                                    <div className="reservation-info">
+                                        <h2>Aktív asztalfoglalás:</h2>
+                                        <p>Foglalás ID: {reservation.id}</p>
+                                        <p>
+                                            Időpont:{" "}
                                             {new Date(
-                                                res.date,
+                                                reservation.date,
                                             ).toLocaleDateString("hu-HU")}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
+                                        </p>
+                                    </div>
+                                )}
+                                {previousReservations.length > 0 && (
+                                    <div className="reservation-info">
+                                        <h3>Előző asztalfoglalások:</h3>
+                                        <ul>
+                                            {previousReservations.map(
+                                                (res, index) => (
+                                                    <li key={index}>
+                                                        Foglalás ID: {res.id}
+                                                        <br />
+                                                        Időpont:{" "}
+                                                        {new Date(
+                                                            res.date,
+                                                        ).toLocaleDateString(
+                                                            "hu-HU",
+                                                        )}
+                                                    </li>
+                                                ),
+                                            )}
+                                        </ul>
+                                    </div>
+                                )}
+                            </Card>
+                        </Col>
                     </>
                 ) : (
-                    <>
-                        {loginOrReg === "login" ? (
-                            <LoginForm onLoginSuccess={(u) => setUser(u)} />
-                        ) : (
-                            <RegForm />
-                        )}
-                        <button
-                            className="btn btn-primary"
-                            onClick={toggleForm}
-                        >
-                            {loginOrReg === "login"
-                                ? "Még nincs profilom"
-                                : "Már van profilom"}
-                        </button>
-                    </>
+                    <Col>
+                        <Card className="profileCard">
+                            {loginOrReg === "login" ? (
+                                <LoginForm onLoginSuccess={(u) => setUser(u)} />
+                            ) : (
+                                <RegForm />
+                            )}
+                            <button
+                                className="btn btn-primary"
+                                onClick={toggleForm}
+                            >
+                                {loginOrReg === "login"
+                                    ? "Még nincs profilom"
+                                    : "Már van profilom"}
+                            </button>
+                        </Card>
+                    </Col>
                 )}
-            </Card>
+            </Row>
         </Container>
     );
 }
