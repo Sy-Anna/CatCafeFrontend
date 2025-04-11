@@ -25,11 +25,7 @@ export default function RegForm() {
 
         setLoading(true);
 
-        const [error, response] = await UsersApi.register(
-            name,
-            email,
-            password,
-        );
+        const [error] = await UsersApi.register(name, email, password);
         if (error) {
             if (Array.isArray(error.message)) {
                 for (const message of error.message) {
@@ -39,7 +35,7 @@ export default function RegForm() {
                 notification.add(error.message, "error");
             }
         } else {
-            console.log("Regisztráció sikeres:", response);
+            notification.add("Sikeres regisztráció", "success");
             navigate("/Profile");
         }
 
