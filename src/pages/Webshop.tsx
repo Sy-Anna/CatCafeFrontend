@@ -53,13 +53,13 @@ export default function Webshop() {
         (async () => {
             setLoading(true);
             const [err, data] = await ProductsApi.getAll();
-            if (err) {
+            if (err || !data) {
                 notification.add(
                     "Nem sikerült betölteni a termékeket.",
                     "error",
                 );
             } else {
-                setProducts(data!);
+                setProducts(data.filter((product) => product.quantity > 0));
             }
             setLoading(false);
         })();
