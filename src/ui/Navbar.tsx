@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Form, Nav, Navbar, NavLink } from "react-bootstrap";
 import useStorageState from "use-storage-state";
 
 import cartIcon from "@assets/img/icons/cartIcon2.png";
