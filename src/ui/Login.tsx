@@ -40,16 +40,13 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
             setToken(response.token);
             setAuthorizationHeader();
             console.log("Login Successful:", response);
+            notification.add("Sikeres bejelentkezés", "success");
             navigate("/home");
         }
 
         const [userError, user] = await UsersApi.me();
 
-        if (userError) {
-            console.error("Nem sikerült lekérni a felhasználót", userError);
-            notification.add("Sikertelen bejelentkezés", "error");
-        } else {
-            console.log("Sikeres bejelentkezés", user);
+        if (!userError && user) {
             if (user.role == "WORKER") {
                 navigate("/Cargo");
             } else {
