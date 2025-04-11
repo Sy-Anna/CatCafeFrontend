@@ -28,7 +28,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
 
         const [error, response] = await UsersApi.login(email, password);
 
-        if (error) {
+        if (error || !response) {
             console.error("Login error", error);
             if (Array.isArray(error.message)) {
                 for (const message of error.message) {
@@ -38,7 +38,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
                 notification.add(error.message, "error");
             }
         } else {
-            setToken(response!.token);
+            setToken(response.token);
             setAuthorizationHeader();
             console.log("Login Successful:", response);
             navigate("/home");
