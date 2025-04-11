@@ -30,11 +30,4 @@
         font-size: 25px !important;
         text-align: left !important;
     }
-
-    p {
-        font-family: "Delius", cursive;
-        font-weight: 400;
-        font-style: normal;
-        text-align: justify;
-    }
 }

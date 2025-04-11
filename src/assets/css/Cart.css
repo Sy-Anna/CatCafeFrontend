@@ -83,12 +83,6 @@
     margin: 0.5rem 0;
 }
 
-.modalContent p {
-    font-family: "Delius", cursive;
-    color: #3f4f44;
-    margin-bottom: 1rem;
-}
-
 .modalActions {
     display: flex;
     justify-content: space-around;
