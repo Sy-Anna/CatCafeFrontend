@@ -29,7 +29,6 @@ export default function Cargo() {
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
     const [quantity, setQuantity] = useState("");
-    const [active, setActive] = useState(true);
     const [image, setImage] = useState<File | null>(null);
     const [user] = useStorageState<User | null>("user");
 
@@ -85,7 +84,6 @@ export default function Cargo() {
             setDescription("");
             setPrice("");
             setQuantity("");
-            setActive(true);
             setImage(null);
 
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -207,16 +205,6 @@ export default function Cargo() {
                                             .files?.[0] ?? null;
                                     setImage(file);
                                 }}
-                            />
-                        </Form.Group>
-
-                        <Form.Group className="mb-3">
-                            <Form.Check
-                                className="checkBox"
-                                type="checkbox"
-                                label="Aktív"
-                                checked={active}
-                                onChange={(e) => setActive(e.target.checked)}
                             />
                         </Form.Group>
 
