@@ -4,20 +4,19 @@
 }
 
 .cargoCard {
-    width: clamp(14rem, 16rem, 18rem);
-    height: 100%;
-    padding: 1rem;
-    background-color: #dcd7c9;
-    border-color: #2c3930;
-    border-radius: 20px;
-    box-shadow: 5px 10px #a27b5c;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: clamp(14rem, 16rem, 18rem) !important;
+    height: 100% !important;
+    padding: 1rem !important;
+    justify-content: center !important;
 }
 
 .cargoCardText {
     display: inline;
     float: left !important;
     width: 100%;
+}
+
+.cargoCardTitle {
+    margin: 0;
+    text-align: center;
 }

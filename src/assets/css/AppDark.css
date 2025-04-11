@@ -67,4 +67,11 @@ body[dark="true"] {
         background-color: #dcd7c9 !important;
         box-shadow: 2px 2px #a27b5c !important;
     }
+
+    .card {
+        background-color: #3f4f44;
+        border-color: #2c3930;
+        border-radius: 20px;
+        box-shadow: 5px 10px #2c3930;
+    }
 }

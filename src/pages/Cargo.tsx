@@ -158,65 +158,72 @@ export default function Cargo() {
                         </Card>
                     </Col>
                 ))}
-                <Card className="cargoCard pt-0">
-                    <Form onSubmit={handleSubmit} className="mt-5">
-                        <Form.Group className="mb-3">
-                            <Form.Control
-                                type="text"
-                                placeholder="Termék név"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                        </Form.Group>
+                <Col className="cardContainer">
+                    <Card className="cargoCard pt-0">
+                        <h1 className="cargoCardTitle">Új termék</h1>
+                        <Form onSubmit={handleSubmit} className="mt-5">
+                            <Form.Group className="mb-3">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Termék név"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Control
-                                type="text"
-                                placeholder="Leírás"
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
-                            />
-                        </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Leírás"
+                                    value={description}
+                                    onChange={(e) =>
+                                        setDescription(e.target.value)
+                                    }
+                                />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Control
-                                type="number"
-                                placeholder="Ár"
-                                value={price}
-                                onChange={(e) => setPrice(e.target.value)}
-                            />
-                        </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Control
+                                    type="number"
+                                    placeholder="Ár"
+                                    value={price}
+                                    onChange={(e) => setPrice(e.target.value)}
+                                />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Control
-                                type="text"
-                                placeholder="Mennyiség"
-                                value={quantity}
-                                onChange={(e) => setQuantity(e.target.value)}
-                            />
-                        </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Mennyiség"
+                                    value={quantity}
+                                    onChange={(e) =>
+                                        setQuantity(e.target.value)
+                                    }
+                                />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Control
-                                type="file"
-                                onChange={(e) => {
-                                    const file =
-                                        (e.target as HTMLInputElement)
-                                            .files?.[0] ?? null;
-                                    setImage(file);
-                                }}
-                            />
-                        </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Control
+                                    type="file"
+                                    onChange={(e) => {
+                                        const file =
+                                            (e.target as HTMLInputElement)
+                                                .files?.[0] ?? null;
+                                        setImage(file);
+                                    }}
+                                />
+                            </Form.Group>
 
-                        <Button
-                            className="mt-0"
-                            type="submit"
-                            disabled={formLoading}
-                        >
-                            {formLoading ? "+" : "+"}
-                        </Button>
-                    </Form>
-                </Card>
+                            <Button
+                                className="mt-0"
+                                type="submit"
+                                disabled={formLoading}
+                            >
+                                {formLoading ? "+" : "+"}
+                            </Button>
+                        </Form>
+                    </Card>
+                </Col>
             </Row>
         </Container>
     );

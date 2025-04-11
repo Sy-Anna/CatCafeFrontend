@@ -140,7 +140,7 @@ export default function Cart() {
                                 ),
                             )
                             .map((product) => (
-                                <Col>
+                                <Col className="col-item" key={product.id}>
                                     <Card key={product.id} className="cartItem">
                                         <img
                                             src={`${API_URL}products/${product.id}/image`}

@@ -55,43 +55,46 @@ export default function Profile() {
                                 />
                             </Card>
                         </Col>
-                        <Col>
-                            <Card className="profileCard">
-                                {reservation && (
-                                    <div className="reservation-info">
-                                        <h2>Aktív asztalfoglalás:</h2>
-                                        <p>Foglalás ID: {reservation.id}</p>
-                                        <p>
-                                            Időpont:{" "}
-                                            {new Date(
-                                                reservation.date,
-                                            ).toLocaleDateString("hu-HU")}
-                                        </p>
-                                    </div>
-                                )}
-                                {previousReservations.length > 0 && (
-                                    <div className="reservation-info">
-                                        <h3>Előző asztalfoglalások:</h3>
-                                        <ul>
-                                            {previousReservations.map(
-                                                (res, index) => (
-                                                    <li key={index}>
-                                                        Foglalás ID: {res.id}
-                                                        <br />
-                                                        Időpont:{" "}
-                                                        {new Date(
-                                                            res.date,
-                                                        ).toLocaleDateString(
-                                                            "hu-HU",
-                                                        )}
-                                                    </li>
-                                                ),
-                                            )}
-                                        </ul>
-                                    </div>
-                                )}
-                            </Card>
-                        </Col>
+                        {user.role === "USER" && (
+                            <Col>
+                                <Card className="profileCard">
+                                    {reservation && (
+                                        <div className="reservation-info">
+                                            <h2>Aktív asztalfoglalás:</h2>
+                                            <p>Foglalás ID: {reservation.id}</p>
+                                            <p>
+                                                Időpont:{" "}
+                                                {new Date(
+                                                    reservation.date,
+                                                ).toLocaleDateString("hu-HU")}
+                                            </p>
+                                        </div>
+                                    )}
+                                    {previousReservations.length > 0 && (
+                                        <div className="reservation-info">
+                                            <h3>Előző asztalfoglalások:</h3>
+                                            <ul>
+                                                {previousReservations.map(
+                                                    (res, index) => (
+                                                        <li key={index}>
+                                                            Foglalás ID:{" "}
+                                                            {res.id}
+                                                            <br />
+                                                            Időpont:{" "}
+                                                            {new Date(
+                                                                res.date,
+                                                            ).toLocaleDateString(
+                                                                "hu-HU",
+                                                            )}
+                                                        </li>
+                                                    ),
+                                                )}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </Card>
+                            </Col>
+                        )}
                     </>
                 ) : (
                     <Col>

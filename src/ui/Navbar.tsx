@@ -94,19 +94,40 @@ export default function NavbarComponent() {
                     checked={dark}
                     onChange={toggleDarkMode}
                 />
-                <a className="navButton btn btn-primary" href="/Cart">
-                    <img className="navIcon" src={cartIcon} alt="cart icon" />
-                    {cartContent.length > 0 && (
-                        <span className="cartCount">{cartContent.length}</span>
-                    )}
-                </a>
-                <a className="navButton btn btn-primary" href="/Profile">
-                    <img
-                        className="navIcon"
-                        src={profileIcon}
-                        alt="profile icon"
-                    />
-                </a>
+                {user && user.role === "WORKER" ? (
+                    <a className="navButton btn btn-primary" href="/Profile">
+                        <img
+                            className="navIcon"
+                            src={profileIcon}
+                            alt="profile icon"
+                        />
+                    </a>
+                ) : (
+                    <>
+                        <a className="navButton btn btn-primary" href="/Cart">
+                            <img
+                                className="navIcon"
+                                src={cartIcon}
+                                alt="cart icon"
+                            />
+                            {cartContent.length > 0 && (
+                                <span className="cartCount">
+                                    {cartContent.length}
+                                </span>
+                            )}
+                        </a>
+                        <a
+                            className="navButton btn btn-primary"
+                            href="/Profile"
+                        >
+                            <img
+                                className="navIcon"
+                                src={profileIcon}
+                                alt="profile icon"
+                            />
+                        </a>
+                    </>
+                )}
             </div>
         </Navbar>
     );
