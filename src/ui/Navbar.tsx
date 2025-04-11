@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,8 +7,15 @@ import Navbar from "react-bootstrap/Navbar";
 import cartIcon from "@assets/img/icons/cartIcon2.png";
 import profileIcon from "@assets/img/icons/profileIcon.png";
 import logoSmall from "@assets/img/logoSmall.png";
+import useStorageState from "use-storage-state";
 
 export default function NavbarComponent() {
+    const [cartContent] = useStorageState<
+        Array<{ id: number; quantity: number }>
+    >("cart", {
+        defaultValue: [],
+    });
+
     // darkMode
     const [dark, setDark] = useState(() => {
         return localStorage.getItem("theme") === "true";
@@ -27,15 +33,8 @@ export default function NavbarComponent() {
     }, []);
 
     return (
-        <Navbar
-            expand="lg"
-            fixed="top"
-            className="navbar"
-        >
-            <Navbar.Brand
-                className="navBrand align-self-center"
-                href="/Home"
-            >
+        <Navbar expand="lg" fixed="top" className="navbar">
+            <Navbar.Brand className="navBrand align-self-center" href="/Home">
                 <img
                     src={logoSmall}
                     width="40"
@@ -50,46 +49,25 @@ export default function NavbarComponent() {
             />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <NavLink
-                        className="navLink"
-                        href="/Home"
-                    >
+                    <NavLink className="navLink" href="/Home">
                         Főoldal
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Blog"
-                    >
+                    <NavLink className="navLink" href="/Blog">
                         Blog
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Gallery"
-                    >
+                    <NavLink className="navLink" href="/Gallery">
                         Galéria
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Booking"
-                    >
+                    <NavLink className="navLink" href="/Booking">
                         Asztalfoglalás
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Webshop"
-                    >
+                    <NavLink className="navLink" href="/Webshop">
                         Webshop
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/Contact"
-                    >
+                    <NavLink className="navLink" href="/Contact">
                         Kapcsolat
                     </NavLink>
-                    <NavLink
-                        className="navLink"
-                        href="/About"
-                    >
+                    <NavLink className="navLink" href="/About">
                         Rólunk
                     </NavLink>
                 </Nav>
@@ -101,24 +79,19 @@ export default function NavbarComponent() {
                     checked={dark}
                     onChange={toggleDarkMode}
                 />
-                <Button className="navButton">
-                    <a href="/Cart">
-                        <img
-                            className="navIcon"
-                            src={cartIcon}
-                            alt="cart icon"
-                        />
-                    </a>
-                </Button>
-                <Button className="navButton">
-                    <a href="/Profile">
-                        <img
-                            className="navIcon"
-                            src={profileIcon}
-                            alt="profile icon"
-                        />
-                    </a>
-                </Button>
+                <a className="navButton btn btn-primary" href="/Cart">
+                    <img className="navIcon" src={cartIcon} alt="cart icon" />
+                    {cartContent.length > 0 && (
+                        <span className="cartCount">{cartContent.length}</span>
+                    )}
+                </a>
+                <a className="navButton btn btn-primary" href="/Profile">
+                    <img
+                        className="navIcon"
+                        src={profileIcon}
+                        alt="profile icon"
+                    />
+                </a>
             </div>
         </Navbar>
     );

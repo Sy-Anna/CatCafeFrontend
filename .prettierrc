@@ -7,5 +7,5 @@
     "htmlWhitespaceSensitivity": "strict",
     "printWidth": 80,
     "semi": true,
-    "singleAttributePerLine": true
+    "singleAttributePerLine": false
 }

@@ -18,11 +18,6 @@
     margin-bottom: 15px;
 }
 /* Card responsiveness */
-.contactCardButton:hover {
-    border-color: #2c3930;
-    background-color: #916e51;
-    box-shadow: 2px 2px #2c3930;
-}
 .contactCard:hover {
     background-color: #bdb6aa;
     box-shadow: 4px 9px #a27b5c;

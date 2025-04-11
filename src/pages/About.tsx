@@ -43,36 +43,34 @@ const addresses = [
 
 export default function About() {
     return (
-        <Container
-            fluid="lg"
-            className="mt-4 card-grid"
-        >
+        <Container fluid="lg" className="mt-4 card-grid">
             <Row className="gx-4 gy-4 gap-4">
                 {addresses.map((address) => (
-                    <Col
-                        className="cardContainer"
-                        key={address.id}
-                    >
+                    <Col className="cardContainer" key={address.id}>
                         <Card className="aboutCard">
                             <h1 className="aboutCardTitle">{address.title}</h1>
                             <div className="content">
                                 <div className="contentTop">
-                                    <img
-                                        className="aboutIcon"
-                                        src={locationIcon}
-                                        alt="icon"
-                                    />
-                                    <p className="aboutCardAddress">
-                                        {address.address}
-                                    </p>
-                                    <img
-                                        className="aboutIcon"
-                                        src={phoneIcon}
-                                        alt="icon"
-                                    />
-                                    <p className="aboutCardPhone">
-                                        {address.phone}
-                                    </p>
+                                    <div>
+                                        <img
+                                            className="aboutIcon"
+                                            src={locationIcon}
+                                            alt="icon"
+                                        />
+                                        <p className="aboutCardAddress">
+                                            {address.address}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="aboutIcon"
+                                            src={phoneIcon}
+                                            alt="icon"
+                                        />
+                                        <p className="aboutCardPhone">
+                                            {address.phone}
+                                        </p>
+                                    </div>
                                 </div>
                                 <p className="aboutCardDescription">
                                     {address.description}

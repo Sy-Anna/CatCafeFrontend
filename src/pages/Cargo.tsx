@@ -8,16 +8,19 @@ import {
     Row,
     Spinner,
 } from "react-bootstrap";
+import useStorageState from "use-storage-state";
 
 import { API_URL } from "@libs/api";
 import { ProductsApi } from "@libs/api/products";
-import type { Product } from "@libs/types";
+import type { Product, User } from "@libs/types";
 
 import "@assets/css/Cargo.css";
 import "@assets/css/Webshop.css";
 import "@assets/css/WebshopDark.css";
+import { useNotification } from "@hooks/useNotification";
 
 export default function Cargo() {
+    const notification = useNotification();
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
     const [formLoading, setFormLoading] = useState(false);
@@ -28,13 +31,19 @@ export default function Cargo() {
     const [quantity, setQuantity] = useState("");
     const [active, setActive] = useState(true);
     const [image, setImage] = useState<File | null>(null);
+    const [user] = useStorageState<User | null>("user");
 
     useEffect(() => {
+        if (!user || user.role !== "WORKER") {
+            location.replace("/Home");
+            return;
+        }
+
         (async () => {
             const [error, response] = await ProductsApi.getAll();
             if (error) {
                 console.error("Nem sikerült lekérni a termékeket", error);
-                alert("Nem jött le semmi");
+                notification.add("Nem jött le semmi", "error");
             } else {
                 console.log("Termékek:", response);
                 setProducts(response!);
@@ -48,7 +57,7 @@ export default function Cargo() {
         setFormLoading(true);
 
         if (!image) {
-            alert("Kép feltöltése kötelező!");
+            notification.add("Kép feltöltése kötelező!", "error");
             setFormLoading(false);
             return;
         }
@@ -62,10 +71,16 @@ export default function Cargo() {
         );
 
         if (error) {
+            if (Array.isArray(error.message)) {
+                for (const message of error.message) {
+                    notification.add(message, "error");
+                }
+            } else {
+                notification.add(error.message, "error");
+            }
             console.error("Hiba termék létrehozásakor:", error);
-            alert("Valami elromlott");
         } else {
-            alert("Termék sikeresen létrehozva");
+            notification.add("Termék sikeresen létrehozva", "success");
             setName("");
             setDescription("");
             setPrice("");
@@ -82,25 +97,14 @@ export default function Cargo() {
     };
 
     if (loading) {
-        return (
-            <Spinner
-                animation="border"
-                variant="primary"
-            />
-        );
+        return <Spinner animation="border" variant="primary" />;
     }
 
     return (
-        <Container
-            fluid="lg"
-            className="mt-4 card-grid"
-        >
+        <Container fluid="lg" className="mt-4 card-grid">
             <Row className="gx-4 gy-4 gap-4">
                 {products.map((product) => (
-                    <Col
-                        className="cardContainer"
-                        key={product.id}
-                    >
+                    <Col className="cardContainer" key={product.id}>
                         <Card className="productCard">
                             <img
                                 className="productCardImage"
@@ -116,7 +120,6 @@ export default function Cargo() {
                             </p>
 
                             <Button
-                                className="productCardButton"
                                 onClick={async () => {
                                     if (
                                         window.confirm(
@@ -128,12 +131,16 @@ export default function Cargo() {
                                                 product.id,
                                             );
                                         if (error) {
-                                            alert(
+                                            notification.add(
                                                 "Hiba történt a törlés során.",
+                                                "error",
                                             );
                                             console.error(error);
                                         } else {
-                                            alert("Termék törölve.");
+                                            notification.add(
+                                                "Termék törölve.",
+                                                "success",
+                                            );
 
                                             // eslint-disable-next-line @typescript-eslint/no-unused-vars
                                             const [_, updatedProducts] =
@@ -154,10 +161,7 @@ export default function Cargo() {
                     </Col>
                 ))}
                 <Card className="cargoCard pt-0">
-                    <Form
-                        onSubmit={handleSubmit}
-                        className="mt-5"
-                    >
+                    <Form onSubmit={handleSubmit} className="mt-5">
                         <Form.Group className="mb-3">
                             <Form.Control
                                 type="text"
@@ -217,7 +221,7 @@ export default function Cargo() {
                         </Form.Group>
 
                         <Button
-                            className="cargoButton mt-0"
+                            className="mt-0"
                             type="submit"
                             disabled={formLoading}
                         >

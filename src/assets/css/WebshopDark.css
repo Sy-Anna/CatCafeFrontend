@@ -7,13 +7,6 @@
         border-radius: 20px;
         box-shadow: 5px 10px #2c3930;
     }
-    .productCardButton {
-        background-color: #dcd7c9;
-        border: #dcd7c9 1px solid;
-        display: inline;
-        float: right;
-        box-shadow: 3px 3px #a27b5c;
-    }
     .productCardText {
         display: inline;
         float: left;
@@ -24,11 +17,6 @@
         margin-bottom: 15px;
     }
     /* Card responsiveness */
-    .productCardButton:hover {
-        border-color: #dcd7c9;
-        background-color: #dcd7c9 !important;
-        box-shadow: 2px 2px #a27b5c;
-    }
 
     .productCard:hover {
         background-color: #334037;

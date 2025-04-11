@@ -16,10 +16,7 @@ export default function Gallery() {
             <h1>A Cat Café négylábú csapattagjai:</h1>
             <div className="gallery-card-grid">
                 {shuffledImages.map((image, index) => (
-                    <div
-                        className="galleryCardContainer"
-                        key={index}
-                    >
+                    <div className="galleryCardContainer" key={index}>
                         <div className="imageCard">
                             <img
                                 className="imageCardImage"

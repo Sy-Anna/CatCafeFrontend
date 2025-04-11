@@ -39,10 +39,7 @@ export default function Home() {
         <>
             <div className="home-card-grid">
                 {pages.map((page, index) => (
-                    <div
-                        className="homeCardContainer"
-                        key={index}
-                    >
+                    <div className="homeCardContainer" key={index}>
                         <a href={page.source}>
                             <div className="homeCard">
                                 <img

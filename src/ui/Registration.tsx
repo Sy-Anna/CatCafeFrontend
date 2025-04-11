@@ -3,16 +3,16 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
+import { useNotification } from "@hooks/useNotification";
 import { UsersApi } from "@libs/api/users";
 
 export default function RegForm() {
+    const notification = useNotification();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [_error, setError] = useState<string | null>(null);
 
     const navigate = useNavigate();
 
@@ -20,12 +20,11 @@ export default function RegForm() {
         e.preventDefault();
 
         if (password !== confirmPassword) {
-            setError("A jelszavak nem egyeznek!");
+            notification.add("A jelszavak nem egyeznek!", "error");
             return;
         }
 
         setLoading(true);
-        setError(null);
 
         const [error, response] = await UsersApi.register(
             name,
@@ -33,12 +32,12 @@ export default function RegForm() {
             password,
         );
         if (error) {
-            if (Array.isArray(error!.message)) {
-                setError(
-                    error!.message.join("\n") || "Ismeretlen hiba történt.",
-                );
+            if (Array.isArray(error.message)) {
+                for (const message of error.message) {
+                    notification.add(message, "error");
+                }
             } else {
-                setError(error!.message || "Ismeretlen hiba történt.");
+                notification.add(error.message, "error");
             }
         } else {
             console.log("Regisztráció sikeres:", response);
@@ -52,10 +51,7 @@ export default function RegForm() {
         <Form onSubmit={handleSubmit}>
             <h1>Regisztráció</h1>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicPassword"
-            >
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
                     type="text"
                     placeholder="felhasználónév"
@@ -64,10 +60,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicEmail"
-            >
+            <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control
                     type="email"
                     placeholder="email"
@@ -76,10 +69,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicPassword"
-            >
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
                     type="password"
                     placeholder="jelszó"
@@ -88,10 +78,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Form.Group
-                className="mb-3"
-                controlId="formBasicPassword"
-            >
+            <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control
                     type="password"
                     placeholder="jelszó újra"
@@ -100,11 +87,7 @@ export default function RegForm() {
                 />
             </Form.Group>
 
-            <Button
-                className="loginBtn"
-                type="submit"
-                disabled={loading}
-            >
+            <Button type="submit" disabled={loading}>
                 Tovább
             </Button>
             <a href="/Registry"></a>

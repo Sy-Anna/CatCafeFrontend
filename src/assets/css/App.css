@@ -7,7 +7,7 @@
 
 body {
     background-color: #dcd7c9 !important;
-    padding: 100px;
+    padding: 100px 0;
 }
 
 /* Navbar */
@@ -36,7 +36,6 @@ body {
     box-shadow: 3px 3px #2c3930 !important;
 }
 .navSwitch .form-check-input {
-    display: inline-block;
     transform: rotate(90deg);
     background-color: #dcd7c9;
     border: #2c3930 1px solid;
@@ -45,7 +44,6 @@ body {
     float: right;
 }
 .navbar-toggler {
-    display: inline-block;
     float: left;
     align-self: flex-start;
     text-align: left;
@@ -98,4 +96,33 @@ p {
     justify-items: center;
     align-items: center;
     align-content: center;
+}
+
+.btn {
+    position: relative;
+    background-color: #a27b5c;
+    border: #2c3930 1px solid;
+    box-shadow: 3px 3px #2c3930;
+    color: #2d3931;
+}
+.btn:hover {
+    border-color: #2c3930 !important;
+    background-color: #916e51 !important;
+    box-shadow: 2px 2px #2c3930 !important;
+}
+.btn:active {
+    border-color: #2c3930 !important;
+}
+
+.cartCount {
+    position: absolute;
+    bottom: 1px;
+    color: white;
+    background: black;
+    height: 16px;
+    line-height: 1;
+    padding: 0 6px 0 2px;
+    right: 1px;
+    font-weight: bold;
+    border-radius: 50px;
 }

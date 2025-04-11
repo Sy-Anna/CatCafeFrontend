@@ -23,22 +23,11 @@
     text-align: left !important;
 }
 
-.loginBtn {
-    font-family: "Fuzzy Bubbles", sans-serif !important;
-    background-color: #a27b5c !important;
-    border: #2c3930 1px solid !important;
-    display: inline-block !important;
-    box-shadow: 3px 3px #2c3930 !important;
-    margin: 5px;
-    margin-bottom: 30px;
-    padding: 10px;
-}
-.loginBtn:hover {
-    background-color: #a27b5c !important;
-    border-color: #2c3930 !important;
-    box-shadow: 2px 2px #3f4f44 !important;
-}
-
 .profileCard a {
     color: #a27b5c;
+}
+
+/* Add margin-top to reservation-info class */
+.reservation-info {
+    margin-top: 20px;
 }

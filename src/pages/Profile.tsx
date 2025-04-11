@@ -1,49 +1,81 @@
 import { useEffect, useState } from "react";
-import { Card, Container, Spinner } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
+import useStorageState from "use-storage-state";
 
-import { UsersApi } from "@libs/api/users";
-import { User } from "@libs/types";
-import LoginForm from "@pages/Login";
-import MyPage from "@pages/MyPage";
-import RegForm from "@pages/Registration";
+import { ReservationsApi } from "@libs/api/reservations";
+import { Reservation, User } from "@libs/types";
+import LoginForm from "@ui/Login";
+import MyPage from "@ui/MyPage";
+import RegForm from "@ui/Registration";
 
 import "@assets/css/Profile.css";
+import "@assets/css/ProfileDark.css";
 
 export default function Profile() {
     const [loginOrReg, setLoginOrReg] = useState<"login" | "reg">("login");
-    const [user, setUser] = useState<User | null>(null);
-    const [loading, setLoading] = useState(true);
+    const [user, setUser] = useStorageState<User | null>("user");
+    const [reservation, setReservation] = useState<Reservation | null>(null);
+    const [previousReservations, setPreviousReservations] = useState<
+        Reservation[]
+    >([]);
 
     const toggleForm = () => {
         setLoginOrReg(loginOrReg === "login" ? "reg" : "login");
     };
 
     useEffect(() => {
-        (async () => {
-            const [err, userData] = await UsersApi.me();
-            if (!err && userData) {
-                setUser(userData);
-            }
-            setLoading(false);
-        })();
-    }, []);
-
-    if (loading)
-        return (
-            <Spinner
-                animation="border"
-                role="status"
-            />
-        );
+        if (user) {
+            (async () => {
+                const [error, reservations] = await ReservationsApi.getAll();
+                if (error || !reservations) {
+                    console.error(error);
+                } else {
+                    const activeReservation = reservations.find(
+                        (r) => r.active,
+                    );
+                    setReservation(activeReservation || null);
+                    setPreviousReservations(
+                        reservations.filter((r) => !r.active),
+                    );
+                }
+            })();
+        }
+    }, [user]);
 
     return (
         <Container>
             <Card className="profileCard">
                 {user ? (
-                    <MyPage
-                        user={user}
-                        onLogout={() => setUser(null)}
-                    />
+                    <>
+                        <MyPage user={user} onLogout={() => setUser(null)} />
+                        {reservation && (
+                            <div className="reservation-info">
+                                <h5>Aktív asztalfoglalás:</h5>
+                                <p>Foglalás ID: {reservation.id}</p>
+                                <p>
+                                    Időpont:{" "}
+                                    {new Date(
+                                        reservation.date,
+                                    ).toLocaleString()}
+                                </p>
+                            </div>
+                        )}
+                        {previousReservations.length > 0 && (
+                            <div className="reservation-info">
+                                <h5>Előző asztalfoglalások:</h5>
+                                <ul>
+                                    {previousReservations.map((res, index) => (
+                                        <li key={index}>
+                                            Foglalás ID: {res.id}, Időpont:{" "}
+                                            {new Date(
+                                                res.date,
+                                            ).toLocaleString()}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </>
                 ) : (
                     <>
                         {loginOrReg === "login" ? (
@@ -52,7 +84,7 @@ export default function Profile() {
                             <RegForm />
                         )}
                         <button
-                            className="loginBtn"
+                            className="btn btn-primary"
                             onClick={toggleForm}
                         >
                             {loginOrReg === "login"

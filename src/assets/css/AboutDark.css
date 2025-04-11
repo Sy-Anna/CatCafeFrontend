@@ -6,17 +6,7 @@
         border-color: #2c3930;
         box-shadow: 5px 10px #2c3930;
     }
-    .aboutCardButton {
-        background-color: #dcd7c9;
-        border: #dcd7c9 1px solid;
-        box-shadow: 3px 3px #a27b5c;
-    }
     /* Card responsiveness */
-    .aboutCardButton:hover {
-        border-color: #dcd7c9;
-        background-color: #dcd7c9;
-        box-shadow: 2px 2px #a27b5c;
-    }
     .aboutCard:hover {
         background-color: #334037;
         box-shadow: 4px 9px #2c3930;

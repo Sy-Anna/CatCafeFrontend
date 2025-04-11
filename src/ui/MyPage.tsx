@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 
+import { useNotification } from "@hooks/useNotification";
 import { UsersApi } from "@libs/api/users";
 import { User } from "@libs/types";
 
@@ -9,19 +10,28 @@ type MyPageProps = {
 };
 
 export default function MyPage({ user, onLogout }: MyPageProps) {
+    const notification = useNotification();
+
     const handleLogout = async () => {
         const token = localStorage.getItem("token");
 
         if (!token) {
-            alert("Nincs bejelentkezve felhasználó.");
+            notification.add("Nincs bejelentkezve felhasználó.", "error");
             return;
         }
 
         const [err] = await UsersApi.logout(token);
         if (!err) {
             onLogout();
+            localStorage.removeItem("token");
         } else {
-            alert("Sikertelen kijelentkezés");
+            if (Array.isArray(err.message)) {
+                for (const message of err.message) {
+                    notification.add(message, "error");
+                }
+            } else {
+                notification.add(err.message, "error");
+            }
         }
     };
 
@@ -34,12 +44,7 @@ export default function MyPage({ user, onLogout }: MyPageProps) {
             <p>
                 <strong>Email:</strong> {user.email}
             </p>
-            <Button
-                className="loginBtn"
-                onClick={handleLogout}
-            >
-                Kijelentkezés
-            </Button>
+            <Button onClick={handleLogout}>Kijelentkezés</Button>
         </div>
     );
 }

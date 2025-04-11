@@ -1,6 +1,5 @@
 import { Button } from "react-bootstrap";
 import { API_URL } from "@libs/api";
-import { ProductsApi } from "@libs/api/products";
 import { Product } from "@libs/types";
 
 import "@assets/css/ProductDetails.css";
@@ -9,28 +8,18 @@ import "@assets/css/ProductDetailsDark.css";
 type Props = {
     product: Product;
     onClose: () => void;
+    onAddToCart: () => void;
 };
 
-export default function ProductDetails({ product, onClose }: Props) {
-	const handleBuy = async () => {
-		const [error, response] = await ProductsApi.buy([{ id: product.id, quantity: 1 }]);
-		if (error) {
-			alert("Hiba történt a vásárlás során.");
-			console.error(error);
-		} else {
-			alert("Sikeres vásárlás!");
-			onClose();
-		}
-	};
-
+export default function ProductDetails({
+    product,
+    onClose,
+    onAddToCart,
+}: Props) {
     return (
         <div className="productDetails">
             <div className="detailsHeader">
-                <Button
-                    variant="outline-dark"
-                    size="sm"
-                    onClick={onClose}
-                >
+                <Button variant="outline-dark" size="sm" onClick={onClose}>
                     x
                 </Button>
             </div>
@@ -48,9 +37,9 @@ export default function ProductDetails({ product, onClose }: Props) {
             <p>{product.price} Ft</p>
             <p>{product.description}</p>
 
-			<Button className="buyButton" size="sm" onClick={handleBuy}>
-				Vásárlás
-			</Button>
-		</div>
-	);
+            <Button size="sm" onClick={onAddToCart}>
+                Kosárba rakom
+            </Button>
+        </div>
+    );
 }

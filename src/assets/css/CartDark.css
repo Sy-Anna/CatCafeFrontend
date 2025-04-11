@@ -1,0 +1,25 @@
+:root [dark="true"] {
+    .cartItem {
+        background-color: #3f4f44;
+        border-color: #2c3930;
+        box-shadow: 5px 10px #2c3930;
+    }
+    .cartItem h3 {
+        color: #dcd7c9;
+    }
+
+    .modalContent {
+        background-color: #3f4f44;
+        border-color: #2c3930;
+        box-shadow: 5px 10px #2c3930;
+    }
+    .modalContent li {
+        color: #dcd7c9;
+    }
+    .modalContent h2 {
+        color: #dcd7c9;
+    }
+    .modalContent p {
+        color: #dcd7c9;
+    }
+}

@@ -12,12 +12,7 @@
     justify-content: space-between;
 }
 .productCardButton {
-    background-color: #a27b5c;
-    border: #2c3930 1px solid;
-    display: inline;
     float: right;
-    box-shadow: 3px 3px #2c3930;
-    max-width: 50%;
 }
 .productCardText {
     display: inline;
@@ -31,14 +26,6 @@
     margin-bottom: 15px;
 }
 /* Card responsiveness */
-.productCardButton:hover {
-    border-color: #2c3930;
-    background-color: #916e51 !important;
-    box-shadow: 2px 2px #2c3930;
-}
-.productCardButton:active {
-    border-color: #2c3930 !important;
-}
 .productCard:hover {
     background-color: #bdb6aa;
     box-shadow: 4px 9px #a27b5c;
