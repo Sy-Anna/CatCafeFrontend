@@ -1,5 +1,4 @@
 import { Button } from "react-bootstrap";
-
 import { API_URL } from "@libs/api";
 import { Product } from "@libs/types";
 
