@@ -43,7 +43,7 @@ export default function Profile() {
     }, [user]);
 
     return (
-        <Container>
+        <Container fluid="lg" className="mt-4">
             <Card className="profileCard">
                 {user ? (
                     <>

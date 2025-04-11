@@ -6,6 +6,7 @@ import "@assets/css/Calendar.css";
 import "@assets/css/CalendarDark.css";
 import { useNotification } from "@hooks/useNotification";
 import { ReservationsApi } from "@libs/api/reservations";
+import { Col, Container, Row } from "react-bootstrap";
 
 type ValuePiece = Date | null;
 
@@ -36,11 +37,24 @@ export default function Booking() {
     };
 
     return (
-        <div className="container">
-            <Calendar onChange={onChange} value={value} />
-            <button className="btn btn-primary mt-3" onClick={handleBooking}>
-                Foglalás
-            </button>
-        </div>
+        <Container fluid="lg" className="mt-4 container">
+            <Row>
+                <Calendar onChange={onChange} value={value} />
+            </Row>
+            <Row>
+                <Col>
+                    <h3 className="mt-3">
+                        Kiválasztott időpont:{" "}
+                        {value ? value.toLocaleString() : "Nincs kiválasztva"}
+                    </h3>
+                    <button
+                        className="btn btn-primary mt-3"
+                        onClick={handleBooking}
+                    >
+                        Foglalás
+                    </button>
+                </Col>
+            </Row>
+        </Container>
     );
 }

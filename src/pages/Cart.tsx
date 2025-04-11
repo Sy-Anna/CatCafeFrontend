@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import useStorageState from "use-storage-state";
 
 import { API_URL } from "@libs/api";
@@ -112,14 +112,14 @@ export default function Cart() {
     }, []);
 
     return (
-        <Container className="cart">
+        <Container fluid="lg" className="mt-4 cart">
             {loading ? (
                 <p>Loading...</p>
             ) : (
                 <div className="cartContainer">
-                    <div className="cartHeader">
+                    <Row className="cartHeader">
                         {cartContent.length > 0 ? (
-                            <>
+                            <Col>
                                 <h1>Kosár</h1>
                                 <button
                                     className="btn btn-primary"
@@ -127,12 +127,12 @@ export default function Cart() {
                                 >
                                     Termékek megvásárlása
                                 </button>
-                            </>
+                            </Col>
                         ) : (
                             <p className="emptyCart">A kosár üres</p>
                         )}
-                    </div>
-                    <div className="cartContent">
+                    </Row>
+                    <Row className="cartContent">
                         {products
                             .filter((product) =>
                                 cartContent.some(
@@ -140,60 +140,62 @@ export default function Cart() {
                                 ),
                             )
                             .map((product) => (
-                                <Card key={product.id} className="cartItem">
-                                    <img
-                                        src={`${API_URL}products/${product.id}/image`}
-                                        alt={product.name}
-                                    />
-                                    <h3>{product.name}</h3>
-                                    <p>{product.price} Ft</p>
-                                    <p>
-                                        Mennyiség:{" "}
-                                        {
-                                            cartContent.find(
-                                                (item) =>
-                                                    item.id === product.id,
-                                            )?.quantity
-                                        }
-                                    </p>
-                                    <div className="cartItemActions">
-                                        <button
-                                            className="btn btn-primary"
-                                            onClick={() =>
-                                                handleCartContent(
-                                                    product,
-                                                    "add",
-                                                )
+                                <Col>
+                                    <Card key={product.id} className="cartItem">
+                                        <img
+                                            src={`${API_URL}products/${product.id}/image`}
+                                            alt={product.name}
+                                        />
+                                        <h3>{product.name}</h3>
+                                        <p>{product.price} Ft</p>
+                                        <p>
+                                            Mennyiség:{" "}
+                                            {
+                                                cartContent.find(
+                                                    (item) =>
+                                                        item.id === product.id,
+                                                )?.quantity
                                             }
-                                        >
-                                            +
-                                        </button>
-                                        <button
-                                            className="btn btn-primary"
-                                            onClick={() =>
-                                                handleCartContent(
-                                                    product,
-                                                    "remove",
-                                                )
-                                            }
-                                        >
-                                            -
-                                        </button>
-                                        <button
-                                            className="btn btn-primary"
-                                            onClick={() =>
-                                                handleCartContent(
-                                                    product,
-                                                    "delete",
-                                                )
-                                            }
-                                        >
-                                            Törlés
-                                        </button>
-                                    </div>
-                                </Card>
+                                        </p>
+                                        <div className="cartItemActions">
+                                            <button
+                                                className="btn btn-primary"
+                                                onClick={() =>
+                                                    handleCartContent(
+                                                        product,
+                                                        "add",
+                                                    )
+                                                }
+                                            >
+                                                +
+                                            </button>
+                                            <button
+                                                className="btn btn-primary"
+                                                onClick={() =>
+                                                    handleCartContent(
+                                                        product,
+                                                        "remove",
+                                                    )
+                                                }
+                                            >
+                                                -
+                                            </button>
+                                            <button
+                                                className="btn btn-primary"
+                                                onClick={() =>
+                                                    handleCartContent(
+                                                        product,
+                                                        "delete",
+                                                    )
+                                                }
+                                            >
+                                                Törlés
+                                            </button>
+                                        </div>
+                                    </Card>
+                                </Col>
                             ))}
-                    </div>
+                    </Row>
                 </div>
             )}
 

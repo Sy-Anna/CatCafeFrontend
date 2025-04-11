@@ -1,8 +1,9 @@
 import "@assets/css/Blog.css";
+import { Container } from "react-bootstrap";
 
 export default function Blog() {
     return (
-        <>
+        <Container fluid="lg" className="mt-4 blog-card-grid">
             <div className="blogParagraph">
                 <img
                     className="blogImage"
@@ -97,6 +98,6 @@ export default function Blog() {
                     környezetben.
                 </p>
             </div>
-        </>
+        </Container>
     );
 }

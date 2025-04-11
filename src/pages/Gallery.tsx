@@ -1,3 +1,5 @@
+import { Container } from "react-bootstrap";
+
 import "@assets/css/Gallery.css";
 import "@assets/css/GalleryDark.css";
 
@@ -14,7 +16,7 @@ export default function Gallery() {
     return (
         <>
             <h1>A Cat Café négylábú csapattagjai:</h1>
-            <div className="gallery-card-grid">
+            <Container fluid="lg" className="mt-4 gallery-card-grid">
                 {shuffledImages.map((image, index) => (
                     <div className="galleryCardContainer" key={index}>
                         <div className="card imageCard">
@@ -27,7 +29,7 @@ export default function Gallery() {
                         </div>
                     </div>
                 ))}
-            </div>
+            </Container>
         </>
     );
 }
