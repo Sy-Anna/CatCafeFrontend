@@ -41,7 +41,7 @@ export default function Home() {
                 {pages.map((page, index) => (
                     <div className="homeCardContainer" key={index}>
                         <a href={page.source}>
-                            <div className="homeCard">
+                            <div className="card homeCard">
                                 <img
                                     className="homeCardImage"
                                     src={page.imgSource}

@@ -1,14 +1,5 @@
 .profileCard {
-    padding: 2em;
-    background-color: #dcd7c9;
-    border-color: #2c3930;
-    border-radius: 40px;
-    box-shadow: 5px 10px #a27b5c;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 100px;
-    padding-bottom: 30px;
+    padding: 3rem !important;
 }
 
 .login {

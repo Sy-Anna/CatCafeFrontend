@@ -2,14 +2,8 @@
 .contactCard {
     width: clamp(14rem, 16rem, 18rem);
     height: clamp(21rem, 23rem, 25rem);
-    padding: 1em;
-    background-color: #dcd7c9;
-    border-color: #2c3930;
-    border-radius: 80px;
-    box-shadow: 5px 10px #a27b5c;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 1em !important;
+    border-radius: 80px !important;
 }
 .contactCardImage {
     width: clamp(12rem, 14rem, 16rem);

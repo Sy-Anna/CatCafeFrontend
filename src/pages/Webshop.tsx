@@ -77,7 +77,7 @@ export default function Webshop() {
                 <Row className="gx-4 gy-4 gap-4">
                     {products.map((product) => (
                         <Col className="cardContainer" key={product.id}>
-                            <Card className="productCard">
+                            <Card className="card productCard">
                                 <img
                                     className="productCardImage"
                                     src={`${API_URL}products/${product.id}/image`}

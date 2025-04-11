@@ -17,7 +17,7 @@ export default function Gallery() {
             <div className="gallery-card-grid">
                 {shuffledImages.map((image, index) => (
                     <div className="galleryCardContainer" key={index}>
-                        <div className="imageCard">
+                        <div className="card imageCard">
                             <img
                                 className="imageCardImage"
                                 src={image}

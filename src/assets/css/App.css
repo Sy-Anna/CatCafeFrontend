@@ -10,6 +10,19 @@ body {
     padding: 100px 0;
 }
 
+.card {
+    border-color: #2c3930;
+    background-color: #dcd7c9;
+    border-radius: 20px;
+    box-shadow: 5px 10px #a27b5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    margin-bottom: 2em;
+    transition: all 0.3s ease;
+}
+
 /* Navbar */
 .navbar {
     background-color: #a27b5c;
@@ -86,6 +99,7 @@ h6 {
     font-family: "Caveat", cursive !important;
     font-weight: bold;
     text-align: left;
+    transition: all 0.3s ease;
 }
 h1 {
     font-size: 2.5rem;
@@ -111,6 +125,7 @@ p {
     font-weight: 500;
     font-style: normal;
     text-align: justify;
+    transition: all 0.3s ease;
 }
 
 .cardContainer {

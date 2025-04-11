@@ -1,11 +1,8 @@
 /* cards */
 .homeCard {
-    display: inline-block;
     border: #2c3930 1px solid;
-    border-radius: 20px;
-    box-shadow: 5px 10px #a27b5c;
     overflow: hidden;
-    padding: 0;
+    padding: 0px !important;
     width: clamp(14rem, 16rem, 18rem);
     height: auto;
     transition: transform 0.3s ease;

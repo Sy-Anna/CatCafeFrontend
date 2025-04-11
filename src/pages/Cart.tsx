@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Card, Container } from "react-bootstrap";
 import useStorageState from "use-storage-state";
 
 import { API_URL } from "@libs/api";
@@ -111,7 +112,7 @@ export default function Cart() {
     }, []);
 
     return (
-        <div className="cart">
+        <Container className="cart">
             {loading ? (
                 <p>Loading...</p>
             ) : (
@@ -139,7 +140,7 @@ export default function Cart() {
                                 ),
                             )
                             .map((product) => (
-                                <div key={product.id} className="cartItem">
+                                <Card key={product.id} className="cartItem">
                                     <img
                                         src={`${API_URL}products/${product.id}/image`}
                                         alt={product.name}
@@ -190,7 +191,7 @@ export default function Cart() {
                                             Törlés
                                         </button>
                                     </div>
-                                </div>
+                                </Card>
                             ))}
                     </div>
                 </div>
@@ -229,6 +230,6 @@ export default function Cart() {
                     </div>
                 </div>
             )}
-        </div>
+        </Container>
     );
 }
