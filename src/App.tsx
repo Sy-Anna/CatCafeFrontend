@@ -12,6 +12,7 @@ import Cart from "@pages/Cart";
 import Contact from "@pages/Contact";
 import Gallery from "@pages/Gallery";
 import Home from "@pages/Home.tsx";
+import ManageReservations from "@pages/ManageReservations";
 import Profile from "@pages/Profile";
 import Webshop from "@pages/Webshop";
 import NavbarComponent from "@ui/Navbar";
@@ -52,6 +53,10 @@ export default function App() {
                     <Route path="/Cart" element={<Cart />} />
                     <Route path="/Profile" element={<Profile />} />
                     <Route path="/Cargo" element={<Cargo />} />
+                    <Route
+                        path="/ManageReservations"
+                        element={<ManageReservations />}
+                    />
                 </Routes>
             </Router>
         </NotificationProvider>

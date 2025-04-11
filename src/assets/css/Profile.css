@@ -18,3 +18,8 @@
 .profileCard a {
     color: #a27b5c;
 }
+
+/* Add margin-top to reservation-info class */
+.reservation-info {
+    margin-top: 20px;
+}
