@@ -3,13 +3,15 @@ import { NavLink } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import useStorageState from "use-storage-state";
 
 import cartIcon from "@assets/img/icons/cartIcon2.png";
 import profileIcon from "@assets/img/icons/profileIcon.png";
 import logoSmall from "@assets/img/logoSmall.png";
-import useStorageState from "use-storage-state";
+import type { User } from "@libs/types";
 
 export default function NavbarComponent() {
+    const [user] = useStorageState<User | null>("user");
     const [cartContent] = useStorageState<
         Array<{ id: number; quantity: number }>
     >("cart", {
@@ -49,27 +51,43 @@ export default function NavbarComponent() {
             />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <NavLink className="navLink" href="/Home">
-                        Főoldal
-                    </NavLink>
-                    <NavLink className="navLink" href="/Blog">
-                        Blog
-                    </NavLink>
-                    <NavLink className="navLink" href="/Gallery">
-                        Galéria
-                    </NavLink>
-                    <NavLink className="navLink" href="/Booking">
-                        Asztalfoglalás
-                    </NavLink>
-                    <NavLink className="navLink" href="/Webshop">
-                        Webshop
-                    </NavLink>
-                    <NavLink className="navLink" href="/Contact">
-                        Kapcsolat
-                    </NavLink>
-                    <NavLink className="navLink" href="/About">
-                        Rólunk
-                    </NavLink>
+                    {user && user.role === "WORKER" ? (
+                        <>
+                            <NavLink
+                                className="navLink"
+                                href="/ManageReservations"
+                            >
+                                Asztalfoglalások kezelése
+                            </NavLink>
+                            <NavLink className="navLink" href="/Cargo">
+                                Webshop kezelése
+                            </NavLink>
+                        </>
+                    ) : (
+                        <>
+                            <NavLink className="navLink" href="/Home">
+                                Főoldal
+                            </NavLink>
+                            <NavLink className="navLink" href="/Blog">
+                                Blog
+                            </NavLink>
+                            <NavLink className="navLink" href="/Gallery">
+                                Galéria
+                            </NavLink>
+                            <NavLink className="navLink" href="/Booking">
+                                Asztalfoglalás
+                            </NavLink>
+                            <NavLink className="navLink" href="/Webshop">
+                                Webshop
+                            </NavLink>
+                            <NavLink className="navLink" href="/Contact">
+                                Kapcsolat
+                            </NavLink>
+                            <NavLink className="navLink" href="/About">
+                                Rólunk
+                            </NavLink>
+                        </>
+                    )}
                 </Nav>
             </Navbar.Collapse>
             <div className="d-flex gap-3 align-items-center">
