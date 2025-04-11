@@ -1,5 +1,6 @@
 .profileCard {
     padding: 3rem !important;
+    gap: 1rem !important;
 }
 
 .login {
@@ -12,7 +13,6 @@
 
 /* Add margin-top to reservation-info class */
 .reservation-info {
-    margin-top: 20px;
     width: max-content;
 }
 .reservation-info p {
