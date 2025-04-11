@@ -2,10 +2,10 @@ import "@assets/css/Gallery.css";
 import "@assets/css/GalleryDark.css";
 
 const images = Object.values(
-	import.meta.glob("/public/img/gallery/*.{jpg,jpeg,png,gif,webp}", {
-		eager: true,
-		import: "default",
-	}),
+    import.meta.glob("/src/assets/img/gallery/*.{jpg,jpeg,png,gif,webp}", {
+        eager: true,
+        import: "default",
+    }),
 );
 
 const shuffledImages = [...images].sort(() => Math.random() - 0.5) as string[];
