@@ -47,9 +47,7 @@ export default function Home() {
                                     src={page.imgSource}
                                     alt="image"
                                 />
-                                <div className="homeCardTitle">
-                                    {page.title}
-                                </div>
+                                <h3 className="homeCardTitle">{page.title}</h3>
                             </div>
                         </a>
                     </div>
