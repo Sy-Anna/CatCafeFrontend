@@ -1,7 +1,6 @@
 /* cards */
 .homeCard {
     display: inline-block;
-    background-color: #2c3930;
     border: #2c3930 1px solid;
     border-radius: 20px;
     box-shadow: 5px 10px #a27b5c;
@@ -32,15 +31,9 @@
 }
 
 .homeCardTitle {
-    bottom: 0;
-    width: 100%;
-    background-color: #dcd7c9;
-    color: #a27b5c;
-    font-family: "Caveat", cursive;
-    font-weight: bold;
-    font-size: 1.2rem;
+    margin: 0;
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
 }
 
 p {
