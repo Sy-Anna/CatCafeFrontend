@@ -128,7 +128,7 @@ npm run preview
     docker run -p 4173:4173 cat-cafe-frontend
     ```
 
-4. Open [http://localhost](http://localhost) in your browser.
+4. Open [http://localhost:4173](http://localhost:4173) in your browser.
 
 ---
 
@@ -263,4 +263,4 @@ serve -s dist
     docker run -p 4173:4173 cat-cafe-frontend
     ```
 
-4. Nyisd meg a [http://localhost](http://localhost) címet a böngésződben.
+4. Nyisd meg a [http://localhost:4173](http://localhost:4173) címet a böngésződben.
