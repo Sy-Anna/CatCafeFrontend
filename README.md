@@ -125,7 +125,7 @@ npm run preview
 3. Run the container:
 
     ```bash
-    docker run -p 80:80 cat-cafe-frontend
+    docker run -p 4173:4173 cat-cafe-frontend
     ```
 
 4. Open [http://localhost](http://localhost) in your browser.
@@ -260,7 +260,7 @@ serve -s dist
 3. Futtasd a konténert:
 
     ```bash
-    docker run -p 80:80 cat-cafe-frontend
+    docker run -p 4173:4173 cat-cafe-frontend
     ```
 
 4. Nyisd meg a [http://localhost](http://localhost) címet a böngésződben.
