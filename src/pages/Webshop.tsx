@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
+import useStorageState from "use-storage-state";
 
+import cartIcon from "@assets/img/icons/cartIcon.png";
+
+import { useNotification } from "@hooks/useNotification";
 import { API_URL } from "@libs/api";
 import { ProductsApi } from "@libs/api/products";
 import { Product } from "@libs/types";
-
 import ProductDetails from "@ui/ProductDetails";
 
 import "@assets/css/Webshop.css";
 import "@assets/css/WebshopDark.css";
-import { useNotification } from "@hooks/useNotification";
-import useStorageState from "use-storage-state";
 
 export default function Webshop() {
     const notification = useNotification();
@@ -98,7 +99,7 @@ export default function Webshop() {
                                     >
                                         <img
                                             className="icon"
-                                            src="/img/icons/cartIcon.png"
+                                            src={cartIcon}
                                             alt="cart icon"
                                         />
                                     </Button>
