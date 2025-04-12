@@ -10,14 +10,16 @@ import {
 } from "react-bootstrap";
 import useStorageState from "use-storage-state";
 
+import { useNotification } from "@hooks/useNotification";
 import { API_URL } from "@libs/api";
 import { ProductsApi } from "@libs/api/products";
 import type { Product, User } from "@libs/types";
 
+import iconDelete from "@assets/img/icons/delete.png";
+
 import "@assets/css/Cargo.css";
 import "@assets/css/Webshop.css";
 import "@assets/css/WebshopDark.css";
-import { useNotification } from "@hooks/useNotification";
 
 export default function Cargo() {
     const notification = useNotification();
@@ -151,7 +153,7 @@ export default function Cargo() {
                             >
                                 <img
                                     className="icon"
-                                    src="/img/icons/delete.png"
+                                    src={iconDelete}
                                     alt="delete"
                                 />
                             </Button>
