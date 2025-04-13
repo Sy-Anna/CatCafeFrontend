@@ -12,13 +12,13 @@ const persons = [
     },
     {
         id: 2,
-        name: "Berencs Zsolt",
+        name: "Berencsi Zsolt",
         role: "Rendszergazda",
         img: "/img/workers/Zsolt.png",
     },
     {
         id: 3,
-        name: "Kopányi Gergő",
+        name: "Kopányi Gergely",
         role: "Rendszergazda",
         img: "/img/workers/Gergő.jpg",
     },

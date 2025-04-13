@@ -4,6 +4,21 @@ import { Container } from "react-bootstrap";
 export default function Blog() {
     return (
         <Container fluid="lg" className="mt-4 blog-card-grid">
+
+            <div className="blogParagraph">
+                <img 
+                    className='blogImage'
+                    src="/img/easter.jpg" 
+                    alt="image" />
+                <h1>Boldog húsvétot kívánunk!</h1>
+                <p>
+                Az ünnep örömére szeretnénk egy kis meglepetéssel készülni nektek 😊! Minden látogatónk húsvéti hangulatú dekorációval és cicás boldogsággal találkozik nálunk, emellett dorombolással garantáltan feltöltődhetsz! 
+                <br />Fontos információ: hivatalos ünnepnapokon zárva tartunk, hogy mi is megünnepelhessük a húsvétot, de a többi nap változatlan nyitva tartassál várunk titeket.
+                <br />Várjuk kedves vendégeinket a megszokott időkben, hogy együtt élvezzük a kávé és cicák csodás összhangját. 
+                <br />Kellemes húsvéti ünnepeket kívánunk, és hamarosan találkozunk! 
+                </p>
+            </div>
+
             <div className="blogParagraph">
                 <img
                     className="blogImage"
@@ -77,6 +92,22 @@ export default function Blog() {
                 </p>
             </div>
 
+            <div className='blogParagraph'>
+                <img 
+                    className='blogImage'
+                    src="/img/developer.jpg" 
+                    alt="image" />
+                <h1>Kávé, cica, kék halál – így készül a Cat Café a nyitásra</h1>
+                <p>
+                    Miközben a kávégépek még csomagolásban, és a cicák is csak álmainkban dorombolnak, a háttérben már gőzerővel dolgozik a fejlesztőcsapat – szó szerint.
+                    <br/>Ők építik fel a foglalórendszert, a cicaprofilokat és az egész digitális élményt, amitől a Cat Café több lesz, mint egy hely, ahol kávézni lehet.
+                    <br/>A tech stack modern, a határidő feszes, a kávé erős – de még ez sem mindig elég ahhoz, hogy a rendszer ne rottyanjon le.
+                    <br/>Mint például ma, amikor az egyik gép kék halált kapott. A fejlesztő csak bólintott: „Legalább nem a cicák fagytak le.”
+                    <br/>Minden napra jut egy bug, egy új ötlet, és legalább három tappancsos szóvicc a táblán.
+                    <br/>A nyitásig még sok a kód – de ha minden jól megy, a vendégek már csak a dorombolós végeredményt látják.
+                </p>
+            </div>
+
             <div className="blogParagraph">
                 <img
                     className="blogImage"
@@ -98,6 +129,18 @@ export default function Blog() {
                     környezetben.
                 </p>
             </div>
+
+            <div className="blogParagraph">
+                <img    
+                        className='blogImage'
+                        src="/img/reserved.jpg"
+                        alt="image" />
+                <h1>A macskakávézók története</h1>
+                <p>
+                A macskakávézók története igazán különleges és szívmelengető, hiszen ezek a helyek nemcsak a kávézás élményét, hanem a macskák társaságát is kínálják. Az első macskakávézó 1998-ban nyílt meg Tajpejben, Tajvanon, de a koncepció igazán Japánban vált népszerűvé. 2004-ben Oszakában nyílt meg az első japán macskakávézó, a "Neko no Dzsikan" (Macskák Órája), amely tíz év alatt több mint 150 hasonló létesítmény megnyitását inspirálta az országban. Európában az első macskakávézó 2012-ben nyílt meg Bécsben, míg Magyarországon 2013-ban nyitotta meg kapuit a Budapest Cat Café. Ezek a helyek különleges atmoszférát teremtenek, ahol a vendégek kávéjukat kortyolgatva élvezhetik a macskák társaságát. A macskák híresek nyugtató hatásukról, így ezek a kávézók különösen népszerűek azok körében, akiknek nincs lehetőségük háziállatot tartani. A kávézók nemcsak a kikapcsolódás helyszínei, hanem gyakran a macskák örökbefogadását is támogatják. Sok helyen a vendégek megismerhetik a macskákat, és ha valamelyikük különösen közel kerül a szívükhöz, örökbe is fogadhatják őket. Ezáltal ezek a kávézók nemcsak a vendégek, hanem a macskák életét is gazdagítják. A macskakávézók története tehát nemcsak a kávézás és a macskák szeretetéről szól, hanem arról is, hogyan hozhatunk létre olyan közösségi tereket, amelyek mindenki számára örömet és nyugalmat nyújtanak. Ha még nem jártál ilyen helyen, érdemes kipróbálni – garantáltan doromboló élményben lesz részed!
+                </p>
+            </div>
+
         </Container>
     );
 }
