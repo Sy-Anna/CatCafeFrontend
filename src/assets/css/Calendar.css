@@ -7,8 +7,9 @@
     border-radius: 50px;
     border: #3f4f44 1px solid;
     box-shadow: 5px 10px #a27b5c;
-    padding: 20px;
+    padding: 0;
     padding-top: 0px;
+    overflow: hidden;
 }
 .container {
     align-items: center;
@@ -19,10 +20,9 @@
     background-color: #916e51;
     border-radius: 80px;
 }
-.react-calendar__navigation,
 .react-calendar__navigation {
     background-color: #a27b5c;
-    border-radius: 50px;
+    padding: 0 20px;
 }
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
@@ -41,6 +41,9 @@
 }
 
 /* Tiles */
+.react-calendar__viewContainer {
+    padding: 0 20px 20px;
+}
 .react-calendar__tile--hasActive {
     background: #a27b5c;
     border-radius: 100px;
