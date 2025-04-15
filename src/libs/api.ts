@@ -26,7 +26,7 @@ function getApiUrl() {
 export function setAuthorizationHeader() {
     const token = localStorage.getItem("token");
     if (token) {
-        const headerValue = `Bearer ${token.slice(1, -1)}`;
+        const headerValue = `Bearer ${JSON.parse(token)}`;
         api.defaults.headers.common.Authorization = headerValue;
     }
 }
@@ -39,5 +39,17 @@ export const api = axios.create({
         "Content-Type": "application/json",
     },
 });
+
+api.interceptors.response.use(
+    (response) => {
+        return response;
+    },
+    (error) => {
+        if (error.response.status === 401) {
+            localStorage.removeItem("token");
+        }
+        return Promise.reject(error);
+    },
+);
 
 setAuthorizationHeader();
