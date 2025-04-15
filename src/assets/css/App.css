@@ -157,6 +157,7 @@ ol {
     box-shadow: 2px 2px #2c3930;
 }
 .btn:active {
+    background-color: #836349 !important;
     border-color: #2c3930;
 }
 
