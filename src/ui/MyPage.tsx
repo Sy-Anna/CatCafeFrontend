@@ -37,7 +37,7 @@ export default function MyPage({ user, onLogout }: MyPageProps) {
 
     return (
         <div>
-            <h2>Profilom</h2>
+            <h1>Profilom</h1>
             <p>
                 <strong>Név:</strong> {user.name}
             </p>

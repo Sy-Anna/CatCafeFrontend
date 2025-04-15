@@ -58,6 +58,14 @@ export default function Profile() {
                         {user.role === "USER" && (
                             <Col>
                                 <Card className="profileCard">
+                                    <h1>Asztalfoglalás</h1>
+                                    {!reservation &&
+                                        previousReservations.length == 0 && (
+                                            <p>
+                                                Jelenleg nincs aktív
+                                                asztalfoglalás.
+                                            </p>
+                                        )}
                                     {reservation && (
                                         <div className="reservation-info">
                                             <h2>Aktív asztalfoglalás:</h2>
